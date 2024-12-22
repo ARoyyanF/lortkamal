@@ -1,4 +1,9 @@
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+} from "@/components/old/ui/card";
 
 export default function ElectionTimeline() {
   const events = [
@@ -7,7 +12,7 @@ export default function ElectionTimeline() {
     { date: "Nov 4, 2024", event: "Early Voting Ends" },
     { date: "Nov 5, 2024", event: "Election Day" },
     { date: "Nov 20, 2024", event: "Results Certified" },
-  ]
+  ];
 
   return (
     <Card className="bg-white shadow-lg">
@@ -25,6 +30,5 @@ export default function ElectionTimeline() {
         </ul>
       </CardContent>
     </Card>
-  )
+  );
 }
-

@@ -1,11 +1,28 @@
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+} from "@/components/old/ui/card";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/old/ui/avatar";
 
 export default function CandidateProfiles() {
   const candidates = [
-    { name: "Jane Doe", party: "Blue Party", image: "/placeholder.svg?height=50&width=50" },
-    { name: "John Smith", party: "Red Party", image: "/placeholder.svg?height=50&width=50" },
-  ]
+    {
+      name: "Jane Doe",
+      party: "Blue Party",
+      image: "/placeholder.svg?height=50&width=50",
+    },
+    {
+      name: "John Smith",
+      party: "Red Party",
+      image: "/placeholder.svg?height=50&width=50",
+    },
+  ];
 
   return (
     <Card className="bg-white shadow-lg">
@@ -29,6 +46,5 @@ export default function CandidateProfiles() {
         </ul>
       </CardContent>
     </Card>
-  )
+  );
 }
-

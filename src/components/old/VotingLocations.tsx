@@ -1,12 +1,17 @@
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { MapPin } from 'lucide-react'
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+} from "@/components/old/ui/card";
+import { MapPin } from "lucide-react";
 
 export default function VotingLocations() {
   const locations = [
     "City Hall - 123 Main St",
     "Central Library - 456 Oak Ave",
     "Community Center - 789 Pine Rd",
-  ]
+  ];
 
   return (
     <Card className="bg-white shadow-lg">
@@ -24,6 +29,5 @@ export default function VotingLocations() {
         </ul>
       </CardContent>
     </Card>
-  )
+  );
 }
-

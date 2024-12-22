@@ -1,26 +1,13 @@
-import Header from "@/components/Header";
-import ElectionInfo from "@/components/ElectionInfo";
-import CandidateProfiles from "@/components/CandidateProfiles";
-import VotingLocations from "@/components/VotingLocations";
-import ElectionTimeline from "@/components/ElectionTimeline";
-import Footer from "@/components/Footer";
+import LandingHero from "@/components/landing-hero";
+import SurveyForm from "@/components/survey-form";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="min-h-screen bg-blue-50">
-      <Header />
-      <main className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-blue-800 mb-8 text-center">
-          2024 General Election
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <ElectionInfo />
-          <CandidateProfiles />
-          <VotingLocations />
-          <ElectionTimeline />
-        </div>
-      </main>
-      <Footer />
+    <div className="min-h-screen bg-[#001524] text-white">
+      <div className="container mx-auto px-4">
+        <LandingHero />
+        <SurveyForm />
+      </div>
     </div>
   );
 }
