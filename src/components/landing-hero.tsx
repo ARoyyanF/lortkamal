@@ -3,6 +3,7 @@ import Image from "next/image";
 
 export default function LandingHero() {
   return (
+
     <div className="py-6">
       {/* Header with social icons */}
       <header className="flex justify-between items-center mb-12">
@@ -39,7 +40,7 @@ export default function LandingHero() {
           </div>
           <div className="space-y-4">
             <p className="text-lg">
-              Memajukan <span className="text-blue-400">HIMAFI</span> bersama
+              Memajukan <span className="text-[#FFD200]">HIMAFI</span> bersama
             </p>
             <h1 className="text-4xl md:text-6xl font-bold text-yellow-400">
               MUHAMMAD
@@ -53,20 +54,20 @@ export default function LandingHero() {
         <section className="space-y-6 mb-12">
           <h2 className="text-2xl md:text-3xl font-semibold">
             &quot;Apa yang diperlukan{" "}
-            <span className="text-blue-400">HIMAFI</span>?&quot;
+            <span className="text-[#FFD200]">HIMAFI</span>?&quot;
           </h2>
-          <div className="bg-gradient-to-tr from-[#111142] to-[#071532] p-6 rounded-lg">
-            <p className="text-gray-300 leading-relaxed">
-              <span className="text-blue-400">HIMAFI</span> sebagai wadah
+          <div className="bg-[#0053CF] p-6 rounded-3xl">
+            <p className="text-white leading-relaxed">
+              <span className="text-[#FFD200]">HIMAFI</span> sebagai wadah
               kegiatan kita bersama tentu memiliki peran penting dalam mendukung
               pengembangan potensi dan aspirasi seluruh anggotanya. Agar{" "}
-              <span className="text-blue-400">HIMAFI</span> bisa terus
+              <span className="text-[#FFD200]">HIMAFI</span> bisa terus
               berkembang dan memberikan manfaat yang optimal, kami mengajak
               kalian untuk turut serta dalam mengisi analisis kondisi ini. Suara
               dan pandangan kalian sangat berarti untuk memahami keadaan{" "}
-              <span className="text-blue-400">HIMAFI</span> saat ini dan
+              <span className="text-[#FFD200]">HIMAFI</span> saat ini dan
               merancang langkah-langkah perbaikan ke depannya. Mari bersama kita
-              bangun <span className="text-blue-400">HIMAFI</span> yang lebih
+              bangun <span className="text-[#FFD200]">HIMAFI</span> yang lebih
               baik untuk kita semua!
             </p>
           </div>
