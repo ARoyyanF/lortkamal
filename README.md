@@ -3,7 +3,7 @@
 Ditch `npm`, use `pnpm` instead. [heres why](https://refine.dev/blog/pnpm-vs-npm-and-yarn)  
 Migrate to `pnpm` using this [guide](https://dev.to/andreychernykh/yarn-npm-to-pnpm-migration-guide-2n04) but:
 
-> skip step 3,4, & 5
+> skip step 3,4,5,6,8
 
 ## Install dependencies
 
