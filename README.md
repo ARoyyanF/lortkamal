@@ -1,9 +1,9 @@
 # Setup
 
 Ditch `npm`, use `pnpm` instead. [heres why](https://refine.dev/blog/pnpm-vs-npm-and-yarn)  
-Migrate to `pnpm` using this [guide](https://dev.to/andreychernykh/yarn-npm-to-pnpm-migration-guide-2n04)
+Migrate to `pnpm` using this [guide](https://dev.to/andreychernykh/yarn-npm-to-pnpm-migration-guide-2n04) but:
 
-> ignore `No lockfile found` error when running `pnpm import`, its because `packages-lock.json` does not exist (i deleted it already)
+> skip step 3,4, & 5
 
 ## Install dependencies
 
