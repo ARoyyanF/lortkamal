@@ -26,6 +26,7 @@ Migrate to `pnpm` using this [guide](https://dev.to/andreychernykh/yarn-npm-to-p
 - https://tailwindcss.com/
 - https://ui.shadcn.com/
 - https://rombo.co/tailwind/
+- https://www.tailwindcss-animated.com/
 
 # UI/UX
 
