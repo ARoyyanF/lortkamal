@@ -19,7 +19,7 @@ export default function LandingHero() {
             href="https://www.linkedin.com/in/hamad-muhammad-kamal/"
             className="text-[#0A66C2] hover:opacity-80"
           >
-            <FaLinkedin className="w-6 h-6" />
+            <FaLinkedin className="w-6 h-6 " />
           </a>
         </div>
       </header>
