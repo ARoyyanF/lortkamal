@@ -43,9 +43,9 @@ export default function TentangKamal() {
         </div>
       </div>
 
-      <div className="mx-auto p-4 max-w-7xl">
-        <div className="text-gray-100 text-justify text-sm lg:text-lg bg-[#0053CF] rounded-3xl p-6 justify-center mb-4">
-          <h2 className="mb-3 text-lg font-bold">Judul Rekap Jejak</h2>
+      <div className="mx-auto px-4 pt-1 max-w-7xl">
+        <div className="text-gray-100 text-justify text-sm lg:text-lg bg-[#0053CF] rounded-3xl p-6 mb-4">
+          <h2 className="text-lg font-bold text-center">Judul Rekam Jejak</h2>
         </div>
       </div>
 
@@ -56,7 +56,7 @@ export default function TentangKamal() {
             {/* Description Box */}
             <div className="m-6">
               <p className="mb-4 text-lg font-bold">
-                Yang ini rekam jejak nonhimafi
+                Yang ini rekam jejak himafi
               </p>
               <p>Lorem ipsum smth smth mager copas templet</p>
             </div>
@@ -66,7 +66,7 @@ export default function TentangKamal() {
             {/* Description Box */}
             <div className="m-6">
               <p className="mb-4 text-lg font-bold">
-                Yang ini rekam jejak nonhimafi
+                Yang ini rekam jejak NON!!himafi
               </p>
               <p>Lorem ipsum smth smth mager copas templet</p>
             </div>

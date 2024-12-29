@@ -32,7 +32,6 @@ export default function Beranda() {
               width={400}
               height={400}
               className="w-full h-full object-top object-cover rounded-3xl"
-              className="w-full h-full object-top object-cover rounded-3xl"
             />
           </div>
 
@@ -52,34 +51,34 @@ export default function Beranda() {
 
             {/* Call to Action Box */}
             <div className="text-gray-100 text-justify text-sm lg:text-lg bg-[#4C81CF] rounded-3xl p-6">
-            <div className="text-gray-100 text-justify text-sm lg:text-lg bg-[#4C81CF] rounded-3xl p-6">
-              <p className="mb-3">
-                Saya percaya bahwa HIMAFI ITB yang lebih baik hanya bisa
-                terwujud jika dibangun bersama, satu aspirasi dari aspirasi.
-                Setiap pendapat, ide, dan masukanmu adalah batu bata penting
-                yang akan memperkuat fondasi organisasi ini. Saya berkomitmen
-                untuk mendengarkan dengan tulus dan menjadikan aspirasimu
-                sebagai bagian nyata dari langkah besar HIMAFI ITB ke depan.
-              </p>
-              <p>
-                Tidak ada aspirasi yang terlalu kecil atau terlalu besar.
-                Semuanya berarti, semuanya penting.
-              </p>
-            </div>
+              <div className="text-gray-100 text-justify text-sm lg:text-lg bg-[#4C81CF] rounded-3xl p-6">
+                <p className="mb-3">
+                  Saya percaya bahwa HIMAFI ITB yang lebih baik hanya bisa
+                  terwujud jika dibangun bersama, satu aspirasi dari aspirasi.
+                  Setiap pendapat, ide, dan masukanmu adalah batu bata penting
+                  yang akan memperkuat fondasi organisasi ini. Saya berkomitmen
+                  untuk mendengarkan dengan tulus dan menjadikan aspirasimu
+                  sebagai bagian nyata dari langkah besar HIMAFI ITB ke depan.
+                </p>
+                <p>
+                  Tidak ada aspirasi yang terlalu kecil atau terlalu besar.
+                  Semuanya berarti, semuanya penting.
+                </p>
+              </div>
 
-            {/* Button Box */}
-            <div className="flex items-center justify-center text-lg lg:text-xl">
-              <button
-                onClick={scrollToForm}
-                className="text-xl text-[#4C81CF] bg-white p-5 rounded-3xl font-semibold hover:bg-blue-300 transition-colors w-full"
-              >
-                Berikan Aspirasimu!
-              </button>
+              {/* Button Box */}
+              <div className="flex items-center justify-center text-lg lg:text-xl">
+                <button
+                  onClick={scrollToForm}
+                  className="text-xl text-[#4C81CF] bg-white p-5 rounded-3xl font-semibold hover:bg-blue-300 transition-colors w-full"
+                >
+                  Berikan Aspirasimu!
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>  
   );
 }
