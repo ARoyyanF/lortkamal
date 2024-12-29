@@ -98,7 +98,7 @@ export default function SurveyForm() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto py-12 ">
+    <div className="max-w-7xl mx-auto px-4">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
