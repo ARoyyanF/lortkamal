@@ -18,9 +18,9 @@ export default function TentangKamal() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
           {/* Left side box */}
-          <div className="bg-[#0053CF] rounded-3xl justify-center">
+          <div className="bg-[#0053CF] rounded-3xl flex justify-center">
             <Image
               src="/Profile pic.png"
               alt="Kamal Profile"
