@@ -39,12 +39,14 @@ export default function Beranda() {
           <div className="col-span-2 grid grid-cols-1 gap-3">
             {/* Description Box */}
             <div className="flex flex-col bg-[#0053CF] rounded-3xl p-2 items-center">
-              <h2 className="text-xl lg:text-4xl align-middle text-center font-bold p-4">
-                Bangun HIMAFI ITB Bersama <br className="newline" />
-                <span className="text-yellow-300 font-bold">
-                  Muhammad Kamal!
-                </span>
-              </h2>
+              <div className="flex items-center justify-center h-full">
+                <h2 className="text-xl lg:text-4xl text-center font-bold p-4">
+                  Bangun HIMAFI ITB Bersama <br className="newline" />
+                  <span className="text-yellow-300 font-bold">
+                    Muhammad Kamal!
+                  </span>
+                </h2>
+              </div>
             </div>
 
             {/* Call to Action Box */}
