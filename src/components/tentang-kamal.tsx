@@ -43,7 +43,7 @@ export default function TentangKamal() {
         </div>
       </div>
 
-      <div className='text-gray-100 text-justify text-sm lg:text-lg bg-[#0053CF] rounded-3xl p-6'>
+      <div className='text-gray-100 text-justify text-sm lg:text-lg bg-[#0053CF] rounded-3xl p-6 max-w-7xl mx-auto px-4'>
               <h2>
                 Judul Rekap Jejak
               </h2>
