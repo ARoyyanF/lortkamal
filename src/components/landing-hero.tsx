@@ -32,6 +32,7 @@ export default function Beranda() {
               width={400}
               height={400}
               className="w-full h-full object-top object-cover rounded-3xl"
+              className="w-full h-full object-top object-cover rounded-3xl"
             />
           </div>
 
@@ -50,6 +51,7 @@ export default function Beranda() {
             </div>
 
             {/* Call to Action Box */}
+            <div className="text-gray-100 text-justify text-sm lg:text-lg bg-[#4C81CF] rounded-3xl p-6">
             <div className="text-gray-100 text-justify text-sm lg:text-lg bg-[#4C81CF] rounded-3xl p-6">
               <p className="mb-3">
                 Saya percaya bahwa HIMAFI ITB yang lebih baik hanya bisa
