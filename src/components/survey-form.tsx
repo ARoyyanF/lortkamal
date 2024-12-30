@@ -99,6 +99,16 @@ export default function SurveyForm() {
 
   return (
     <div className="max-w-7xl mx-auto px-4">
+      <h1 className="text-3xl lg:text-6xl font-bold text-center mb-6 text-white">
+        Semua Aspirasi Berarti
+      </h1>
+      <p className="text-sm lg:text-lg text-center px-4 mb-6 text-white">
+        Setiap suara adalah langkah menuju perubahan. Saya percaya bahwa setiap
+        aspirasi, sekecil apapun, memiliki peran penting dalam membangun HIMAFI
+        ITB yang lebih baik. Mari sampaikan pendapatmu dan jadilah bagian dari
+        perubahan bersama.
+      </p>
+
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -114,7 +124,7 @@ export default function SurveyForm() {
             <TextInput name="nim" label="NIM" placeholder="NIM" form={form} />
           </div>
 
-          <p className="text-gray-400 italic">
+          <p className="text-gray-400 italic text-center">
             Berikut ini adalah pertanyaan terkait HIMAFI. Mohon diisi
             sejujur-jujurnya. Kerahasiaan jawaban terjamin.
           </p>
@@ -159,10 +169,6 @@ export default function SurveyForm() {
             membawa <span className="text-blue-400">HIMAFI</span> menuju arah
             yang lebih baik.
           </p>
-
-          <div className="text-center text-blue-400 font-bold">
-            HIDUP HIMAFI!
-          </div>
         </form>
       </Form>
     </div>

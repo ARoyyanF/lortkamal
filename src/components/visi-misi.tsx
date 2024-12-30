@@ -3,7 +3,7 @@
 export default function VisiMisi() {
   return (
     <div className="leading-tight py-8">
-      <section className="scroll-m-12" id="visi-misi">
+      <section className="scroll-mt-24" id="visi-misi">
         <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-3xl lg:text-6xl font-bold text-center mb-6 text-white">
             Apa yang Ingin Dibawakan Kamal?
@@ -32,7 +32,7 @@ export default function VisiMisi() {
         </div>
       </section>
 
-      <section className="scroll-m-12" id="draft">
+      <section className="scroll-mt-24" id="draft">
         <div className="mx-auto px-4 pt-1 max-w-7xl">
           <div className="text-gray-100 text-justify text-sm lg:text-lg bg-[#0053CF] rounded-3xl p-6 mb-4">
             <h2 className="text-lg font-bold text-center">

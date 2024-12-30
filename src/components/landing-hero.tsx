@@ -10,7 +10,7 @@ export default function Beranda() {
   };
 
   return (
-    <div className="leading-tight min-h-screen py-6">
+    <div className="leading-tight py-6">
       <div className="max-w-7xl mx-auto px-4">
         <h1 className="text-3xl lg:text-6xl font-bold text-center mb-6 text-white">
           Mengakar. Bertumbuh. Bergerak.

@@ -48,7 +48,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="fixed rounded-full flex top-5 left-[15%] right-[15%] mx-10 justify-center bg-[#22212A] px-4 py-4 z-50">
+    <nav className="fixed rounded-full flex top-5 left-[5%] right-[5%] 2xl:left-[15%] 2xl:right-[15%] mx-10 justify-center bg-[#22212A] px-4 py-4 z-50">
       <div className="max-w-7xl justify-center mx-auto flex items-center gap-3 lg:gap-16">
         <Image src="/logo.png" alt="Logo MK" width={32} height={32} />
         <div className="flex gap-3 lg:gap-16 items-center">
