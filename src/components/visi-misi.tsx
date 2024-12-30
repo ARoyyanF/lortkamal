@@ -9,7 +9,7 @@ export default function VisiMisi() {
             Apa yang Ingin Dibawakan Kamal?
           </h1>
           <p className="text-sm lg:text-lg text-center px-4 mb-6 text-white">
-            skibidi gyatt rizz only in ohio duke dennis did you pray today livvy
+            gyatt rizz only in ohio duke dennis did you pray today livvy
             dunne rizzing up baby gronk sussy imposter pibby glitch in real life
             sigma alpha omega male grindset andrew tate goon cave freddy fazbear
             colleen ballinger smurf cat vs strawberry elephant blud dawg shmlawg
