@@ -3,6 +3,7 @@ import LandingHero from "@/components/landing-hero";
 import TentangKamal from "@/components/tentang-kamal";
 import VisiMisi from "@/components/visi-misi";
 import SurveyForm from "@/components/survey-form";
+import Kontak from "@/components/kontak";
 
 export default function Page() {
   return (
@@ -18,6 +19,9 @@ export default function Page() {
         <VisiMisi />
         <section className="scroll-m-20" id="survey-form">
           <SurveyForm />
+        </section>
+        <section className="scroll-m-20" id="konta">
+          <Kontak />
         </section>
       </main>
     </div>

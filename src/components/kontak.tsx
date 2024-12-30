@@ -1,46 +1,48 @@
 "use client";
 
-export default function VisiMisi() {
+export default function Kontak() {
     return (
         <div className="leading-tight py-8">
-            <section className="scroll-mt-24" id="visi-misi">
-                <div className="max-w-7xl mx-auto px-4">
-                    <h1 className="text-3xl lg:text-6xl font-bold text-center mb-6 text-white">
-                        Apa yang Ingin Dibawakan Kamal?
-                    </h1>
-                    <p className="text-sm lg:text-lg text-center px-4 mb-6 text-white">
-                        gyatt rizz only in ohio duke dennis did you pray today livvy
-                        dunne rizzing up baby gronk sussy imposter pibby glitch in real life
-                        sigma alpha omega male grindset andrew tate goon cave freddy fazbear
-                        colleen ballinger smurf cat vs strawberry elephant blud dawg shmlawg
-                        ishowspeed a whole bunch of turbulence flabbergasted after that...
-                        cantt even mew in oklahoma free robux gltich working 2025 we can go
-                        gyatt for gyatt is that a jojo reference ? oh my god wat da hail!!!!
-                    </p>
-                </div>
+            <section className="scroll-mt-24" id="kontak">
 
                 <div className="mx-auto px-4 pt-1 max-w-7xl">
-                    <div className="text-gray-100 text-justify text-sm lg:text-lg bg-[#0053CF] rounded-3xl p-6 mb-4">
-                        <h2 className="text-lg font-bold text-center">Visi</h2>
+                    <div className="text-gray-100 text-left text-sm lg:text-lg bg-[#0053CF] rounded  p-2">
+                        <h2 className="text-lg font-bold text-left m-3" >Ingin Dekat dengan Kamal dan Visi Misinya? </h2>
+                        <p className="text-lg font-light text-left m-3">Anda dapat menhubungi Kontak berikut</p>
                     </div>
                 </div>
 
-                <div className="mx-auto px-4 pt-1 max-w-7xl">
-                    <div className="text-gray-100 text-justify text-sm lg:text-lg bg-[#0053CF] rounded-3xl p-6 mb-4">
-                        <h2 className="text-lg font-bold text-center">Misi</h2>
+                <div className="max-w-7xl mx-auto px-4 mb-4">
+                    <div className="flex flex-col md:flex-row ">
+                        {/* Left side box */}
+                        <div className="flex flex-grow text-gray-100 text-justify text-sm lg:text-lg bg-[#0053CF] rounded ">
+                            {/* Description Box */}
+                            <div className="m-6">
+                                <p className="mb-4 text-lg font-bold">
+                                    Muhammad Kamal
+                                </p>
+                                <p>Nomor kontak : 0821234567</p>
+                                <p>ID Line : 0821234567</p>
+                                <p>Instagram : 0821234567</p>
+                            </div>
+                            {/* Right side box*/}
+                        </div>
+                        <div className="flex flex-grow text-gray-100 text-justify text-sm lg:text-lg bg-[#0053CF] rounded">
+                            {/* Description Box */}
+                            <div className="m-6">
+                                <p className="mb-4 text-lg font-bold">
+                                    Tim Sukses
+                                </p>
+                                <p>Nomor kontak : 0821234567</p>
+                                <p>ID Line : 0821234567</p>
+                                <p>Instagram : 0821234567</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section className="scroll-mt-24" id="draft">
-                <div className="mx-auto px-4 pt-1 max-w-7xl">
-                    <div className="text-gray-100 text-justify text-sm lg:text-lg bg-[#0053CF] rounded-3xl p-6 mb-4">
-                        <h2 className="text-lg font-bold text-center">
-                            Draft Muhammad Kamal
-                        </h2>
-                    </div>
-                </div>
-            </section>
+
         </div>
     );
 }
