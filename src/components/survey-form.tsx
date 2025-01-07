@@ -99,10 +99,10 @@ export default function SurveyForm() {
 
   return (
     <div className="max-w-7xl mx-auto px-4">
-      <h1 className="text-3xl lg:text-6xl font-bold text-center mb-6 text-white">
+      <h1 className="intersect:animate-jump animate-duration-[2000ms] text-3xl lg:text-6xl font-bold text-center mb-6 text-white">
         Semua Aspirasi Berarti
       </h1>
-      <p className="text-sm lg:text-lg text-center px-4 mb-6 text-white">
+      <p className="intersect:animate-fade-up text-sm lg:text-lg text-center px-4 mb-6 text-white">
         Setiap suara adalah langkah menuju perubahan. Saya percaya bahwa setiap
         aspirasi, sekecil apapun, memiliki peran penting dalam membangun HIMAFI
         ITB yang lebih baik. Mari sampaikan pendapatmu dan jadilah bagian dari
@@ -114,7 +114,7 @@ export default function SurveyForm() {
           onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-6 text-white font-semibold"
         >
-          <div className="space-y-4">
+          <div className="space-y-4 intersect-once intersect:animate-fade-up">
             <TextInput
               name="nama"
               label="Nama"
@@ -124,7 +124,7 @@ export default function SurveyForm() {
             <TextInput name="nim" label="NIM" placeholder="NIM" form={form} />
           </div>
 
-          <p className="text-gray-400 italic text-center">
+          <p className="intersect:animate-jump text-gray-400 italic text-center">
             Berikut ini adalah pertanyaan terkait HIMAFI. Mohon diisi
             sejujur-jujurnya. Kerahasiaan jawaban terjamin.
           </p>
@@ -158,13 +158,13 @@ export default function SurveyForm() {
           </FormCard>
           <Button
             type="submit"
-            className="w-full bg-blue-800 hover:bg-blue-600"
+            className="intersect:animate-jump w-full bg-blue-800 hover:bg-blue-600"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Submitting..." : "Submit"}
           </Button>
 
-          <p className="text-center text-gray-400 italic">
+          <p className="intersect:animate-fade-up text-center text-gray-400 italic">
             Terima kasih telah mengisi analikan singkat ini. Semoga kita dapat
             membawa <span className="text-blue-400">HIMAFI</span> menuju arah
             yang lebih baik.

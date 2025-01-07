@@ -7,20 +7,24 @@ import Kontak from "@/components/kontak";
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-[#181720] text-white">
+    <div className="min-h-screen bg-[#181720] text-white bg-gradient-to-bl from-[#182c6091] to-[#001524]">
+      <script
+        defer
+        src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"
+      ></script>
       <NavBar />
       <main className="pt-24">
-        <section className="scroll-m-20" id="landing-hero">
+        <section className="scroll-mt-32" id="landing-hero">
           <LandingHero />
         </section>
-        <section className="scroll-m-20" id="tentang-kamal">
+        <section className="scroll-mt-32" id="tentang-kamal">
           <TentangKamal />
         </section>
         <VisiMisi />
-        <section className="scroll-m-20" id="survey-form">
+        <section className="scroll-mt-32" id="survey-form">
           <SurveyForm />
         </section>
-        <section className="scroll-m-20" id="konta">
+        <section className="scroll-mt-32" id="kontak">
           <Kontak />
         </section>
       </main>

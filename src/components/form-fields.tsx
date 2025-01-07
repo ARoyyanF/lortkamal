@@ -126,12 +126,12 @@ export const RatingScale = ({ name, label, min, max, form }) => (
         </FormLabel>
         <div className="flex justify-between items-center mt-4 md:flex-row flex-col">
           <span className="text-sm text-white">Sangat tidak setuju</span>
-          <div className="flex gap-2 md:flex-row flex-col">
+          <div className="flex flex-grow px-12 py-6 gap-1 md:flex-row flex-col">
             {[...Array(max - min + 1)].map((_, i) => (
               <Button
                 key={i + min}
                 type="button"
-                className={`w-8 h-8 p-0 rounded-full border-4 border-blue-700 bg-white text-black font-bold hover:bg-blue-500 ${
+                className={`flex-1 min-w-32 md:min-w-0 rounded-xl border-4 border-blue-700 bg-white text-black font-bold hover:bg-blue-500 ${
                   field.value === String(i + min)
                     ? "bg-blue-700 text-white"
                     : ""
@@ -150,7 +150,7 @@ export const RatingScale = ({ name, label, min, max, form }) => (
 );
 
 export const FormCard = ({ children }) => (
-  <Card className="bg-gradient-to-tr from-[#111142] to-[#071532] border-none ">
+  <Card className="bg-gradient-to-tr from-[#21217c] to-[#214a9b] border-none ">
     <CardContent className="p-6">{children}</CardContent>
   </Card>
 );

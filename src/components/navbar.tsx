@@ -22,7 +22,7 @@ export default function NavBar() {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
+          return rect.top <= 200 && rect.bottom >= 200;
         }
         return false;
       });
@@ -48,18 +48,23 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="fixed rounded-full flex top-5 left-[5%] right-[5%] 2xl:left-[15%] 2xl:right-[15%] mx-10 justify-center bg-[#22212A] px-4 py-4 z-50">
-      <div className="max-w-7xl justify-center mx-auto flex items-center gap-3 lg:gap-16">
-        <Image src="/logo.png" alt="Logo MK" width={32} height={32} />
-        <div className="flex gap-3 lg:gap-16 items-center">
+    <nav className="rounded-b-[40px]  animate-delay-1000 animate-flip-down fixed md:rounded-full flex md:top-5 left-0 right-0 xl:left-[5%] xl:right-[5%] justify-center from-blue-950 to-gray-800 bg-gradient-to-r px-4 xl:px-12 h-20 md:h-16 z-50 text-center">
+      <div className="max-w-7xl justify-center mx-auto flex flex-grow items-center gap-3 lg:gap-14">
+        <div className="animate-jump animate-duration-[4000ms] flex-initial">
+          <div className="max-h-8 justify-center items-center flex max-w-8 md:max-h-none md:max-w-none">
+            <Image src="/logo.png" alt="Logo MK" width={128} height={128} />
+          </div>
+        </div>
+
+        <div className="flex items-center flex-grow gap-2">
           {navigation.map((item) => (
             <a
               key={item.name}
               href={item.href}
               onClick={(e) => handleClick(e, item.href)}
-              className={`text-[7pt] lg:text-xl font-medium transition-colors hover:text-[#7fabec] ${
+              className={`animate-fade-right animate-duration-[3000ms] flex-grow text-[9pt] md:text-xl font-medium transition-colors hover:text-[#7fabec] ${
                 activeSection === item.href.slice(1)
-                  ? "text-white bg-[#0053CF] px-2 py-2 rounded-full"
+                  ? "text-white bg-[#0053CF] px-2 py-2 md:px-6 rounded-xl md:rounded-full"
                   : "text-gray-300"
               }`}
             >
