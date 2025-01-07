@@ -58,5 +58,9 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animated"), require("tailwindcss-motion")],
+  plugins: [
+    require("tailwindcss-animated"),
+    require("tailwindcss-motion"),
+    require("tailwindcss-intersect"),
+  ],
 } satisfies Config;

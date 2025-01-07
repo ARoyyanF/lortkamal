@@ -126,6 +126,9 @@ importers:
       tailwindcss-animated:
         specifier: ^1.1.2
         version: 1.1.2(tailwindcss@3.4.17)
+      tailwindcss-intersect:
+        specifier: ^2.0.1
+        version: 2.0.1(tailwindcss@3.4.17)
       tailwindcss-motion:
         specifier: ^1.0.0
         version: 1.0.0(tailwindcss@3.4.17)
@@ -2627,6 +2630,11 @@ packages:
     resolution: {integrity: sha512-SI4owS5ojserhgEYIZA/uFVdNjU2GMB2P3sjtjmFA52VxoUi+Hht6oR5+RdT+CxrX9cNNYEa+vbTWHvN9zbj3w==}
     peerDependencies:
       tailwindcss: '>=3.1.0'
+
+  tailwindcss-intersect@2.0.1:
+    resolution: {integrity: sha512-0NcIGTKvJwNvMZBKMiykddJdKmJUb3eeVCvy366UP7tS/Sxdxc5E3pR9rwPMLxmhFIYiMdbCKn2G7GfZ8zB/TQ==}
+    peerDependencies:
+      tailwindcss: '>=3.2.0'
 
   tailwindcss-motion@1.0.0:
     resolution: {integrity: sha512-Bc8XJxiSGjup0NHsph4OBGXXFfmbInFUhvVVluKPScQD1R2kDQTZIODqumsI/lONryeTpDdKzwuuw1a99Z38bQ==}
@@ -5228,6 +5236,10 @@ snapshots:
   tailwind-merge@2.6.0: {}
 
   tailwindcss-animated@1.1.2(tailwindcss@3.4.17):
+    dependencies:
+      tailwindcss: 3.4.17
+
+  tailwindcss-intersect@2.0.1(tailwindcss@3.4.17):
     dependencies:
       tailwindcss: 3.4.17
 
