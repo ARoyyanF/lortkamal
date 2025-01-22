@@ -22,7 +22,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     console.log("Received form data:", body);
 
-    const { nama, nim, sigmaQuestion, shadowboxQuestion, rating } = body;
+    const { nama, nim, sigmaQuestion, shadowboxQuestion, rating, yapping } = body;
 
     const values = [
       [
@@ -32,6 +32,7 @@ export async function POST(req: Request) {
         sigmaQuestion.join(", "),
         shadowboxQuestion,
         rating,
+        yapping,
       ],
     ];
 

@@ -163,7 +163,7 @@ export default function SurveyForm() {
           <div className="space-y-4 intersect-once intersect:animate-fade-right">
             <FormCard>
               <TextBox
-                name="abcdef"
+                name="yapping"
                 label="4. Yapfest"
                 placeholder="longtext mucho texto"
                 form={form}
