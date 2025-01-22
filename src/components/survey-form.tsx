@@ -11,6 +11,7 @@ import {
   CheckboxGroup,
   RadioButtonGroup,
   RatingScale,
+  TextBox,
   FormCard,
 } from "./form-fields";
 
@@ -159,6 +160,17 @@ export default function SurveyForm() {
               />
             </FormCard>
           </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <TextBox
+                name="abcdef"
+                label="4. Yapfest"
+                placeholder="longtext mucho texto"
+                form={form}
+              />
+            </FormCard>
+          </div>
+
           <Button
             type="submit"
             className="intersect-once intersect:animate-jump w-full bg-blue-800 hover:bg-blue-600"

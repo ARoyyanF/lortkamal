@@ -149,6 +149,27 @@ export const RatingScale = ({ name, label, min, max, form }) => (
   />
 );
 
+export const TextBox = ({ name, label, placeholder, form }) => (
+  <FormField
+    control={form.control}
+    name={name}
+    render={({ field }) => (
+      <FormItem>
+        <FormLabel className="text-lg mb-4 text-white font-semibold">
+          {label}
+        </FormLabel>
+        <FormControl>
+          <Input
+            placeholder={placeholder}
+            {...field}
+            className="text-white bg-transparent border border-input ring-offset-background file:border-0 file:bg-transparent focus-visible:outline-none ring-0"
+          />
+        </FormControl>
+      </FormItem>
+    )}
+  />
+);
+
 export const FormCard = ({ children }) => (
   <Card className="bg-gradient-to-tr from-[#21217c] to-[#214a9b] border-none ">
     <CardContent className="p-6">{children}</CardContent>
