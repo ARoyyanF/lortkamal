@@ -98,13 +98,23 @@ export default function SurveyForm() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto py-12 ">
+    <div className="max-w-7xl mx-auto px-4">
+      <h1 className="intersect:animate-jump animate-duration-[2000ms] text-3xl lg:text-6xl font-bold text-center mb-6 text-white">
+        Semua Aspirasi Berarti
+      </h1>
+      <p className="intersect:animate-fade-up text-sm lg:text-lg text-center px-4 mb-6 text-white">
+        Setiap suara adalah langkah menuju perubahan. Saya percaya bahwa setiap
+        aspirasi, sekecil apapun, memiliki peran penting dalam membangun HIMAFI
+        ITB yang lebih baik. Mari sampaikan pendapatmu dan jadilah bagian dari
+        perubahan bersama.
+      </p>
+
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-6 text-white font-semibold"
         >
-          <div className="space-y-4">
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
             <TextInput
               name="nama"
               label="Nama"
@@ -114,55 +124,54 @@ export default function SurveyForm() {
             <TextInput name="nim" label="NIM" placeholder="NIM" form={form} />
           </div>
 
-          <p className="text-gray-400 italic">
+          <p className="intersect-once intersect:animate-jump text-gray-400 italic text-center">
             Berikut ini adalah pertanyaan terkait HIMAFI. Mohon diisi
             sejujur-jujurnya. Kerahasiaan jawaban terjamin.
           </p>
-
-          <FormCard>
-            <CheckboxGroup
-              name="sigmaQuestion"
-              label="1. Apa yang dicari oleh orang sigma?"
-              options={sigmaOptions}
-              form={form}
-            />
-          </FormCard>
-
-          <FormCard>
-            <RadioButtonGroup
-              name="shadowboxQuestion"
-              label="2. Gan slek shadowblox kan kenapa jadi itu dota apa ada d?"
-              options={shadowboxOptions}
-              form={form}
-            />
-          </FormCard>
-
-          <FormCard>
-            <RatingScale
-              name="rating"
-              label="3. Vote kamal yay or nay"
-              min={1}
-              max={10}
-              form={form}
-            />
-          </FormCard>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <CheckboxGroup
+                name="sigmaQuestion"
+                label="1. Apa yang dicari oleh orang sigma?"
+                options={sigmaOptions}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <RadioButtonGroup
+                name="shadowboxQuestion"
+                label="2. Gan slek shadowblox kan kenapa jadi itu dota apa ada d?"
+                options={shadowboxOptions}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <RatingScale
+                name="rating"
+                label="3. Vote kamal yay or nay"
+                min={1}
+                max={10}
+                form={form}
+              />
+            </FormCard>
+          </div>
           <Button
             type="submit"
-            className="w-full bg-blue-800 hover:bg-blue-600"
+            className="intersect-once intersect:animate-jump w-full bg-blue-800 hover:bg-blue-600"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Submitting..." : "Submit"}
           </Button>
 
-          <p className="text-center text-gray-400 italic">
+          <p className="intersect:animate-fade-up text-center text-gray-400 italic">
             Terima kasih telah mengisi analikan singkat ini. Semoga kita dapat
             membawa <span className="text-blue-400">HIMAFI</span> menuju arah
             yang lebih baik.
           </p>
-
-          <div className="text-center text-blue-400 font-bold">
-            HIDUP HIMAFI!
-          </div>
         </form>
       </Form>
     </div>
