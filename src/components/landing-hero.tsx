@@ -10,7 +10,7 @@ export default function Beranda() {
   };
 
   return (
-    <div className="leading-tight py-6">
+    <div className="leading-tight py-6 min-h-[90vh] content-center">
       <div className="max-w-7xl mx-auto px-4">
         <h1 className="animate-jump-in animate-duration-[3000ms] text-3xl lg:text-6xl font-bold text-center mb-6 text-white">
           Mengakar. Bertumbuh. Bergerak.
@@ -23,9 +23,9 @@ export default function Beranda() {
       </div>
 
       <div className="flex max-w-7xl mx-auto px-4">
-        <div className="animate-delay-[3000ms] grid grid-cols-1 lg:grid-cols-3 gap-3 flex-grow">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 flex-grow">
           {/* Left side large box */}
-          <div className="intersect-once intersect:animate-fade-right col-span-1 bg-gradient-to-tr from-[#21217c] to-[#214a9b] rounded-3xl flex-1">
+          <div className="animate-fade-right animate-delay-[3000ms] col-span-1 bg-gradient-to-tr from-[#21217c] to-[#214a9b] rounded-3xl flex-1">
             <Image
               src="/Profile pic.png"
               alt="Kamal Profile"
@@ -36,9 +36,9 @@ export default function Beranda() {
           </div>
 
           {/* Right side three boxes */}
-          <div className="animate-fade-up animate-duration-[1000ms] col-span-2 grid grid-cols-1 gap-3">
+          <div className="animate-fade-up animate-duration-[1000ms] animate-delay-[3000ms] col-span-2 grid grid-cols-1 gap-3">
             {/* Description Box */}
-            <div className="intersect-once intersect:animate-fade-left animate-delay-300 flex flex-col bg-gradient-to-tr from-[#2e37af] to-[#3c3abb] rounded-3xl p-2 items-center">
+            <div className="animate-fade-left animate-delay-[3000ms] flex flex-col bg-gradient-to-tr from-[#2e37af] to-[#9203ffc6] rounded-3xl p-2 items-center">
               <div className=" flex items-center justify-center h-full">
                 <h2 className="text-xl lg:text-4xl text-center font-bold p-4">
                   Bangun HIMAFI ITB Bersama <br className="newline" />
@@ -50,7 +50,7 @@ export default function Beranda() {
             </div>
 
             {/* Call to Action Box */}
-            <div className="intersect-once intersect:animate-fade-right animate-duration-[3000ms] animate-delay-700 text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#387dcc] to-[#1364dd] rounded-3xl p-6">
+            <div className="animate-fade-right animate-duration-[3000ms] animate-delay-[3000ms] text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#387dcc] to-[#115ccd] rounded-3xl p-6">
               <p className="mb-3">
                 Saya percaya bahwa HIMAFI ITB yang lebih baik hanya bisa
                 terwujud jika dibangun bersama, satu aspirasi dari aspirasi.

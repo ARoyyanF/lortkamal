@@ -5,10 +5,10 @@ export default function VisiMisi() {
     <div className="leading-tight py-8">
       <section className="scroll-mt-32" id="visi-misi">
         <div className="max-w-7xl mx-auto px-4">
-          <h1 className="intersect:animate-jump text-3xl lg:text-6xl font-bold text-center mb-6 text-white">
+          <h1 className="animate-once intersect:animate-jump text-3xl lg:text-6xl font-bold text-center mb-6 text-white">
             Apa yang Ingin Dibawakan Kamal?
           </h1>
-          <p className="intersect:animate-flip-down text-sm lg:text-lg text-center px-4 mb-6 text-white">
+          <p className="animate-once intersect:animate-flip-down text-sm lg:text-lg text-center px-4 mb-6 text-white">
             gyatt rizz only in ohio duke dennis did you pray today livvy dunne
             rizzing up baby gronk sussy imposter pibby glitch in real life sigma
             alpha omega male grindset andrew tate goon cave freddy fazbear
@@ -21,7 +21,7 @@ export default function VisiMisi() {
 
         <div className="intersect:animate-fade-up mx-auto px-4 pt-1 max-w-7xl">
           <div className="text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#21217c] to-[#214a9b] rounded-3xl p-6 mb-4">
-            <h2 className="intersect:animate-jump animate-delay-500  text-4xl font-bold text-center pb-4">
+            <h2 className="intersect-once intersect:animate-jump animate-delay-500  text-4xl font-bold text-center pb-4">
               Visi
             </h2>
             <p>
@@ -40,7 +40,7 @@ export default function VisiMisi() {
 
         <div className="intersect:animate-fade-up  mx-auto px-4 pt-1 max-w-7xl">
           <div className="text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#21217c] to-[#214a9b] rounded-3xl p-6 mb-4">
-            <h2 className="intersect:animate-jump animate-delay-500 text-4xl font-bold text-center pb-4">
+            <h2 className="intersect-once intersect:animate-jump animate-delay-500 text-4xl font-bold text-center pb-4">
               Misi
             </h2>
             <p>
@@ -70,7 +70,7 @@ export default function VisiMisi() {
       <section className="scroll-mt-32" id="draft">
         <div className="intersect:animate-fade-up mx-auto px-4 pt-1 max-w-7xl">
           <div className="text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#21217c] to-[#214a9b] rounded-3xl p-6 mb-4">
-            <h2 className="intersect:animate-jump animate-delay-500 text-4xl font-bold text-center pb-4">
+            <h2 className="intersect-once intersect:animate-jump animate-delay-500 text-4xl font-bold text-center pb-4">
               Draft Muhammad Kamal
             </h2>
             <p>
