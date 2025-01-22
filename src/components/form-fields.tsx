@@ -183,7 +183,7 @@ export const SliderScale = ({ name, label, min, max, form }) => (
         </FormLabel>
         <FormControl>
           <Slider
-            defaultValue={[50]}
+            defaultValue={[field.value]}
             onValueChange={(value) => field.onChange(value[0])}
             min={min}
             max={max}

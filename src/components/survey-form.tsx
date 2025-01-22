@@ -25,7 +25,7 @@ const formSchema = z.object({
   shadowboxQuestion: z.string().min(1, "Please select an option"),
   rating: z.string().min(1, "Please select a rating"),
   yapping: z.string().min(1, "yapping cuk"),
-  scale: z.string().min(1, "scale goes brr"),
+  slider: z.number().min(0).max(100),
 });
 
 const sigmaOptions = [
@@ -56,6 +56,8 @@ const defaultValues = {
   sigmaQuestion: [],
   shadowboxQuestion: "",
   rating: "",
+  yapping: "",
+  slider: 30,
 };
 
 export default function SurveyForm() {
@@ -67,6 +69,7 @@ export default function SurveyForm() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    console.log("Form submitted:", values);
     setIsSubmitting(true);
     try {
       const response = await fetch("/api/submit-survey", {
