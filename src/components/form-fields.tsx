@@ -9,6 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
 
 export const TextInput = ({ name, label, placeholder, form }) => (
   <FormField
@@ -159,7 +160,7 @@ export const TextBox = ({ name, label, placeholder, form }) => (
           {label}
         </FormLabel>
         <FormControl>
-          <Input
+          <Textarea
             placeholder={placeholder}
             {...field}
             className="text-white bg-transparent border border-input ring-offset-background file:border-0 file:bg-transparent focus-visible:outline-none ring-0"
