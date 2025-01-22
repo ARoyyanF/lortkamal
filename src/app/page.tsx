@@ -8,10 +8,10 @@ import Kontak from "@/components/kontak";
 export default function Page() {
   return (
     <div className="min-h-screen bg-[#181720] text-white bg-gradient-to-bl from-[#182c6091] to-[#001524]">
-      <script
+      {/* <script
         defer
         src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"
-      ></script>
+      ></script> */}
       <NavBar />
       <main className="pt-24">
         <section className="scroll-mt-32" id="landing-hero">

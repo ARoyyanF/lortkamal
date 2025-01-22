@@ -114,7 +114,7 @@ export default function SurveyForm() {
           onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-6 text-white font-semibold"
         >
-          <div className="space-y-4 intersect-once intersect:animate-fade-up">
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
             <TextInput
               name="nama"
               label="Nama"
@@ -124,41 +124,44 @@ export default function SurveyForm() {
             <TextInput name="nim" label="NIM" placeholder="NIM" form={form} />
           </div>
 
-          <p className="intersect:animate-jump text-gray-400 italic text-center">
+          <p className="intersect-once intersect:animate-jump text-gray-400 italic text-center">
             Berikut ini adalah pertanyaan terkait HIMAFI. Mohon diisi
             sejujur-jujurnya. Kerahasiaan jawaban terjamin.
           </p>
-
-          <FormCard>
-            <CheckboxGroup
-              name="sigmaQuestion"
-              label="1. Apa yang dicari oleh orang sigma?"
-              options={sigmaOptions}
-              form={form}
-            />
-          </FormCard>
-
-          <FormCard>
-            <RadioButtonGroup
-              name="shadowboxQuestion"
-              label="2. Gan slek shadowblox kan kenapa jadi itu dota apa ada d?"
-              options={shadowboxOptions}
-              form={form}
-            />
-          </FormCard>
-
-          <FormCard>
-            <RatingScale
-              name="rating"
-              label="3. Vote kamal yay or nay"
-              min={1}
-              max={10}
-              form={form}
-            />
-          </FormCard>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <CheckboxGroup
+                name="sigmaQuestion"
+                label="1. Apa yang dicari oleh orang sigma?"
+                options={sigmaOptions}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <RadioButtonGroup
+                name="shadowboxQuestion"
+                label="2. Gan slek shadowblox kan kenapa jadi itu dota apa ada d?"
+                options={shadowboxOptions}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <RatingScale
+                name="rating"
+                label="3. Vote kamal yay or nay"
+                min={1}
+                max={10}
+                form={form}
+              />
+            </FormCard>
+          </div>
           <Button
             type="submit"
-            className="intersect:animate-jump w-full bg-blue-800 hover:bg-blue-600"
+            className="intersect-once intersect:animate-jump w-full bg-blue-800 hover:bg-blue-600"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Submitting..." : "Submit"}
