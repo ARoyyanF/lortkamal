@@ -22,7 +22,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     console.log("Received form data:", body);
 
-    const { nama, nim, sigmaQuestion, shadowboxQuestion, rating, yapping } = body;
+    const { nama, nim, sigmaQuestion, shadowboxQuestion, rating, yapping, slider} = body;
 
     const values = [
       [
@@ -33,6 +33,7 @@ export async function POST(req: Request) {
         shadowboxQuestion,
         rating,
         yapping,
+        slider
       ],
     ];
 

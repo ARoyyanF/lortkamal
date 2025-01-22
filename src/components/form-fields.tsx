@@ -171,6 +171,26 @@ export const TextBox = ({ name, label, placeholder, form }) => (
   />
 );
 
+export const Slider = ({ name, label, min, max, form }) => (
+  <FormField
+    control={form.control}
+    name={name}
+    render={({ field }) => (
+      <FormItem>
+        <FormLabel className="text-lg mb-4 text-white font-semibold">
+          {label}
+        </FormLabel>
+        <Slider
+          value={[field.value || 0]}
+          onValueChange={(value) => field.onChange(value[0])}
+          min={min}
+          max={max}
+        />
+      </FormItem>
+    )}
+  />
+);
+
 export const FormCard = ({ children }) => (
   <Card className="bg-gradient-to-tr from-[#21217c] to-[#214a9b] border-none ">
     <CardContent className="p-6">{children}</CardContent>

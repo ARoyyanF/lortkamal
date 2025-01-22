@@ -13,6 +13,7 @@ import {
   RatingScale,
   TextBox,
   FormCard,
+  Slider,
 } from "./form-fields";
 
 const formSchema = z.object({
@@ -167,6 +168,17 @@ export default function SurveyForm() {
                 name="yapping"
                 label="4. Yapfest"
                 placeholder="longtext mucho texto"
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <Slider
+                name="slider"
+                label="5. Slider"
+                min={0}
+                max={100}
                 form={form}
               />
             </FormCard>
