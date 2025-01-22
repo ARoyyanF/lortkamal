@@ -3,8 +3,7 @@ import Image from "next/image";
 
 export default function Kontak() {
   return (
-    <div className="leading-tight min-h-[50vh] flex flex-col pb-8 pt-16 mt-32 bg-slate-400/10">
-      <div className="flex-grow" />
+    <div className="leading-tight min-h-[80vh] flex flex-col pb-8 pt-16 mt-32 bg-slate-400/10">
       <div className="max-w-7xl mx-auto px-4">
         <h1 className="intersect:animate-fade-down animate-duration-[3000ms] text-3xl lg:text-3xl font-bold text-center mb-6 text-white">
           Hubungi kami lebih lanjut
