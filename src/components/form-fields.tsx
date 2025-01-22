@@ -174,18 +174,21 @@ export const TextBox = ({ name, label, placeholder, form }) => (
 export const Slider = ({ name, label, min, max, form }) => (
   <FormField
     control={form.control}
-    name={name}
+    name="slider"
     render={({ field }) => (
       <FormItem>
-        <FormLabel className="text-lg mb-4 text-white font-semibold">
-          {label}
-        </FormLabel>
-        <Slider
-          value={[field.value || 0]}
-          onValueChange={(value) => field.onChange(value[0])}
-          min={min}
-          max={max}
-        />
+        <FormLabel>Slider</FormLabel>
+        <FormControl>
+          <Slider
+            min={0}
+            max={100}
+            step={1}
+            defaultValue={[field.value]}
+            onValueChange={(vals) => {
+              field.onChange(vals[0]);
+            }}
+          />
+        </FormControl>
       </FormItem>
     )}
   />
