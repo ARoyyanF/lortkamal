@@ -23,6 +23,7 @@ const formSchema = z.object({
     .min(1, "Please select at least one option"),
   shadowboxQuestion: z.string().min(1, "Please select an option"),
   rating: z.string().min(1, "Please select a rating"),
+  yapping: z.string().min(1, "yapping cuk"),
 });
 
 const sigmaOptions = [
