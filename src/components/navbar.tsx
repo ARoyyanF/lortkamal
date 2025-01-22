@@ -79,7 +79,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="rounded-full  animate-delay-1000 animate-flip-down fixed md:rounded-full flex md:top-5 left-0 right-0 xl:left-[5%] xl:right-[5%] justify-center from-blue-950 to-gray-800 bg-gradient-to-r px-4 xl:px-12 h-16 z-50 text-center">
+    <nav className="rounded-full shadow-2xl animate-delay-1000 animate-flip-down fixed md:rounded-full flex md:top-5 left-0 right-0 xl:left-[5%] xl:right-[5%] justify-center from-blue-950 to-gray-800 bg-gradient-to-r px-4 xl:px-12 h-16 z-50 text-center">
       <div className="max-w-7xl justify-center mx-auto flex flex-grow items-center gap-3 lg:gap-14">
         <div className="animate-jump animate-duration-[4000ms] flex-initial">
           <div className="max-h-8 justify-center items-center flex max-w-8 md:max-h-none md:max-w-none">

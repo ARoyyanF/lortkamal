@@ -38,7 +38,7 @@ export default function Beranda() {
           {/* Right side three boxes */}
           <div className="animate-fade-up animate-duration-[1000ms] animate-delay-[3000ms] col-span-2 grid grid-cols-1 gap-3">
             {/* Description Box */}
-            <div className="animate-fade-left animate-delay-[3000ms] flex flex-col bg-gradient-to-tr from-[#2e37af] to-[#3c3abb] rounded-3xl p-2 items-center">
+            <div className="animate-fade-left animate-delay-[3000ms] flex flex-col bg-gradient-to-tr from-[#2e37af] to-[#9203ffc6] rounded-3xl p-2 items-center">
               <div className=" flex items-center justify-center h-full">
                 <h2 className="text-xl lg:text-4xl text-center font-bold p-4">
                   Bangun HIMAFI ITB Bersama <br className="newline" />
@@ -50,7 +50,7 @@ export default function Beranda() {
             </div>
 
             {/* Call to Action Box */}
-            <div className="animate-fade-right animate-duration-[3000ms] animate-delay-[3000ms] text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#387dcc] to-[#1364dd] rounded-3xl p-6">
+            <div className="animate-fade-right animate-duration-[3000ms] animate-delay-[3000ms] text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#387dcc] to-[#115ccd] rounded-3xl p-6">
               <p className="mb-3">
                 Saya percaya bahwa HIMAFI ITB yang lebih baik hanya bisa
                 terwujud jika dibangun bersama, satu aspirasi dari aspirasi.

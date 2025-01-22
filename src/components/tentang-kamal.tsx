@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function TentangKamal() {
   return (
     <div className="leading-tight py-8">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 ">
         <h1 className="intersect:animate-jump-in animate-delay-300 text-3xl lg:text-6xl font-bold text-center mb-6 text-white">
           Tak Kenal Maka Tak Melekat
         </h1>
@@ -20,7 +20,7 @@ export default function TentangKamal() {
       <div className="max-w-7xl mx-auto px-4 mb-3">
         <div className="flex flex-col md:flex-row gap-4">
           {/* Left side box */}
-          <div className="intersect:animate-fade-right bg-gradient-to-tl from-[#5f2eafd0] to-[#3c3abb] rounded-3xl justify-center flex-none items-center flex">
+          <div className=" intersect:animate-fade-right bg-gradient-to-tl from-[#5f2eafd0] to-[#3c3abb] rounded-3xl justify-center flex-none items-center flex">
             <Image
               src="/Profile pic.png"
               alt="Kamal Profile"
@@ -31,10 +31,10 @@ export default function TentangKamal() {
           </div>
 
           {/* Right side box*/}
-          <div className="intersect:animate-fade-left text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#5f2eafd0] to-[#3c3abb] rounded-3xl ">
+          <div className=" intersect:animate-fade-left text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#5f2eafd0] to-[#3c3abb] rounded-3xl ">
             {/* Description Box */}
             <div className="m-6">
-              <p className="mb-4 text-lg font-bold">
+              <p className="mb-4 text-lg lg:text-2xl font-bold">
                 Judulnya biografi sederhana
               </p>
               <p>
@@ -58,7 +58,7 @@ export default function TentangKamal() {
 
       <div className="mx-auto px-4 pt-1 max-w-7xl">
         <div className="text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] rounded-3xl p-6 mb-4">
-          <h2 className="intersect:animate-jump-in text-lg font-bold text-center">
+          <h2 className="intersect:animate-jump-in text-2xl lg:text-4xl font-bold text-center">
             Judul Rekam Jejak
           </h2>
         </div>
@@ -70,7 +70,7 @@ export default function TentangKamal() {
           <div className=" intersect:animate-fade-left flex-1 text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] rounded-3xl ">
             {/* Description Box */}
             <div className="m-6">
-              <p className="mb-4 text-lg font-bold">
+              <p className="mb-4 text-lg lg:text-2xl font-bold">
                 Yang ini rekam jejak himafi
               </p>
               <p>
@@ -96,7 +96,7 @@ export default function TentangKamal() {
           <div className="intersect:animate-fade-right flex-1 text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] rounded-3xl ">
             {/* Description Box */}
             <div className="m-6">
-              <p className="mb-4 text-lg font-bold">
+              <p className="mb-4 text-lg lg:text-2xl font-bold">
                 Yang ini rekam jejak NON!!himafi
               </p>
               <p>
