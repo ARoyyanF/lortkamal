@@ -10,6 +10,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
+import { Slider } from "@/components/ui/slider";
 
 export const TextInput = ({ name, label, placeholder, form }) => (
   <FormField
@@ -171,22 +172,21 @@ export const TextBox = ({ name, label, placeholder, form }) => (
   />
 );
 
-export const Slider = ({ name, label, min, max, form }) => (
+export const SliderScale = ({ name, label, min, max, form }) => (
   <FormField
     control={form.control}
-    name="slider"
+    name={name}
     render={({ field }) => (
       <FormItem>
-        <FormLabel>Slider</FormLabel>
+        <FormLabel className="text-lg mb-4 text-white font-semibold">
+          {label}
+        </FormLabel>
         <FormControl>
           <Slider
-            min={0}
-            max={100}
-            step={1}
-            defaultValue={[field.value]}
-            onValueChange={(vals) => {
-              field.onChange(vals[0]);
-            }}
+            defaultValue={[50]}
+            onValueChange={(value) => field.onChange(value[0])}
+            min={min}
+            max={max}
           />
         </FormControl>
       </FormItem>

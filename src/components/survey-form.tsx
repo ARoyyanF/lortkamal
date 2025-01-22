@@ -13,7 +13,7 @@ import {
   RatingScale,
   TextBox,
   FormCard,
-  Slider,
+  SliderScale,
 } from "./form-fields";
 
 const formSchema = z.object({
@@ -25,6 +25,7 @@ const formSchema = z.object({
   shadowboxQuestion: z.string().min(1, "Please select an option"),
   rating: z.string().min(1, "Please select a rating"),
   yapping: z.string().min(1, "yapping cuk"),
+  scale: z.string().min(1, "scale goes brr"),
 });
 
 const sigmaOptions = [
@@ -174,7 +175,7 @@ export default function SurveyForm() {
           </div>
           <div className="space-y-4 intersect-once intersect:animate-fade-right">
             <FormCard>
-              <Slider
+              <SliderScale
                 name="slider"
                 label="5. Slider"
                 min={0}
