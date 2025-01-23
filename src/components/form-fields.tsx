@@ -9,6 +9,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
+import { Slider } from "@/components/ui/slider";
 
 export const TextInput = ({ name, label, placeholder, form }) => (
   <FormField
@@ -95,12 +97,12 @@ export const RadioButtonGroup = ({ name, label, options, form }) => (
             className=""
           >
             {options.map((option) => (
-              <FormItem key={option.value} className="flex gap-4 items-center">
+              <FormItem key={option.value} className="flex gap-4 items-center ">
                 <div></div>
                 <FormControl>
                   <RadioGroupItem
                     value={option.value}
-                    className=" border-2 text-black border-blue-400 bg-white ring-2 ring-blue-600"
+                    className=" border-2 border-blue-400 bg-white ring-2 ring-blue-600"
                   />
                 </FormControl>
                 <FormLabel className="font-semibold text-white mt-0">
@@ -126,7 +128,7 @@ export const RatingScale = ({ name, label, min, max, form }) => (
         </FormLabel>
         <div className="flex justify-between items-center mt-4 md:flex-row flex-col">
           <span className="text-sm text-white">Sangat tidak setuju</span>
-          <div className="flex flex-grow px-12 py-6 gap-1 md:flex-row flex-col">
+          <div className="flex fle<>x-grow px-12 py-6 gap-1 md:flex-row flex-col">
             {[...Array(max - min + 1)].map((_, i) => (
               <Button
                 key={i + min}
@@ -144,6 +146,49 @@ export const RatingScale = ({ name, label, min, max, form }) => (
           </div>
           <span className="text-sm text-white">Sangat setuju</span>
         </div>
+      </FormItem>
+    )}
+  />
+);
+
+export const TextBox = ({ name, label, placeholder, form }) => (
+  <FormField
+    control={form.control}
+    name={name}
+    render={({ field }) => (
+      <FormItem>
+        <FormLabel className="text-lg mb-4 text-white font-semibold">
+          {label}
+        </FormLabel>
+        <FormControl>
+          <Textarea
+            placeholder={placeholder}
+            {...field}
+            className="text-white bg-transparent border border-input ring-offset-background file:border-0 file:bg-transparent focus-visible:outline-none ring-0"
+          />
+        </FormControl>
+      </FormItem>
+    )}
+  />
+);
+
+export const SliderScale = ({ name, label, min, max, form }) => (
+  <FormField
+    control={form.control}
+    name={name}
+    render={({ field }) => (
+      <FormItem>
+        <FormLabel className="text-lg mb-4 text-white font-semibold">
+          {label}
+        </FormLabel>
+        <FormControl>
+          <Slider
+            defaultValue={[field.value]}
+            onValueChange={(value) => field.onChange(value[0])}
+            min={min}
+            max={max}
+          />
+        </FormControl>
       </FormItem>
     )}
   />

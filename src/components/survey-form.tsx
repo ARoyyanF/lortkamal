@@ -11,7 +11,9 @@ import {
   CheckboxGroup,
   RadioButtonGroup,
   RatingScale,
+  TextBox,
   FormCard,
+  SliderScale,
 } from "./form-fields";
 
 const formSchema = z.object({
@@ -22,6 +24,8 @@ const formSchema = z.object({
     .min(1, "Please select at least one option"),
   shadowboxQuestion: z.string().min(1, "Please select an option"),
   rating: z.string().min(1, "Please select a rating"),
+  yapping: z.string().min(1, "yapping cuk"),
+  slider: z.number().min(0).max(100),
 });
 
 const sigmaOptions = [
@@ -52,6 +56,8 @@ const defaultValues = {
   sigmaQuestion: [],
   shadowboxQuestion: "",
   rating: "",
+  yapping: "",
+  slider: 30,
 };
 
 export default function SurveyForm() {
@@ -63,6 +69,7 @@ export default function SurveyForm() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    console.log("Form submitted:", values);
     setIsSubmitting(true);
     try {
       const response = await fetch("/api/submit-survey", {
@@ -159,9 +166,31 @@ export default function SurveyForm() {
               />
             </FormCard>
           </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <TextBox
+                name="yapping"
+                label="4. Yapfest"
+                placeholder="longtext mucho texto"
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <SliderScale
+                name="slider"
+                label="5. Slider"
+                min={0}
+                max={100}
+                form={form}
+              />
+            </FormCard>
+          </div>
+
           <Button
             type="submit"
-            className="intersect-once intersect:animate-jump w-full bg-blue-800 hover:bg-blue-600"
+            className="intersect-once intersect:animate-jump w-full"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Submitting..." : "Submit"}
