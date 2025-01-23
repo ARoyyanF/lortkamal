@@ -97,12 +97,12 @@ export const RadioButtonGroup = ({ name, label, options, form }) => (
             className=""
           >
             {options.map((option) => (
-              <FormItem key={option.value} className="flex gap-4 items-center">
+              <FormItem key={option.value} className="flex gap-4 items-center ">
                 <div></div>
                 <FormControl>
                   <RadioGroupItem
                     value={option.value}
-                    className=" border-2 text-black border-blue-400 bg-white ring-2 ring-blue-600"
+                    className=" border-2 border-blue-400 bg-white ring-2 ring-blue-600"
                   />
                 </FormControl>
                 <FormLabel className="font-semibold text-white mt-0">
@@ -128,7 +128,7 @@ export const RatingScale = ({ name, label, min, max, form }) => (
         </FormLabel>
         <div className="flex justify-between items-center mt-4 md:flex-row flex-col">
           <span className="text-sm text-white">Sangat tidak setuju</span>
-          <div className="flex flex-grow px-12 py-6 gap-1 md:flex-row flex-col">
+          <div className="flex fle<>x-grow px-12 py-6 gap-1 md:flex-row flex-col">
             {[...Array(max - min + 1)].map((_, i) => (
               <Button
                 key={i + min}

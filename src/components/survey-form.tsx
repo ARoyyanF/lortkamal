@@ -190,7 +190,7 @@ export default function SurveyForm() {
 
           <Button
             type="submit"
-            className="intersect-once intersect:animate-jump w-full bg-blue-800 hover:bg-blue-600"
+            className="intersect-once intersect:animate-jump w-full"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Submitting..." : "Submit"}
