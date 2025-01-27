@@ -3,6 +3,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -26,6 +27,7 @@ export const TextInput = ({ name, label, placeholder, form }) => (
             className="font-bold bg-transparent border-4 border-blue-400 rounded-lg focus:border-blue-200 px-2 text-white"
           />
         </FormControl>
+        <FormMessage className="font-black" />
       </FormItem>
     )}
   />
@@ -76,6 +78,7 @@ export const CheckboxGroup = ({ name, label, options, form }) => (
             />
           ))}
         </div>
+        <FormMessage className="font-black" />
       </FormItem>
     )}
   />
@@ -112,6 +115,7 @@ export const RadioButtonGroup = ({ name, label, options, form }) => (
             ))}
           </RadioGroup>
         </FormControl>
+        <FormMessage className="font-black" />
       </FormItem>
     )}
   />
@@ -146,6 +150,7 @@ export const RatingScale = ({ name, label, min, max, form }) => (
           </div>
           <span className="text-sm text-white">Sangat setuju</span>
         </div>
+        <FormMessage className="font-black" />
       </FormItem>
     )}
   />
@@ -167,6 +172,7 @@ export const TextBox = ({ name, label, placeholder, form }) => (
             className="text-white bg-transparent border border-input ring-offset-background file:border-0 file:bg-transparent focus-visible:outline-none ring-0"
           />
         </FormControl>
+        <FormMessage className="font-black" />
       </FormItem>
     )}
   />

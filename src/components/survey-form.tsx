@@ -18,14 +18,14 @@ import {
 } from "./form-fields";
 
 const formSchema = z.object({
-  nama: z.string().min(1, "Nama is required"),
-  nim: z.string().min(1, "NIM is required"),
+  nama: z.string().min(1, "Nama kosong"),
+  nim: z.string().min(1, "NIM kosong"),
   sigmaQuestion: z
     .array(z.string())
-    .min(1, "Please select at least one option"),
-  shadowboxQuestion: z.string().min(1, "Please select an option"),
-  rating: z.string().min(1, "Please select a rating"),
-  yapping: z.string().min(1, "yapping cuk"),
+    .min(1, "Pilih setidaknya satu opsi atau lebih"),
+  shadowboxQuestion: z.string().min(1, "Pilih salah satu opsi"),
+  rating: z.string().min(1, "Pilih rentang"),
+  yapping: z.string().min(1, "Mohon diisi 🙏"),
   slider: z.number().min(0).max(100),
 });
 
@@ -68,6 +68,9 @@ export default function SurveyForm() {
     resolver: zodResolver(formSchema),
     defaultValues,
   });
+  const onError = (error) => {
+    toast.warning("Formulir belum terisi penuh!");
+  };
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     console.log("Form submitted:", values);
@@ -116,7 +119,7 @@ export default function SurveyForm() {
 
       <Form {...form}>
         <form
-          onSubmit={form.handleSubmit(onSubmit)}
+          onSubmit={form.handleSubmit(onSubmit, onError)}
           className="space-y-6 text-white font-semibold"
         >
           <div className="space-y-4 intersect-once intersect:animate-fade-right">
