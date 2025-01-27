@@ -22,7 +22,20 @@ export async function POST(req: Request) {
     const body = await req.json();
     console.log("Received form data:", body);
 
-    const { nama, nim, sigmaQuestion, shadowboxQuestion, rating, yapping, slider} = body;
+    const {
+      nama,
+      nim,
+      sigmaQuestion,
+      shadowboxQuestion,
+      rating,
+      yapping,
+      slider,
+      preference1,
+    } = body;
+
+    function sanitisePreference(preference) {
+      return preference.map((item) => item.id).toString();
+    }
 
     const values = [
       [
@@ -33,9 +46,11 @@ export async function POST(req: Request) {
         shadowboxQuestion,
         rating,
         yapping,
-        slider
+        slider,
+        sanitisePreference(preference1),
       ],
     ];
+    console.log("Sending form data: ", values);
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,

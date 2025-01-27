@@ -15,7 +15,20 @@ import {
   TextBox,
   FormCard,
   SliderScale,
+  DraggablePreferenceTable,
 } from "./form-fields";
+import {
+  KeyboardSensor,
+  PointerSensor,
+  useSensor,
+  useSensors,
+} from "@dnd-kit/core";
+import { sortableKeyboardCoordinates } from "@dnd-kit/sortable";
+
+const DraggablePreferenceTableSchema = z.object({
+  id: z.string(),
+  description: z.string(),
+});
 
 const formSchema = z.object({
   nama: z.string().min(1, "Nama kosong"),
@@ -27,6 +40,7 @@ const formSchema = z.object({
   rating: z.string().min(1, "Pilih rentang"),
   yapping: z.string().min(1, "Mohon diisi 🙏"),
   slider: z.number().min(0).max(100),
+  preference1: z.array(DraggablePreferenceTableSchema),
 });
 
 const sigmaOptions = [
@@ -59,10 +73,24 @@ const defaultValues = {
   rating: "",
   yapping: "",
   slider: 30,
+  preference1: [
+    { id: "1", description: "A hot caffeinated beverage" },
+    { id: "2", description: "A soothing herbal drink" },
+    { id: "3", description: "Essential for hydration" },
+    { id: "4", description: "Fruity and refreshing" },
+    { id: "5", description: "Blended fruits and vegetables" },
+  ],
 };
 
 export default function SurveyForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const sensors = useSensors(
+    useSensor(PointerSensor),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates,
+    })
+  );
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -184,6 +212,16 @@ export default function SurveyForm() {
                 label="5. Slider"
                 min={0}
                 max={100}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <DraggablePreferenceTable
+                name="preference1"
+                label="6. Preference"
+                sensors={sensors}
                 form={form}
               />
             </FormCard>

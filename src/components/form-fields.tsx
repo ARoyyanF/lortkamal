@@ -12,6 +12,72 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Slider } from "@/components/ui/slider";
+import { DndContext, closestCenter, type DragEndEvent } from "@dnd-kit/core";
+import {
+  arrayMove,
+  SortableContext,
+  verticalListSortingStrategy,
+} from "@dnd-kit/sortable";
+import { Table, TableBody } from "@/components/ui/table";
+import { SortableItem } from "./sortableitem";
+
+export const DraggablePreferenceTable = ({ name, label, form, sensors }) => (
+  <FormField
+    control={form.control}
+    name={name}
+    render={({ field }) => (
+      <FormItem>
+        <FormLabel className="text-lg mb-4 text-white font-semibold">
+          {label}
+        </FormLabel>
+        <div className="pt-4 text-white font-bold">
+          Preferensi teratas / Paling penting
+        </div>
+        <FormControl>
+          <DndContext
+            sensors={sensors}
+            collisionDetection={closestCenter}
+            onDragEnd={(event: DragEndEvent) => {
+              const { active, over } = event;
+
+              if (active.id !== over?.id) {
+                const oldIndex = field.value.findIndex(
+                  (item) => item.id === active.id
+                );
+                const newIndex = field.value.findIndex(
+                  (item) => item.id === over?.id
+                );
+
+                field.onChange(arrayMove(field.value, oldIndex, newIndex));
+              }
+            }}
+          >
+            <Table className="overflow-hidden text-white ">
+              <TableBody>
+                <SortableContext
+                  items={field.value.map((p) => p.id)}
+                  strategy={verticalListSortingStrategy}
+                >
+                  {field.value.map((preference, index) => (
+                    <SortableItem
+                      key={preference.id}
+                      id={preference.id}
+                      preference={preference}
+                    />
+                  ))}
+                </SortableContext>
+              </TableBody>
+            </Table>
+          </DndContext>
+        </FormControl>
+        <FormMessage className="font-black" />
+        <div className="text-white font-bold">
+          Preferensi terbawah / Paling tidak penting
+        </div>
+      </FormItem>
+    )}
+  />
+);
 
 export const TextInput = ({ name, label, placeholder, form }) => (
   <FormField
