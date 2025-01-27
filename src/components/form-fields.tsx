@@ -93,7 +93,7 @@ export const RadioButtonGroup = ({ name, label, options, form }) => (
         <FormControl>
           <RadioGroup
             onValueChange={field.onChange}
-            defaultValue={field.value}
+            value={field.value || ""}
             className=""
           >
             {options.map((option) => (
