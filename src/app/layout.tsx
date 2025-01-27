@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { TRPCProvider } from "@/trpc/client";
 import ObserverProvider from "./ObserverProvider";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         <TRPCProvider>
           <ObserverProvider>{children}</ObserverProvider>
+          <Toaster richColors theme="light" position="bottom-center" />
         </TRPCProvider>
       </body>
     </html>

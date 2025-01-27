@@ -1,4 +1,5 @@
 "use client";
+import { toast } from "sonner";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -86,19 +87,16 @@ export default function SurveyForm() {
         throw new Error(data.error || "Failed to submit survey");
       }
 
-      // toast({
-      //   title: "Survey Submitted",
-      //   description: "Thank you for your feedback!",
-      // });
+      toast.success("Survey Terkirim", {
+        description: "Terimakasih banyak atas masukannya!",
+      });
       form.reset(defaultValues);
     } catch (error) {
       console.error("Error submitting survey:", error);
-      // toast({
-      //   title: "Error",
-      //   description:
-      //     error.message || "Failed to submit survey. Please try again.",
-      //   variant: "destructive",
-      // });
+      toast.error("Error", {
+        description:
+          error instanceof Error ? error.message : "Failed to submit survey",
+      });
     } finally {
       setIsSubmitting(false);
     }
