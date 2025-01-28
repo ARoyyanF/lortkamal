@@ -35,7 +35,7 @@ export default function TentangKamal() {
             {/* Description Box */}
             <div className="m-6">
               <p className="mb-4 text-lg lg:text-2xl font-bold">
-                Judulnya biografi sederhana
+                Jejak Saya Sejauh Ini
               </p>
               <p>
                 Saddam Hussein dilahirkan di kota Al-Awja, 13 km dari kota
