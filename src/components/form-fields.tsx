@@ -198,7 +198,7 @@ export const RatingScale = ({ name, label, min, max, form }) => (
         </FormLabel>
         <div className="flex justify-between items-center mt-4 md:flex-row flex-col">
           <span className="text-sm text-white">Sangat tidak setuju</span>
-          <div className="flex fle<>x-grow px-12 py-6 gap-1 md:flex-row flex-col">
+          <div className="flex flex-grow px-12 py-6 gap-1 md:flex-row flex-col">
             {[...Array(max - min + 1)].map((_, i) => (
               <Button
                 key={i + min}
@@ -262,7 +262,7 @@ export const SliderScale = ({
           {label}
         </FormLabel>
         <div className="flex justify-between items-center mt-4 md:flex-row flex-col">
-          <span className="text-sm text-white">{mintext}</span>
+          <span className="text-sm text-secondary">{mintext}</span>
           <div className="flex flex-grow px-12 py-6 gap-1 md:flex-row flex-col">
             <Slider
               defaultValue={[field.value]}
@@ -271,7 +271,7 @@ export const SliderScale = ({
               max={max}
             />
           </div>
-          <span className="text-sm text-white">{maxtext}</span>
+          <span className="text-sm text-secondary">{maxtext}</span>
         </div>
         <FormMessage className="font-black" />
       </FormItem>
