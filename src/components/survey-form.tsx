@@ -209,9 +209,11 @@ export default function SurveyForm() {
             <FormCard>
               <SliderScale
                 name="slider"
-                label="5. Slider"
+                label="Slider"
                 min={0}
                 max={100}
+                mintext="Min value"
+                maxtext="Max value"
                 form={form}
               />
             </FormCard>

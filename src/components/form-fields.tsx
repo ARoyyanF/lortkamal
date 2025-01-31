@@ -244,7 +244,15 @@ export const TextBox = ({ name, label, placeholder, form }) => (
   />
 );
 
-export const SliderScale = ({ name, label, min, max, form }) => (
+export const SliderScale = ({
+  name,
+  label,
+  min,
+  max,
+  mintext,
+  maxtext,
+  form,
+}) => (
   <FormField
     control={form.control}
     name={name}
@@ -253,14 +261,19 @@ export const SliderScale = ({ name, label, min, max, form }) => (
         <FormLabel className="text-lg mb-4 text-white font-semibold">
           {label}
         </FormLabel>
-        <FormControl>
-          <Slider
-            defaultValue={[field.value]}
-            onValueChange={(value) => field.onChange(value[0])}
-            min={min}
-            max={max}
-          />
-        </FormControl>
+        <div className="flex justify-between items-center mt-4 md:flex-row flex-col">
+          <span className="text-sm text-white">{mintext}</span>
+          <div className="flex flex-grow px-12 py-6 gap-1 md:flex-row flex-col">
+            <Slider
+              defaultValue={[field.value]}
+              onValueChange={(value) => field.onChange(value[0])}
+              min={min}
+              max={max}
+            />
+          </div>
+          <span className="text-sm text-white">{maxtext}</span>
+        </div>
+        <FormMessage className="font-black" />
       </FormItem>
     )}
   />
