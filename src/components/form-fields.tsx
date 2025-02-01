@@ -175,7 +175,7 @@ export const RadioButtonGroup = ({ name, label, options, form }) => (
                   />
                 </FormControl>
                 <FormLabel className="font-semibold text-white mt-0">
-                  {option.value}
+                  {option.label}
                 </FormLabel>
               </FormItem>
             ))}
@@ -261,18 +261,23 @@ export const SliderScale = ({
         <FormLabel className="text-lg mb-4 text-white font-semibold">
           {label}
         </FormLabel>
-        <div className="flex justify-between items-center mt-4 md:flex-row flex-col">
-          <span className="text-sm text-secondary">{mintext}</span>
-          <div className="flex flex-grow px-12 py-6 gap-1 md:flex-row flex-col">
+        <FormControl>
+          <div>
             <Slider
               defaultValue={[field.value]}
               onValueChange={(value) => field.onChange(value[0])}
               min={min}
               max={max}
             />
+            {/* <div className="flex  items-center mt-4 flex-col">
+              <div className="flex-none"></div> */}
+            <div className="flex justify-between flex-row py-3">
+              <span className="text-sm text-secondary">{mintext}</span>
+              <span className="text-sm text-secondary">{maxtext}</span>
+            </div>
+            {/* </div> */}
           </div>
-          <span className="text-sm text-secondary">{maxtext}</span>
-        </div>
+        </FormControl>
         <FormMessage className="font-black" />
       </FormItem>
     )}
