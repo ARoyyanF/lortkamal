@@ -51,11 +51,11 @@ export default function TentangKamal() {
               </p>
               <br />
               <p>
-                <span className="text-yellow-300 font-bold text-base lg:text-2xl"> Di sela kesibukan kuliah, saya terus mengembangkan diri </span>
+                Di sela kesibukan kuliah, saya terus mengembangkan diri
                 melalui berbagai pelatihan dan beasiswa, seperti IndonesiaNEXT
-                oleh Telkomsel dan Pacmann Data & Business Scholarship. Bagi saya,
-                pengetahuan bukan sekadar kumpulan teori, tetapi juga bekal untuk
-                mengabdi. Saya pun aktif berkiprah di berbagai organisasi,
+                oleh Telkomsel dan Pacmann Data & Business Scholarship.<span className="text-yellow-300 font-bold text-base lg:text-2xl"> Bagi saya, pengetahuan bukan sekadar kumpulan teori, tetapi juga bekal untuk
+                  mengabdi. </span>
+                Saya pun aktif berkiprah di berbagai organisasi,
                 antara lain HIMAFI ITB, Dagozilla ITB, serta komunitas
                 profesional seperti American Physical Society.
               </p>
@@ -149,28 +149,196 @@ export default function TentangKamal() {
               <p className="mb-3 text-base lg:text-xl font-bold">
                 Kepanitiaan
               </p>
-              <ul className="list-disc pl-5 mb-4 space-y-1 lg:space-y-2">
-                <li className="font-bold">Perayaan Wisuda Oktober HIMAFI ITB 2024 “Wisoutlaw” (2024–2025)</li>
-                Kepala Bidang Pensuasanaan
-                <li className="font-bold">Proses Penerimaan Anggota HIMAFI ITB “Intellektuelle Schule” 2024 (2024)</li>
-                Kepala Divisi Keilmuan dan Karir Bidang Materi dan Metode
-                <li className="font-bold">EUREKA ITB! 2024 (2024)</li>
-                Staf Dokumentasi
-                <li className="font-bold">ITB Fair 2024 (2024)</li>
-                Staf Dokumentasi
-                <li className="font-bold">Parade Wisuda Oktober HIMAFI ITB 2023 “Wismurf” (2023)</li>
-                Tim Dokumentasi Volunteer, Staff Desain
-                <li className="font-bold">Syukuran Wisuda Pertama Program Studi Sarjana Fisika ITB 2023 (2023)</li>
-                Operator
-                <li className="font-bold">Orientasi Studi Keluarga Mahasiswa ITB 2023 (2023)</li>
-                Staf Subidang Dokumentasi Divisi Kreatif
-                <li className="font-bold">Scientia FMIPA ITB 2023 (2023)</li>
-                Staf Mentor
-                <li className="font-bold">TEDxITB 6.0 (2022–2023)</li>
-                Staf Sinematografi
-                <li className="font-bold">Parade Wisuda Oktober ITB 2022 (2022)</li>
-                Staf Grafis Bidang Kreatif
+              <ul className="list-none space-y-4 mb-4">
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none flex items-center justify-center">
+                    <Image
+                      src="/wisoutlaw.png"
+                      alt="Wisoutlaw Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">Perayaan Wisuda Oktober HIMAFI ITB 2024 “Wisoutlaw” (2024–2025)</p>
+                    <p className="text-white">Kepala Bidang Pensuasanaan</p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none flex items-center justify-center">
+                    <Image
+                      src="/ishimafi.jpg"
+                      alt="Intellektuelle Schule Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover rounded-full"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://www.instagram.com/ppahimafiitb/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white hover:text-blue-400 transition-colors duration-300"
+                    >
+                      Proses Penerimaan Anggota HIMAFI ITB “Intellektuelle Schule” 2024 (2024)
+                    </a>
+                    <p className="text-white">Kepala Divisi Keilmuan dan Karir Bidang Materi dan Metode</p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none flex items-center justify-center">
+                    <Image
+                      src="/eureka.jpg"
+                      alt="EUREKA ITB Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover rounded-full"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://eurekaitb.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white hover:text-blue-400 transition-colors duration-300"
+                    >
+                      EUREKA ITB! 2024 (2024)
+                    </a>
+                    <p className="text-white">Staf Dokumentasi</p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none flex items-center justify-center">
+                    <Image
+                      src="/itbfair24.jpg"
+                      alt="ITB Fair 2024 Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover rounded-full"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://www.instagram.com/itbfair/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white hover:text-blue-400 transition-colors duration-300"
+                    >
+                      ITB Fair 2024 (2024)
+                    </a>
+                    <p className="text-white">Staf Dokumentasi</p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none flex items-center justify-center">
+                    <Image
+                      src="/wismurf.webp"
+                      alt="Wismurf Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover rounded-full"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">Parade Wisuda Oktober HIMAFI ITB 2023 “Wismurf” (2023)</p>
+                    <p className="text-white">Tim Dokumentasi Volunteer, Staff Desain</p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none bg-white p-1 rounded-full flex items-center justify-center">
+                    <Image
+                      src="/itb.png"
+                      alt="ITB Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover rounded-full"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">Syukuran Wisuda Pertama Program Studi Sarjana Fisika ITB 2023 (2023)</p>
+                    <p className="text-white">Operator</p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none flex items-center justify-center">
+                    <Image
+                      src="/oskm23.jpg"
+                      alt="OSKM ITB 2023 Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover "
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">Orientasi Studi Keluarga Mahasiswa ITB 2023 (2023)</p>
+                    <p className="text-white">Staf Subidang Dokumentasi Divisi Kreatif</p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none flex items-center justify-center">
+                    <Image
+                      src="/fmipa22.png"
+                      alt="Scientia FMIPA ITB Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">Scientia FMIPA ITB 2023 (2023)</p>
+                    <p className="text-white">Staf Mentor</p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none bg-black square-full flex items-center justify-center">
+                    <Image
+                      src="/tedxitb.webp"
+                      alt="TEDxITB Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover "
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://tedxitb.id"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white hover:text-blue-400 transition-colors duration-300"
+                    >
+                      TEDxITB 6.0 (2022–2023)
+                    </a>
+                    <p className="text-white">Staf Sinematografi</p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none  flex items-center justify-center">
+                    <Image
+                      src="/wisokto22.png"
+                      alt="Wisuda Oktober 2022 Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">Parade Wisuda Oktober ITB 2022 (2022)</p>
+                    <p className="text-white">Staf Grafis Bidang Kreatif</p>
+                  </div>
+                </li>
               </ul>
+
             </div>
             {/* Right side box*/}
           </div>
@@ -423,10 +591,75 @@ export default function TentangKamal() {
           <p className="mb-3 text-base lg:text-xl font-bold">
             Riwayat Pekerjaan/Magang
           </p>
-          <ul className="list-disc pl-5 mb-4 space-y-1 lg:space-y-2">
-            <li>Meja Belajar (2023) -  Curriculum Team (Physics Specialization)</li>
-            <li>Xeratic (2022) - Data Engineer</li>
-            <li>Pemimpin.id (2022) - Graphic Designer</li>
+          <ul className="list-none space-y-4 mb-4">
+            <li className="flex items-center space-x-4">
+              <div className="w-16 h-16 flex-none bg-white p-2 rounded-full flex items-center justify-center">
+                <Image
+                  src="/mejabelajar.webp"
+                  alt="Meja Belajar Logo"
+                  width={64}
+                  height={64}
+                  className="object-cover rounded-full"
+                />
+              </div>
+              <div>
+                <a
+                  href="https://www.instagram.com/mejabelajaredu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-white hover:text-blue-400 transition-colors duration-300"
+                >
+                  Meja Belajar (2023)
+                </a>
+                <p className="text-white">Curriculum Team (Physics Specialization)</p>
+              </div>
+            </li>
+
+            <li className="flex items-center space-x-4">
+              <div className="w-16 h-16 flex-none bg-white p-2 rounded-full flex items-center justify-center">
+                <Image
+                  src="/xeratic.png"
+                  alt="Xeratic Logo"
+                  width={64}
+                  height={64}
+                  className="object-cover rounded-full"
+                />
+              </div>
+              <div>
+                <a
+                  href="https://www.xeratic.com/id/home"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-white hover:text-blue-400 transition-colors duration-300"
+                >
+                  Xeratic (2022)
+                </a>
+                <p className="text-white">Data Engineer</p>
+              </div>
+            </li>
+
+            <li className="flex items-center space-x-4">
+              <div className="w-16 h-16 flex-none flex items-center justify-center">
+                <Image
+                  src="/pemimpinid.png"
+                  alt="Pemimpin.id Logo"
+                  width={64}
+                  height={64}
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <a
+                  href="https://www.instagram.com/pemimpin.indonesia/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-white hover:text-blue-400 transition-colors duration-300"
+                >
+                  Pemimpin.id (2022)
+                </a>
+                <p className="text-white">Graphic Designer</p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
