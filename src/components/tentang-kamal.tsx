@@ -144,7 +144,7 @@ export default function TentangKamal() {
               </p>
               <ul className="list-none space-y-4 mb-4">
                 <li className="flex items-center space-x-4">
-                  <div className="w-16 h-16 flex-none">
+                  <div className="w-16 h-16 flex-none flex items-center justify-center">
                     <Image
                       src="/pps_society_logo.jpeg"
                       alt="Pajajaran Physical Society Logo"
@@ -154,7 +154,14 @@ export default function TentangKamal() {
                     />
                   </div>
                   <div>
-                    <p className="font-bold text-white">Pajajaran Physical Society (2022–2024)</p>
+                    <a
+                      href="https://www.instagram.com/pps_society/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white hover:text-blue-400 transition-colors duration-300"
+                    >
+                      Pajajaran Physical Society (2022–2024)
+                    </a>
                     <p className="text-white">
                       Content Writer (One Page Fact), Video Editor, dan Motion Designer
                     </p>
@@ -162,17 +169,24 @@ export default function TentangKamal() {
                 </li>
 
                 <li className="flex items-center space-x-4">
-                  <div className="w-16 h-16 flex-none">
+                  <div className="w-16 h-16 flex-none flex items-center justify-center">
                     <Image
                       src="/hifi.png"
                       alt="Himpunan Mahasiswa Fisika Logo"
                       width={64}
                       height={64}
-                      className="object-cover "
+                      className="object-cover"
                     />
                   </div>
                   <div>
-                    <p className="font-bold text-white">Himpunan Mahasiswa Fisika FMIPA Unpad (2021–2022)</p>
+                    <a
+                      href="https://hifi.fmipa.unpad.ac.id/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white hover:text-blue-400 transition-colors duration-300"
+                    >
+                      Himpunan Mahasiswa Fisika FMIPA Unpad (2021–2022)
+                    </a>
                     <p className="text-white">
                       Staf Departemen Media & Informasi, Anggota Luar Biasa
                     </p>
@@ -180,7 +194,7 @@ export default function TentangKamal() {
                 </li>
 
                 <li className="flex items-center space-x-4">
-                  <div className="w-16 h-16 flex-none">
+                  <div className="w-16 h-16 flex-none flex items-center justify-center">
                     <Image
                       src="/gamabaunpad.png"
                       alt="Keluarga Mahasiswa Bandung Logo"
@@ -190,20 +204,25 @@ export default function TentangKamal() {
                     />
                   </div>
                   <div>
-                    <p className="font-bold text-white">Keluarga Mahasiswa Bandung Unpad (2021–2022)</p>
+                    <a
+                      href="https://www.instagram.com/gamabanunpad/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white hover:text-blue-400 transition-colors duration-300"
+                    >
+                      Keluarga Mahasiswa Bandung Unpad (2021–2022)
+                    </a>
                     <p className="text-white">Anggota</p>
                   </div>
                 </li>
               </ul>
-
-
 
               <p className="mb-3 text-base lg:text-xl font-bold">
                 Riwayat Organisasi Umum
               </p>
               <ul className="list-none space-y-4 mb-4">
                 <li className="flex items-center space-x-4">
-                  <div className="w-16 h-16 flex-none">
+                  <div className="w-16 h-16 flex-none bg-white p-2 rounded-full flex items-center justify-center">
                     <Image
                       src="/astm.png"
                       alt="ASTM Logo"
@@ -213,13 +232,21 @@ export default function TentangKamal() {
                     />
                   </div>
                   <div>
-                    <p className="font-bold text-white">American Standard Testing and Material International (ASTM) (2024–Sekarang)</p>
-                    <p className="text-white">Student Member</p>
+                    <div>
+                      <a
+                        href="https://www.astm.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold text-white hover:text-blue-400 transition-colors duration-300"
+                      >
+                        American Standard Testing and Material International (ASTM) (2024–Sekarang)
+                      </a>
+                      <p className="text-white">Student Member</p>
+                    </div>
                   </div>
                 </li>
-
                 <li className="flex items-center space-x-4">
-                  <div className="w-16 h-16 flex-none">
+                  <div className="w-16 h-16 flex-none flex items-center justify-center">
                     <Image
                       src="/iop.png"
                       alt="Institute of Physics Logo"
@@ -229,29 +256,43 @@ export default function TentangKamal() {
                     />
                   </div>
                   <div>
-                    <p className="font-bold text-white">Institute of Physics (2022–Sekarang)</p>
+                    <a
+                      href="https://www.iop.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white hover:text-blue-400 transition-colors duration-300"
+                    >
+                      Institute of Physics (2022–Sekarang)
+                    </a>
                     <p className="text-white">Associate Member (AMInstP)</p>
                   </div>
                 </li>
 
                 <li className="flex items-center space-x-4">
-                  <div className="w-16 h-16 flex-none">
+                  <div className="w-16 h-16 flex-none bg-white p-2 rounded-full flex items-center justify-center">
                     <Image
                       src="/APS.png"
                       alt="American Physical Society Logo"
                       width={64}
                       height={64}
-                      className="object-covers"
+                      className="object-cover"
                     />
                   </div>
                   <div>
-                    <p className="font-bold text-white">American Physical Society (2021–Sekarang)</p>
+                    <a
+                      href="https://www.aps.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white hover:text-blue-400 transition-colors duration-300"
+                    >
+                      American Physical Society (2021–Sekarang)
+                    </a>
                     <p className="text-white">Undergraduate Student Member</p>
                   </div>
                 </li>
 
                 <li className="flex items-center space-x-4">
-                  <div className="w-16 h-16 flex-none">
+                  <div className="w-16 h-16 flex-none flex items-center justify-center">
                     <Image
                       src="/pemimpinid.png"
                       alt="Pemimpin Indonesia Logo"
@@ -261,13 +302,20 @@ export default function TentangKamal() {
                     />
                   </div>
                   <div>
-                    <p className="font-bold text-white">Pemimpin Indonesia (2022–2023)</p>
+                    <a
+                      href="https://www.instagram.com/pemimpin.indonesia/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white hover:text-blue-400 transition-colors duration-300"
+                    >
+                      Pemimpin Indonesia (2022–2023)
+                    </a>
                     <p className="text-white">Associate</p>
                   </div>
                 </li>
 
                 <li className="flex items-center space-x-4">
-                  <div className="w-16 h-16 flex-none">
+                  <div className="w-16 h-16 flex-none  flex items-center justify-center">
                     <Image
                       src="/gdsc.jpeg"
                       alt="Google Developer Student Club ITB Logo"
@@ -277,11 +325,19 @@ export default function TentangKamal() {
                     />
                   </div>
                   <div>
-                    <p className="font-bold text-white">Google Developer Student Club ITB (2022–2023)</p>
+                    <a
+                      href="https://linktr.ee/dscitb"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white hover:text-blue-400 transition-colors duration-300"
+                    >
+                      Google Developer Student Club ITB (2022–2023)
+                    </a>
                     <p className="text-white">Member</p>
                   </div>
                 </li>
               </ul>
+
 
 
               <p className="mb-3 text-base lg:text-xl font-bold">
