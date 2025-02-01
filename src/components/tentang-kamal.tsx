@@ -99,11 +99,52 @@ export default function TentangKamal() {
               <p className="mb-3 text-base lg:text-xl font-bold">
                 Organisasi
               </p>
-              <ul className="list-disc pl-5 mb-4 space-y-1 lg:space-y-2">
-                <li className="font-bold">Himpunan Mahasiswa Fisika ITB (2024–Sekarang)</li>
-                Anggota, Kepala Divisi Ekstrakampus
-                <li className="font-bold">Dagozilla ITB (2023–Sekarang)</li>
-                Anggota Divisi Programming, Kepala Divisi Programming
+              <ul className="list-none space-y-4 mb-4">
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none flex items-center justify-center">
+                    <Image
+                      src="/himafi.jpeg"
+                      alt="Himpunan Mahasiswa Fisika ITB Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://www.instagram.com/himafi.itb/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white hover:text-blue-400 transition-colors duration-300"
+                    >
+                      Himpunan Mahasiswa Fisika ITB (2024–Sekarang)
+                    </a>
+                    <p className="text-white">Anggota, Kepala Divisi Ekstrakampus</p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none flex items-center justify-center">
+                    <Image
+                      src="/dagoz.jpg"
+                      alt="Dagozilla ITB Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover rounded-full"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://dagozilla.itb.ac.id/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white hover:text-blue-400 transition-colors duration-300"
+                    >
+                      Dagozilla ITB (2023–Sekarang)
+                    </a>
+                    <p className="text-white">Anggota Divisi Programming, Kepala Divisi Programming</p>
+                  </div>
+                </li>
               </ul>
               <p className="mb-3 text-base lg:text-xl font-bold">
                 Kepanitiaan
