@@ -38,7 +38,10 @@ export default function TentangKamal() {
                 Jejak Saya Sejauh Ini
               </p>
               <p>
-                Nama saya Muhammad Kamal, biasa dipanggil <span style={{ fontWeight: "bold", fontSize: "20px" }}>Kamal</span> atau <span style={{ fontWeight: "bold", fontSize: "20px" }}>Hamad</span>.
+                Nama saya Muhammad Kamal, biasa dipanggil <span className="text-yellow-300 font-bold text-base lg:text-2xl">
+                  Kamal </span>
+                atau <span className="text-yellow-300 font-bold text-base lg:text-2xl" >
+                  Hamad</span>.
                 Saya lahir di Kota Bandung pada 29 Maret 2003. Sejak kecil,
                 saya selalu ingin belajar dan berbagi. Semangat ini membawa
                 saya menempuh pendidikan di SD Negeri 257 Pelita, SMP Negeri
@@ -48,7 +51,7 @@ export default function TentangKamal() {
               </p>
               <br />
               <p>
-                Di sela kesibukan kuliah, saya terus mengembangkan diri
+                <span className="text-yellow-300 font-bold text-base lg:text-2xl"> Di sela kesibukan kuliah, saya terus mengembangkan diri </span>
                 melalui berbagai pelatihan dan beasiswa, seperti IndonesiaNEXT
                 oleh Telkomsel dan Pacmann Data & Business Scholarship. Bagi saya,
                 pengetahuan bukan sekadar kumpulan teori, tetapi juga bekal untuk
@@ -59,16 +62,15 @@ export default function TentangKamal() {
               <br />
               <p>
                 Walau telah terlibat dalam beragam kepanitiaan dan meraih berbagai
-                pengalaman, mulai dari kepala divisi hingga asisten penelitian,
-                saya tetap melihat diri saya sebagai bagian dari banyak orang yang
-                sama-sama ingin berbuat lebih bagi lingkungan. Melalui peran saya di
-                HIMAFI ITB dan lingkungan sekitar saya, saya berharap dapat
+                pengalaman, mulai dari kepala divisi hingga asisten penelitian, <span className="text-yellow-300 font-bold text-base lg:text-2xl">
+                  saya tetap melihat diri saya sebagai bagian dari banyak orang yang sama-sama ingin berbuat lebih bagi lingkungan.</span> Melalui
+                peran saya di HIMAFI ITB dan lingkungan sekitar saya, saya berharap dapat
                 berkontribusi agar himpunan ini dan rekan-rekan di lingkungan sekitar
                 saya semakin mengakar, bertumbuh, dan bergerak maju.
               </p>
               <br />
               <p>
-                Bagi saya, tujuan akhirnya sederhana: menjadi <span style={{ fontWeight: "bold", fontSize: "20px" }}>insan yang bermanfaat</span> dan <span style={{ fontWeight: "bold", fontSize: "20px" }}>tetap membumi</span>. Saya yakin bahwa dengan kesungguhan hati, kerja
+                Bagi saya, tujuan akhirnya sederhana: menjadi <span className="text-yellow-300 font-bold text-base lg:text-2xl">insan yang bermanfaat</span> dan <span className="text-yellow-300 font-bold text-base lg:text-2xl">tetap membumi</span>. Saya yakin bahwa dengan kesungguhan hati, kerja
                 keras, serta dukungan semua pihak, HIMAFI ITB dapat terus berkembang
                 dan menghadirkan dampak positif bagi masyarakat luas.
               </p>
@@ -97,7 +99,7 @@ export default function TentangKamal() {
               <p className="mb-3 text-base lg:text-xl font-bold">
                 Organisasi
               </p>
-              <ul className="list-disc pl-5 mb-4">
+              <ul className="list-disc pl-5 mb-4 space-y-1 lg:space-y-2">
                 <li className="font-bold">Himpunan Mahasiswa Fisika ITB (2024–Sekarang)</li>
                 Anggota, Kepala Divisi Ekstrakampus
                 <li className="font-bold">Dagozilla ITB (2023–Sekarang)</li>
@@ -106,7 +108,7 @@ export default function TentangKamal() {
               <p className="mb-3 text-base lg:text-xl font-bold">
                 Kepanitiaan
               </p>
-              <ul className="list-disc pl-5 mb-4">
+              <ul className="list-disc pl-5 mb-4 space-y-1 lg:space-y-2">
                 <li className="font-bold">Perayaan Wisuda Oktober HIMAFI ITB 2024 “Wisoutlaw” (2024–2025)</li>
                 Kepala Bidang Pensuasanaan
                 <li className="font-bold">Proses Penerimaan Anggota HIMAFI ITB “Intellektuelle Schule” 2024 (2024)</li>
@@ -140,35 +142,152 @@ export default function TentangKamal() {
               <p className="mb-3 text-base lg:text-xl font-bold">
                 Riwayat Organisasi Kemahasiswaan
               </p>
-              <ul className="list-disc pl-5 mb-4">
-                <li className="font-bold">Pajajaran Physical Society (2022–2024)</li>
-                Content Writer (One Page Fact), Video Editor, dan Motion Designer
-                <li className="font-bold">Himpunan Mahasiswa Fisika FMIPA Unpad (2021–2022)</li>
-                Staf Departemen Media & Informasi, Anggota Luar Biasa
-                <li className="font-bold">Keluarga Mahasiswa Bandung Unpad (2021–2022)</li>
-                Anggota
+              <ul className="list-none space-y-4 mb-4">
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none">
+                    <Image
+                      src="/pps_society_logo.jpeg"
+                      alt="Pajajaran Physical Society Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover rounded-full"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">Pajajaran Physical Society (2022–2024)</p>
+                    <p className="text-white">
+                      Content Writer (One Page Fact), Video Editor, dan Motion Designer
+                    </p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none">
+                    <Image
+                      src="/hifi.png"
+                      alt="Himpunan Mahasiswa Fisika Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover "
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">Himpunan Mahasiswa Fisika FMIPA Unpad (2021–2022)</p>
+                    <p className="text-white">
+                      Staf Departemen Media & Informasi, Anggota Luar Biasa
+                    </p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none">
+                    <Image
+                      src="/gamabaunpad.png"
+                      alt="Keluarga Mahasiswa Bandung Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover rounded-full"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">Keluarga Mahasiswa Bandung Unpad (2021–2022)</p>
+                    <p className="text-white">Anggota</p>
+                  </div>
+                </li>
               </ul>
+
+
 
               <p className="mb-3 text-base lg:text-xl font-bold">
                 Riwayat Organisasi Umum
               </p>
-              <ul className="list-disc pl-5 mb-4">
-                <li className="font-bold">American Standard Testing and Material International (ASTM) (2024–Sekarang</li>
-                Student Member
-                <li className="font-bold">Institute of Physics (2022–Sekarang)</li>
-                Associate Member (AMInstP)
-                <li className="font-bold">American Physical Society (2021–Sekarang)</li>
-                Undergraduate Student Member
-                <li className="font-bold">Pemimpin Indonesia (2022–2023)</li>
-                Associate
-                <li className="font-bold">Google Developer Student Club ITB (2022–2023)</li>
-                Member
+              <ul className="list-none space-y-4 mb-4">
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none">
+                    <Image
+                      src="/astm.png"
+                      alt="ASTM Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover rounded-full"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">American Standard Testing and Material International (ASTM) (2024–Sekarang)</p>
+                    <p className="text-white">Student Member</p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none">
+                    <Image
+                      src="/iop.png"
+                      alt="Institute of Physics Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">Institute of Physics (2022–Sekarang)</p>
+                    <p className="text-white">Associate Member (AMInstP)</p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none">
+                    <Image
+                      src="/APS.png"
+                      alt="American Physical Society Logo"
+                      width={64}
+                      height={64}
+                      className="object-covers"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">American Physical Society (2021–Sekarang)</p>
+                    <p className="text-white">Undergraduate Student Member</p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none">
+                    <Image
+                      src="/pemimpinid.png"
+                      alt="Pemimpin Indonesia Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">Pemimpin Indonesia (2022–2023)</p>
+                    <p className="text-white">Associate</p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4">
+                  <div className="w-16 h-16 flex-none">
+                    <Image
+                      src="/gdsc.jpeg"
+                      alt="Google Developer Student Club ITB Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover rounded-full"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">Google Developer Student Club ITB (2022–2023)</p>
+                    <p className="text-white">Member</p>
+                  </div>
+                </li>
               </ul>
+
 
               <p className="mb-3 text-base lg:text-xl font-bold">
                 Riwayat Kepanitiaan
               </p>
-              <ul className="list-disc pl-5 mb-4">
+              <ul className="list-disc pl-5 mb-4 space-y-1 lg:space-y-2">
                 <li className="font-bold">Pekan Olahraga Fisika (PORSKA) X Putra Putri Fisika (PPF) Himpunan Mahasiswa Fisika FMIPA Unpad (2022)</li>
                 Kepala Divisi Catur Bidang Olahraga, Komentator E-Sport
                 <li className="font-bold">Graduating Achievement (Gradient) Part 1 Himpunan Mahasiswa Fisika FMIPA Unpad 2022 Kabinet Saturasi (2022)</li>
@@ -197,7 +316,7 @@ export default function TentangKamal() {
           <p className="mb-3 text-base lg:text-xl font-bold">
             Riwayat Akademik dan Penelitian
           </p>
-          <ul className="list-disc pl-5 mb-4">
+          <ul className="list-disc pl-5 mb-4 space-y-1 lg:space-y-2">
             <li>Asisten Laboratorium dan Penelitian – Laboratorium Elektronika dan Instrumentasi UGV & UAV (2024–Sekarang)</li>
             <li>Asisten Laboratorium dan Penelitian – Asisten Pemrograman Penelitian, Pengabdian Masyarakat, dan Inovasi ITB (Fakultas Teknik Pertambangan dan Perminyakan ITB) (2024–Sekarang)</li>
             <li>Asisten Laboratorium Praktikum Elektronika Analog dan Digital (2024–2025)</li>
@@ -207,7 +326,7 @@ export default function TentangKamal() {
           <p className="mb-3 text-base lg:text-xl font-bold">
             Riwayat Pekerjaan/Magang
           </p>
-          <ul className="list-disc pl-5 mb-4">
+          <ul className="list-disc pl-5 mb-4 space-y-1 lg:space-y-2">
             <li>Meja Belajar (2023) -  Curriculum Team (Physics Specialization)</li>
             <li>Xeratic (2022) - Data Engineer</li>
             <li>Pemimpin.id (2022) - Graphic Designer</li>
