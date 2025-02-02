@@ -13,7 +13,7 @@ export default function Page() {
         src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"
       ></script> */}
       <NavBar />
-      <main className="pt-24">
+      <main className="pt-24 overflow-hidden">
         <section className="scroll-mt-32" id="landing-hero">
           <LandingHero />
         </section>
