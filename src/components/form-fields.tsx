@@ -266,6 +266,7 @@ export const SliderScale = ({
             <Slider
               defaultValue={[field.value]}
               onValueChange={(value) => field.onChange(value[0])}
+              step={0.01}
               min={min}
               max={max}
             />
