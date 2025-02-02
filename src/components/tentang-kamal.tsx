@@ -377,7 +377,7 @@ export default function TentangKamal() {
                 <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
                   <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-2">
                     <Image
-                      src="/mejabelajar.webp"
+                      src="/Mejabelajar.webp"
                       alt="Meja Belajar Logo"
                       width={64}
                       height={64}
