@@ -79,6 +79,12 @@ const formSchema = z.object({
   q5g: z.number().min(0).max(100),
   q5h: z.array(DraggablePreferenceTableSchema),
   q5i: z.string().min(1, "Mohon diisi 🙏"),
+  q6a: z.number().min(0).max(100),
+  q6b: z.array(z.string()).min(1, "Pilih setidaknya satu opsi atau lebih"),
+  q6c: z.string().min(1, "Pilih salah satu opsi"),
+  q6d: z.array(DraggablePreferenceTableSchema),
+  q6e: z.array(z.string()).min(1, "Pilih setidaknya satu opsi atau lebih"),
+  q6f: z.string().min(1, "Mohon diisi 🙏"),
 
   // sigmaQuestion: z
   //   .array(z.string())
@@ -326,6 +332,38 @@ const defaultValues = {
     },
   ],
   q5i: "",
+  q6a: 30,
+  q6b: [],
+  q6c: "",
+  q6d: [
+    {
+      id: "1",
+      description: "Konsistensi konten media sosial",
+    },
+    {
+      id: "2",
+      description: "Prestasi anggota di bidang akademik/non-akademik",
+    },
+    {
+      id: "3",
+      description: "Dukungan dari Alumni atau Dosen",
+    },
+    {
+      id: "4",
+      description: "Pelaksanaan event-event besar secara rutin",
+    },
+    {
+      id: "5",
+      description:
+        "Kontribusi dan keikutsertaan HIMAFI ITB pada acara besar ITB",
+    },
+    {
+      id: "6",
+      description: "Banyak menyediakan kontroversi",
+    },
+  ],
+  q6e: [],
+  q6f: "",
 };
 
 export default function SurveyForm() {
@@ -1139,6 +1177,144 @@ export default function SurveyForm() {
               <TextBox
                 name="q5i"
                 label="Silakan berikan aspirasi yang berhubungan dengan bagian sosial, rekreasi, dan koneksi anggota! (Aspirasi bersifat umum dan bisa berhubungan dengan kritik, saran, masukan, dan kendala yang selama ini dimiliki terhadap bagian ini)"
+                placeholder="Tulis jawaban di sini"
+                form={form}
+              />
+            </FormCard>
+          </div>
+
+          <div className="flex justify-center">
+            <Divider>CITRA ORGANISASI DAN KOMUNIKASI</Divider>
+          </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <SliderScale
+                name="q6a"
+                label="Seberapa dikenal HIMAFI ITB di kalangan mahasiswa ITB menurut Anda?"
+                min={0}
+                max={100}
+                mintext="Sama sekali tidak dikenal"
+                maxtext="Sangat dikenal"
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <CheckboxGroup
+                name="q6b"
+                label="Melalui media apa saja Anda paling sering mengetahui informasi terbaru tentang HIMAFI ITB?"
+                options={[
+                  {
+                    id: "1",
+                    label: "Facebook",
+                  },
+                  { id: "2", label: "Instagram" },
+                  {
+                    id: "3",
+                    label: "Line/Kanal Chat Internal",
+                  },
+                  {
+                    id: "4",
+                    label: "Website",
+                  },
+                  {
+                    id: "5",
+                    label: "Mulut ke mulut",
+                  },
+                ]}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <RadioButtonGroup
+                name="q6c"
+                label="Bagaimana Anda menilai reputasi HIMAFI ITB saat ini di mata publik kampus"
+                options={[
+                  { value: "1", label: "Biasa saja, tidak menonjol" },
+                  { value: "2", label: "Mulai dikenal, tapi belum konsisten" },
+                  { value: "3", label: "Cukup baik, memiliki citra positif" },
+                  { value: "4", label: "Sangat baik dan berpengaruh" },
+                ]}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <DraggablePreferenceTable
+                name="q6d"
+                label="Urutkan faktor terpenting untuk membangun branding HIMAFI ITB:"
+                sensors={sensors}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <CheckboxGroup
+                name="q6e"
+                label="Konten apa yang Anda ingin lihat tentang HIMAFI ITB?"
+                options={[
+                  {
+                    id: "1",
+                    label: "Konten Kajian Akademik",
+                  },
+                  { id: "2", label: "Konten Kajian Sosial" },
+                  {
+                    id: "3",
+                    label: "Kegiatan yang dilaksanakan di internal HIMAFI ITB",
+                  },
+                  {
+                    id: "4",
+                    label: "Apresiasi Massa HIMAFI ITB",
+                  },
+                  {
+                    id: "5",
+                    label: "Sejarah HIMAFI ITB",
+                  },
+                  {
+                    id: "6",
+                    label:
+                      "People’s of HIMAFI ITB (konten wawancara terhadap massa HIMAFI ITB) atau Cerita Sukses dari Anggota HIMAFI",
+                  },
+                  {
+                    id: "7",
+                    label: "Info dan Tips Beasiswa",
+                  },
+                  {
+                    id: "8",
+                    label: "Kolaborasi Riset dan Publikasi Mahasiswa",
+                  },
+                  {
+                    id: "9",
+                    label:
+                      "Informasi Mengenai Agenda Workshop atau Seminar Fisika",
+                  },
+                  {
+                    id: "10",
+                    label: "Profil Alumni Berprestasi",
+                  },
+                  {
+                    id: "11",
+                    label: "Peluang Karier dan Magang di Bidang Fisika",
+                  },
+                  {
+                    id: "12",
+                    label: "Behind The Scenes Pengurus HIMAFI ITB",
+                  },
+                ]}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <TextBox
+                name="q6f"
+                label="Silakan berikan aspirasi yang berhubungan dengan bagian citra organisasi dan komunikasi! (Aspirasi bersifat umum dan bisa berhubungan dengan kritik, saran, masukan, dan kendala yang selama ini dimiliki terhadap bagian ini)"
                 placeholder="Tulis jawaban di sini"
                 form={form}
               />
