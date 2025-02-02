@@ -9,6 +9,17 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        geist: ["var(--font-geist-sans)"],
+        geistMono: ["var(--font-geist-mono)"],
+        roboto: ["var(--font-roboto)"],
+        inter: ["var(--font-inter)"],
+        montserrat: ["var(--font-montserrat)"],
+        poppins: ["var(--font-poppins)"],
+        quicksand: ["var(--font-quicksand)"],
+        lato: ["var(--font-lato)"],
+        raleway: ["var(--font-raleway)"],
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
