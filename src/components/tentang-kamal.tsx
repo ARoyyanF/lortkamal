@@ -5,10 +5,10 @@ export default function TentangKamal() {
   return (
     <div className="py-8 leading-tight">
       <div className="mx-auto max-w-7xl px-4">
-        <h1 className="mb-6 text-center text-3xl font-bold text-white animate-delay-300 intersect:animate-jump-in lg:text-6xl">
+        <h1 className="mb-6 text-center text-3xl font-bold text-white animate-delay-300  font-montserrat intersect:animate-jump-in lg:text-6xl">
           Tak Kenal Maka Tak Melekat
         </h1>
-        <p className="mb-6 px-4 text-center text-sm text-white intersect:animate-fade-down lg:text-lg">
+        <p className="mb-6 px-4 text-center text-sm text-white font-poppins intersect:animate-fade-down lg:text-lg">
           Kenali lebih dekat Muhammad Kamal, seorang anggota HIMAFI ITB yang
           ingin berkontribusi lebih untuk organisasi ini. Dengan langkah-langkah
           sederhana yang sudah saya lakukan, saya berkomitmen untuk terus
@@ -96,7 +96,7 @@ export default function TentangKamal() {
 
       <div className="mx-auto max-w-7xl px-4 pt-1">
         <div className="mb-4 rounded-3xl bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] p-6 text-justify text-sm text-gray-100 lg:text-lg">
-          <h2 className="text-center text-2xl font-bold intersect:animate-jump-in lg:text-4xl">
+          <h2 className="text-center text-2xl font-bold font-montserrat intersect:animate-jump-in lg:text-4xl">
             Rekam Jejak
           </h2>
         </div>

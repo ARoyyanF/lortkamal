@@ -12,10 +12,10 @@ export default function Beranda() {
   return (
     <div className="leading-tight py-6 min-h-[90vh] content-center">
       <div className="max-w-7xl mx-auto px-4">
-        <h1 className="animate-jump-in animate-duration-[3000ms] text-3xl lg:text-6xl font-bold text-center mb-6 text-white">
+        <h1 className="font-montserrat animate-jump-in animate-duration-[3000ms] text-3xl lg:text-6xl font-bold text-center mb-6 text-white">
           Mengakar. Bertumbuh. Bergerak.
         </h1>
-        <p className="animate-fade-down animate-duration-[1000ms] animate-delay-[2000ms] text-sm lg:text-lg text-center px-4 mb-6 text-white text-just">
+        <p className=" font-poppins animate-fade-down animate-duration-[1000ms] animate-delay-[2000ms] text-sm lg:text-lg text-center px-4 mb-6 text-white text-just">
           HIMAFI ITB berakar kuat dalam setiap anggotanya, menumbuhkan potensi
           individu sekaligus organisasi, dan terus bergerak untuk memberdayakan
           diri serta memberikan dampak positif bagi lingkungan sekitarnya.
@@ -39,8 +39,8 @@ export default function Beranda() {
           <div className="animate-fade-up animate-duration-[1000ms] animate-delay-[3000ms] col-span-2 grid grid-cols-1 gap-3">
             {/* Description Box */}
             <div className="animate-fade-left animate-delay-[3000ms] flex flex-col bg-gradient-to-tr from-[#2e37af] to-[#9203ffc6] rounded-3xl p-2 items-center">
-              <div className=" flex items-center justify-center h-full">
-                <h2 className="text-xl lg:text-4xl text-center font-bold p-4">
+              <div className="font-montserrat flex items-center justify-center h-full">
+                <h2 className=" text-xl lg:text-4xl text-center font-bold p-4">
                   Bangun HIMAFI ITB Bersama <br className="newline" />
                   <span className="text-yellow-300 font-bold">
                     Muhammad Kamal!
@@ -50,7 +50,7 @@ export default function Beranda() {
             </div>
 
             {/* Call to Action Box */}
-            <div className="animate-fade-right animate-duration-[3000ms] animate-delay-[3000ms] text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#387dcc] to-[#115ccd] rounded-3xl p-6">
+            <div className="font-poppins animate-fade-right animate-duration-[3000ms] animate-delay-[3000ms] text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#387dcc] to-[#115ccd] rounded-3xl p-6">
               <p className="mb-3">
                 Saya percaya bahwa HIMAFI ITB yang lebih baik hanya bisa
                 terwujud jika dibangun bersama, satu aspirasi dari aspirasi.
@@ -66,7 +66,7 @@ export default function Beranda() {
             </div>
 
             {/* Button Box */}
-            <div className="intersect:animate-jump intersect:animate-delay-0 intersect:animate-duration-[3000ms] flex items-center justify-center text-lg lg:text-xl">
+            <div className=" font-montserrat intersect:animate-jump intersect:animate-delay-0 intersect:animate-duration-[3000ms] flex items-center justify-center text-lg lg:text-xl">
               <button
                 onClick={scrollToForm}
                 className="text-xl text-[#4C81CF] bg-white p-5 rounded-3xl font-semibold hover:bg-blue-300 transition-colors w-full"

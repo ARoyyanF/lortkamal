@@ -5,12 +5,12 @@ export default function Kontak() {
   return (
     <div className="leading-tight min-h-[80vh] flex flex-col pb-8 pt-16 mt-32 bg-slate-400/10">
       <div className="max-w-7xl mx-auto px-4">
-        <h1 className="intersect:animate-fade-down animate-duration-[3000ms] text-3xl lg:text-3xl font-bold text-center mb-6 text-white">
+        <h1 className="font-montserrat intersect:animate-fade-down animate-duration-[3000ms] text-3xl lg:text-3xl font-bold text-center mb-6 text-white">
           Hubungi kami lebih lanjut
         </h1>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 mb-4">
+      <div className="font-poppins max-w-7xl mx-auto px-4 mb-4">
         <div className="flex flex-col md:flex-row gap-4">
           {/* Left side box */}
           <div className="intersect:animate-fade-right animate-duration-[3000ms] flex flex-grow text-gray-100 text-justify text-sm lg:text-lg bg-[#0053CF] rounded-3xl ">
