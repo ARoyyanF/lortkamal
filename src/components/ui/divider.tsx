@@ -7,9 +7,9 @@ interface DividerProps {
 
 export function Divider({ children, className = "" }: DividerProps) {
   return (
-    <div className={`relative w-screen flex items-center${className}`}>
+    <div className={`relative w-screen flex items-center break-words ${className}`}>
       <div className="flex-grow border-t"></div>
-      <span className="flex-shrink-0 mx-4 text-popover">{children}</span>
+      <span className="text-wrap mx-4 text-popover text-center">{children}</span>
       <div className="flex-grow border-t"></div>
     </div>
   );

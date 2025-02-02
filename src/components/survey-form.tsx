@@ -972,7 +972,7 @@ export default function SurveyForm() {
 
           <div className="flex justify-center">
             <Divider>
-              BAGIAN KEBUTUHAN ANGGOTA, KOLABORASI, DAN ADVOKASI MASSA
+              KEBUTUHAN ANGGOTA, KOLABORASI, DAN ADVOKASI MASSA
             </Divider>
           </div>
           <div className="space-y-4 intersect-once intersect:animate-fade-right">

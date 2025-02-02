@@ -273,8 +273,8 @@ export const SliderScale = ({
             {/* <div className="flex  items-center mt-4 flex-col">
               <div className="flex-none"></div> */}
             <div className="flex justify-between flex-row py-3">
-              <span className="text-sm text-secondary">{mintext}</span>
-              <span className="text-sm text-secondary text-right">
+              <span className="flex-1 text-sm text-secondary">{mintext}</span>
+              <span className="flex-1 text-sm text-secondary text-right">
                 {maxtext}
               </span>
             </div>
