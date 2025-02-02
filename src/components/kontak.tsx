@@ -17,9 +17,18 @@ export default function Kontak() {
             {/* Description Box */}
             <div className="m-6">
               <p className="mb-4 text-lg font-bold">Muhammad Kamal</p>
-              <p>Nomor kontak : 0821234567</p>
-              <p>ID Line : 0821234567</p>
-              <p>Instagram : 0821234567</p>
+              <p>Nomor kontak : 082216928553</p>
+              <p>ID Line : Muhammadkamal52</p>
+              <div>
+                Instagram : <a
+                  href="https://www.instagram.com/panggilsajakamal/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white transition-colors duration-300 hover:text-blue-400"
+                >
+                  @panggilsajakamal
+                </a>
+              </div>
             </div>
             {/* Right side box*/}
           </div>
@@ -27,9 +36,18 @@ export default function Kontak() {
             {/* Description Box */}
             <div className="m-6">
               <p className="mb-4 text-lg font-bold">Tim Sukses</p>
-              <p>Nomor kontak : 0821234567</p>
-              <p>ID Line : 0821234567</p>
-              <p>Instagram : 0821234567</p>
+              <p>Nomor kontak : 0813-1400-1884</p>
+              <p>ID Line : nashwanchakap</p>
+              <div>
+                Instagram : <a
+                  href="https://www.instagram.com/mfthn_22/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white transition-colors duration-300 hover:text-blue-400"
+                >
+                  @mfthn_22
+                </a>
+              </div>
             </div>
           </div>
         </div>

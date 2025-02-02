@@ -31,9 +31,9 @@ export default function TentangKamal() {
           </div>
 
           {/* Right side box*/}
-          <div className="rounded-3xl bg-gradient-to-tr from-[#5f2eafd0] to-[#3c3abb] text-justify text-sm intersect:animate-fade-left lg:text-lg">
+          <div className="font-poppins rounded-3xl bg-gradient-to-tr from-[#5f2eafd0] to-[#3c3abb] text-justify text-sm intersect:animate-fade-left lg:text-lg">
             {/* Description Box */}
-            <div className="rounded-3xl rounded-b-none bg-[#3735af] text-justify text-sm lg:text-lg">
+            <div className=" rounded-3xl rounded-b-none bg-[#3735af] text-justify text-sm lg:text-lg">
               <div className="rounded-3xl bg-[#4341cc] text-justify text-sm lg:text-lg">
                 <p className="p-6">
                   <span className="text-base font-bold text-yellow-300 lg:text-3xl">
@@ -64,7 +64,7 @@ export default function TentangKamal() {
             </div>
           </div>
         </div>
-        <div className="rounded-3xl rounded-tr-none bg-[#29287c] text-justify text-sm intersect:animate-fade-left lg:text-lg">
+        <div className=" font-poppins rounded-3xl rounded-tr-none bg-[#29287c] text-justify text-sm intersect:animate-fade-left lg:text-lg">
           <div className="rounded-3xl rounded-t-none bg-[#302e94] text-justify text-sm md:rounded-tl-3xl lg:text-lg">
             <p className="p-6">
               Walau telah terlibat dalam beragam kepanitiaan dan meraih berbagai
@@ -108,13 +108,13 @@ export default function TentangKamal() {
           <div className="flex flex-auto flex-col gap-4">
             <div className="rounded-3xl bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] text-justify text-sm text-gray-100 intersect:animate-fade-left lg:text-lg">
               {/* Description Box */}
-              <p className="rounded-3xl rounded-b-none bg-[#28267a] p-6 text-center text-xl font-bold lg:text-4xl">
+              <p className="font-montserrat rounded-3xl rounded-b-none bg-[#28267a] p-6 text-center text-xl font-bold lg:text-4xl">
                 HIMAFI ITB dan ITB
               </p>
-              <p className="my-4 px-4 text-lg font-bold lg:text-xl">
+              <p className="font-montserrat my-4 px-4 text-lg font-bold lg:text-xl">
                 Organisasi
               </p>
-              <ul className="list-none space-y-4">
+              <ul className=" font-poppins list-none space-y-4">
                 <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
                   <div className="flex h-16 w-16 flex-none items-center justify-center">
                     <Image
@@ -164,10 +164,10 @@ export default function TentangKamal() {
                   </div>
                 </li>
               </ul>
-              <p className="my-4 px-4 text-lg font-bold lg:text-xl">
+              <p className="font-montserrat my-4 px-4 text-lg font-bold lg:text-xl">
                 Kepanitiaan
               </p>
-              <ul className="list-none space-y-4">
+              <ul className=" font-poppins list-none space-y-4">
                 <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
                   <div className="flex h-16 w-16 flex-none items-center justify-center">
                     <Image
@@ -370,10 +370,10 @@ export default function TentangKamal() {
               </ul>
             </div>
             <div className="rounded-3xl bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] text-justify text-sm text-gray-100 intersect:animate-fade-left lg:text-lg">
-              <p className="rounded-3xl rounded-b-none bg-[#28267a] p-6 text-center text-xl font-bold lg:text-4xl">
+              <p className="font-montserrat rounded-3xl rounded-b-none bg-[#28267a] p-6 text-center text-xl font-bold lg:text-4xl">
                 Riwayat Pekerjaan/Magang
               </p>
-              <ul className="mt-4 list-none space-y-4">
+              <ul className="font-poppins mt-4 list-none space-y-4">
                 <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
                   <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-2">
                     <Image
@@ -450,13 +450,13 @@ export default function TentangKamal() {
           <div className="flex flex-auto flex-col gap-4">
             <div className="rounded-3xl bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] text-justify text-sm text-gray-100 intersect:animate-fade-right lg:text-lg">
               {/* Description Box */}
-              <p className="rounded-3xl rounded-b-none bg-[#28267a] p-6 text-center text-xl font-bold lg:text-4xl">
+              <p className="font-montserrat rounded-3xl rounded-b-none bg-[#28267a] p-6 text-center text-xl font-bold lg:text-4xl">
                 Rekam Jejak Lainnya
               </p>
-              <p className="my-4 px-4 text-lg font-bold lg:text-xl">
+              <p className="font-montserrat my-4 px-4 text-lg font-bold lg:text-xl">
                 Riwayat Organisasi Kemahasiswaan
               </p>
-              <ul className="list-none space-y-4">
+              <ul className="font-poppins list-none space-y-4">
                 <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
                   <div className="flex h-16 w-16 flex-none items-center justify-center">
                     <Image
@@ -529,10 +529,10 @@ export default function TentangKamal() {
                   </div>
                 </li>
               </ul>
-              <p className="my-4 px-4 text-lg font-bold lg:text-xl">
+              <p className="font-montserrat my-4 px-4 text-lg font-bold lg:text-xl">
                 Riwayat Organisasi Umum
               </p>
-              <ul className="mb-4 list-none space-y-4">
+              <ul className="font-poppins mb-4 list-none space-y-4">
                 <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
                   <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-2">
                     <Image
@@ -649,10 +649,10 @@ export default function TentangKamal() {
                   </div>
                 </li>
               </ul>
-              <p className="my-4 px-4 text-lg font-bold lg:text-xl">
+              <p className="font-montserrat my-4 px-4 text-lg font-bold lg:text-xl">
                 Riwayat Kepanitiaan
               </p>
-              <ul className="list-none space-y-1 lg:space-y-2">
+              <ul className="font-poppins list-none space-y-1 lg:space-y-2">
                 <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4 px-8">
                   <div>
                     <p className="font-bold">
@@ -740,13 +740,13 @@ export default function TentangKamal() {
 
       <div className="mx-auto max-w-7xl flex-1 px-4 pt-1 intersect:animate-fade-down">
         <div className="rounded-3xl bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] text-justify text-sm text-gray-100 intersect:animate-fade-left lg:text-lg">
-          <p className="rounded-3xl rounded-b-none bg-[#28267a] p-6 text-center text-xl font-bold lg:text-4xl">
+          <p className="font-montserrat rounded-3xl rounded-b-none bg-[#28267a] p-6 text-center text-xl font-bold lg:text-4xl">
             Akademik
           </p>
-          <p className="my-4 px-4 text-lg font-bold lg:text-xl">
+          <p className="font-montserrat my-4 px-4 text-lg font-bold lg:text-xl">
             Riwayat Akademik dan Penelitian
           </p>
-          <ul className="space-y-4 list-disc md:pl-10 lg:space-y-2">
+          <ul className="font-poppins space-y-4 list-disc md:pl-10 lg:space-y-2">
             <li className="flex items-center space-x-4 rounded-3xl md:rounded-r-none bg-[#302e94] p-4">
               <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-2">
                 <Image
