@@ -65,6 +65,11 @@ const formSchema = z.object({
   q3d: z.number().min(0).max(100),
   q3e: z.array(DraggablePreferenceTableSchema),
   q3f: z.string().min(1, "Mohon diisi 🙏"),
+  q4a: z.number().min(0).max(100),
+  q4b: z.array(z.string()).min(1, "Pilih setidaknya satu opsi atau lebih"),
+  q4c: z.string().min(1, "Pilih salah satu opsi"),
+  q4d: z.array(DraggablePreferenceTableSchema),
+  q4e: z.string().min(1, "Mohon diisi 🙏"),
 
   // sigmaQuestion: z
   //   .array(z.string())
@@ -237,6 +242,40 @@ const defaultValues = {
     { id: "5", description: "Mengembangkan citra organisasi" },
   ],
   q3f: "",
+  q4a: 30,
+  q4b: [],
+  q4c: "",
+  q4d: [
+    {
+      id: "1",
+      description:
+        "Penyediaan fasilitas penunjang kuliah dan kegiatan di lingkungan fisika yang memadai",
+    },
+    {
+      id: "2",
+      description: "Keringanan finansial atau beasiswa untuk anggota",
+    },
+    {
+      id: "3",
+      description:
+        "Bantuan penunjang kehidupan (makanan, pakaian, tempat tinggal) untuk anggota",
+    },
+    {
+      id: "4",
+      description: "Ruang diskusi dan kolaborasi antarmahasiswa",
+    },
+    { id: "5", description: "Pengembangan koneksi industri dan akademisi" },
+    {
+      id: "6",
+      description:
+        "Ruang penyampaian aspirasi umum (semacam Ngobrol Santai Bersama Kaprodi)",
+    },
+    {
+      id: "7",
+      description: "Dukungan Kesehatan Mental dan Kesejahteraan Mahasiswa",
+    },
+  ],
+  q4e: "",
 };
 
 export default function SurveyForm() {
@@ -841,6 +880,106 @@ export default function SurveyForm() {
               />
             </FormCard>
           </div>
+
+          <div className="flex justify-center">
+            <Divider>
+              BAGIAN KEBUTUHAN ANGGOTA, KOLABORASI, DAN ADVOKASI MASSA
+            </Divider>
+          </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <SliderScale
+                name="q4a"
+                label="Seberapa baik menurut Anda HIMAFI ITB sudah mengadvokasi kebutuhan anggota, khususnya kebutuhan finansial dan kebutuhan primer, ke pihak yang bersangkutan?"
+                min={0}
+                max={100}
+                mintext="Nonexistent"
+                maxtext="Sangat baik dan sangat membantu"
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <CheckboxGroup
+                name="q4b"
+                label="Pihak eksternal mana saja yang menurut Anda harus diajak bekerja sama oleh HIMAFI ITB? "
+                options={[
+                  {
+                    id: "1",
+                    label: "Program Studi atau Fakultas",
+                  },
+                  { id: "2", label: "Lembaga Penelitian/Instansi Pemerintah" },
+                  {
+                    id: "3",
+                    label: "Perusahaan Teknologi/Industri",
+                  },
+                  {
+                    id: "4",
+                    label: "Himpunan Mahasiswa Jurusan di ITB",
+                  },
+                  {
+                    id: "5",
+                    label: "Unit Kegiatan Mahasiswa di ITB",
+                  },
+                  {
+                    id: "6",
+                    label: "Himpunan Mahasiswa Jurusan di luar ITB",
+                  },
+                  {
+                    id: "7",
+                    label: "Unit Kegiatan Mahasiswa di luar ITB",
+                  },
+                  {
+                    id: "8",
+                    label:
+                      "Alumni HIMAFI yang kompeten melalui Ikatan Alumni Fisika ITB",
+                  },
+                  {
+                    id: "9",
+                    label: "NGO Sosial/Lingkungan",
+                  },
+                ]}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <RadioButtonGroup
+                name="q4c"
+                label="Sejauh ini, bagaimana dukungan program studi dan universitas terhadap kegiatan HIMAFI ITB?"
+                options={[
+                  { value: "1", label: "Tidak ada dukungan sama sekali" },
+                  { value: "2", label: "Dukungan terbatas" },
+                  { value: "3", label: "Dukungan cukup memadai" },
+                  { value: "4", label: "Dukungan penuh" },
+                ]}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <DraggablePreferenceTable
+                name="q4d"
+                label="Urutkan fokus utama dalam advokasi HIMAFI ITB:"
+                sensors={sensors}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <TextBox
+                name="q4e"
+                label="Silakan berikan aspirasi yang berhubungan dengan bagian kebutuhan anggota, kolaborasi, dan advokasi massa! (Aspirasi bersifat umum dan bisa berhubungan dengan kritik, saran, masukan, dan kendala yang selama ini dimiliki terhadap bagian ini)"
+                placeholder="Tulis jawaban di sini"
+                form={form}
+              />
+            </FormCard>
+          </div>
+
           {/* <div className="intersect-once intersect:animate-fade-right">
             <FormCard>
               <RadioButtonGroup
