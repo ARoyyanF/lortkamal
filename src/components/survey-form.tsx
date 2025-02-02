@@ -59,6 +59,12 @@ const formSchema = z.object({
   q2i: z.array(DraggablePreferenceTableSchema),
   q2j: z.array(z.string()).min(1, "Pilih setidaknya satu opsi atau lebih"),
   q2k: z.string().min(1, "Mohon diisi 🙏"),
+  q3a: z.string().min(1, "Pilih salah satu opsi"),
+  q3b: z.string().min(1, "Pilih salah satu opsi"),
+  q3c: z.string().min(1, "Pilih salah satu opsi"),
+  q3d: z.number().min(0).max(100),
+  q3e: z.array(DraggablePreferenceTableSchema),
+  q3f: z.string().min(1, "Mohon diisi 🙏"),
 
   // sigmaQuestion: z
   //   .array(z.string())
@@ -213,6 +219,24 @@ const defaultValues = {
   ],
   q2j: [],
   q2k: "",
+  q3a: "",
+  q3b: "",
+  q3c: "",
+  q3d: 30,
+  q3e: [
+    { id: "1", description: "Ingin membantu masyarakat secara langsung" },
+    { id: "2", description: "Menambah pengalaman organisasi" },
+    {
+      id: "3",
+      description: "Mendapat pengakuan/pencapaian pribadi",
+    },
+    {
+      id: "4",
+      description: "Memenuhi kewajiban moral/etika",
+    },
+    { id: "5", description: "Mengembangkan citra organisasi" },
+  ],
+  q3f: "",
 };
 
 export default function SurveyForm() {
@@ -741,6 +765,82 @@ export default function SurveyForm() {
             </FormCard>
           </div>
 
+          <div className="flex justify-center">
+            <Divider>PENGABDIAN MASYARAKAT</Divider>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <RadioButtonGroup
+                name="q3a"
+                label="Apakah Anda mengetahui bahwa HIMAFI ITB memiliki program kerja yang berhubungan dengan pengabdian masyarakat?"
+                options={[
+                  { value: "1", label: "Ya" },
+                  { value: "2", label: "Tidak" },
+                ]}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <RadioButtonGroup
+                name="q3b"
+                label="Darimana Anda mengetahui keberadaan program kerja tersebut?"
+                options={[
+                  { value: "1", label: "Media Sosial HIMAFI ITB" },
+                  { value: "2", label: "Broadcast di grup" },
+                  { value: "3", label: "Informasi mulut ke mulut" },
+                ]}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <RadioButtonGroup
+                name="q3c"
+                label="Apakah Anda mengikuti program kerja pengabdian masyarakat yang diadakan HIMAFI ITB?"
+                options={[
+                  { value: "1", label: "Ya" },
+                  { value: "2", label: "Tidak" },
+                ]}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <SliderScale
+                name="q3d"
+                label="Seberapa efektif menurut Anda kegiatan pengabdian masyarakat HIMAFI ITB dalam memberi dampak ke masyarakat?"
+                min={0}
+                max={100}
+                mintext="Tidak berdampak sama sekali"
+                maxtext="Sangat berdampak"
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <DraggablePreferenceTable
+                name="q3e"
+                label="Urutkan alasan utama Anda mengikuti kegiatan pengabdian masyarakat:"
+                sensors={sensors}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <TextBox
+                name="q3f"
+                label="Silakan berikan aspirasi yang berhubungan dengan bagian pengabdian masyarakat! (Aspirasi bersifat umum dan bisa berhubungan dengan kritik, saran, masukan, dan kendala yang selama ini dimiliki terhadap bagian ini)"
+                placeholder="Tulis jawaban di sini"
+                form={form}
+              />
+            </FormCard>
+          </div>
           {/* <div className="intersect-once intersect:animate-fade-right">
             <FormCard>
               <RadioButtonGroup
