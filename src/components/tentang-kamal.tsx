@@ -750,23 +750,18 @@ export default function TentangKamal() {
             <li className="flex items-center space-x-4 rounded-3xl md:rounded-r-none bg-[#302e94] p-4">
               <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-2">
                 <Image
-                  src="/mejabelajar.webp"
-                  alt="Meja Belajar Logo"
+                  src="/ugv-uav.jpg"
+                  alt="Prawira Logo"
                   width={64}
                   height={64}
                   className="rounded-full object-cover"
                 />
               </div>
               <div>
-                <a
-                  href="https://www.instagram.com/mejabelajaredu/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
-                >
+                <p className="font-bold text-white">
                   Laboratorium Elektronika dan Instrumentasi UGV & UAV
                   (2024–Sekarang)
-                </a>
+                </p>
                 <p className="text-[#b5bff8]">
                   Asisten Laboratorium dan Penelitian
                 </p>
@@ -775,8 +770,8 @@ export default function TentangKamal() {
             <li className="flex items-center space-x-4 rounded-3xl md:rounded-r-none bg-[#302e94] p-4">
               <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-2">
                 <Image
-                  src="/mejabelajar.webp"
-                  alt="Meja Belajar Logo"
+                  src="/fttm.jpg"
+                  alt="FTTM Logo"
                   width={64}
                   height={64}
                   className="rounded-full object-cover"
@@ -784,7 +779,7 @@ export default function TentangKamal() {
               </div>
               <div>
                 <a
-                  href="https://www.instagram.com/mejabelajaredu/"
+                  href="https://www.fttm.itb.ac.id/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
@@ -801,8 +796,8 @@ export default function TentangKamal() {
             <li className="flex items-center space-x-4 rounded-3xl md:rounded-r-none bg-[#302e94] p-4">
               <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-2">
                 <Image
-                  src="/mejabelajar.webp"
-                  alt="Meja Belajar Logo"
+                  src="/elka.png"
+                  alt="elka Logo"
                   width={64}
                   height={64}
                   className="rounded-full object-cover"
@@ -810,7 +805,7 @@ export default function TentangKamal() {
               </div>
               <div>
                 <a
-                  href="https://www.instagram.com/mejabelajaredu/"
+                  href="https://elka.fi.itb.ac.id/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
@@ -823,8 +818,8 @@ export default function TentangKamal() {
             <li className="flex items-center space-x-4 rounded-3xl md:rounded-r-none bg-[#302e94] p-4">
               <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-2">
                 <Image
-                  src="/mejabelajar.webp"
-                  alt="Meja Belajar Logo"
+                  src="/pengkom.jpg"
+                  alt="pengkom Logo"
                   width={64}
                   height={64}
                   className="rounded-full object-cover"
@@ -832,7 +827,7 @@ export default function TentangKamal() {
               </div>
               <div>
                 <a
-                  href="https://www.instagram.com/mejabelajaredu/"
+                  href="https://www.instagram.com/berpikir_komputasional/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
@@ -842,11 +837,11 @@ export default function TentangKamal() {
                 <p className="text-[#b5bff8]">Staf Asisten</p>
               </div>
             </li>
-            <li className="flex items-center space-x-4 rounded-3xl md:rounded-r-none bg-[#302e94] p-4">
+            <li className="flex items-center space-x-4 rounded-3xl md:rounded-tr-none bg-[#302e94] p-4">
               <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-2">
                 <Image
-                  src="/mejabelajar.webp"
-                  alt="Meja Belajar Logo"
+                  src="/pengkom.jpg"
+                  alt="pengkom Logo"
                   width={64}
                   height={64}
                   className="rounded-full object-cover"
@@ -854,7 +849,7 @@ export default function TentangKamal() {
               </div>
               <div>
                 <a
-                  href="https://www.instagram.com/mejabelajaredu/"
+                  href="https://www.instagram.com/berpikir_komputasional/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
