@@ -3,12 +3,12 @@ import Image from "next/image";
 
 export default function TentangKamal() {
   return (
-    <div className="leading-tight py-8">
-      <div className="max-w-7xl mx-auto px-4 ">
-        <h1 className=" font-montserrat intersect:animate-jump-in animate-delay-300 text-3xl lg:text-6xl font-bold text-center mb-6 text-white">
+    <div className="py-8 leading-tight">
+      <div className="mx-auto max-w-7xl px-4">
+        <h1 className="mb-6 text-center text-3xl font-bold text-white animate-delay-300  font-montserrat intersect:animate-jump-in lg:text-6xl">
           Tak Kenal Maka Tak Melekat
         </h1>
-        <p className="font-poppins intersect:animate-fade-down text-sm lg:text-lg text-center px-4 mb-6 text-white">
+        <p className="mb-6 px-4 text-center text-sm text-white font-poppins intersect:animate-fade-down lg:text-lg">
           Kenali lebih dekat Muhammad Kamal, seorang anggota HIMAFI ITB yang
           ingin berkontribusi lebih untuk organisasi ini. Dengan langkah-langkah
           sederhana yang sudah saya lakukan, saya berkomitmen untuk terus
@@ -17,105 +17,850 @@ export default function TentangKamal() {
         </p>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 mb-3">
-        <div className="flex flex-col md:flex-row gap-4">
+      <div className="mx-auto mb-3 max-w-7xl px-4">
+        <div className="flex flex-col gap-4 md:flex-row">
           {/* Left side box */}
-          <div className=" intersect:animate-fade-right bg-gradient-to-tl from-[#5f2eafd0] to-[#3c3abb] rounded-3xl justify-center flex-none items-center flex">
+          <div className="mb-4 flex flex-none items-center justify-center rounded-3xl bg-gradient-to-tl from-[#5f2eafd0] to-[#3c3abb] intersect:animate-fade-right">
             <Image
               src="/Profile pic.png"
               alt="Kamal Profile"
               width={200}
               height={200}
-              className="object-top object-cover rounded-3xl scale-200"
+              className="scale-200 rounded-3xl object-cover object-top"
             />
           </div>
 
           {/* Right side box*/}
-          <div className=" intersect:animate-fade-left text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#5f2eafd0] to-[#3c3abb] rounded-3xl ">
+          <div className="font-poppins rounded-3xl bg-gradient-to-tr from-[#5f2eafd0] to-[#3c3abb] text-justify text-sm intersect:animate-fade-left lg:text-lg">
             {/* Description Box */}
-            <div className="m-6">
-              <p className=" font-montserrat mb-4 text-lg lg:text-2xl font-bold">
-                Judulnya biografi sederhana
-              </p>
-              <p className="font-poppins">
-                Saddam Hussein dilahirk an di kota Al-Awja, 13 km dari kota
-                Tikrit di Segitiga Sunni, dalam sebuah keluarga gembala. Ibunya,
-                Subha Tulfah al-Mussallat, menamai anaknya yang baru lahir itu
-                "Saddam", yang dalam bahasa Arab berarti "Dia yang menantang".
-                Saddam tak pernah mengenal ayahnya, Hussein Abdul Majid, yang
-                menghilang enam bulan sebelum Saddam dilahirkan. Tak lama
-                kemudian, kakak Saddam yang berusia 13 tahun meninggal dunia
-                karena kanker, sehingga ibunya mengalami depresi hebat pada
-                bulan-bulan terakhir kehamilannya. Ibunda Saddam berusaha
-                membatalkan kehamilannya dengan mencoba melakukan bunuh diri.
-                Bayi Saddam kemudian dikirim ke keluarga paman ibunya,
-                Khairallah Talfah, hingga ia berusia tiga tahun.[20]
+            <div className=" rounded-3xl rounded-b-none bg-[#3735af] text-justify text-sm lg:text-lg">
+              <div className="rounded-3xl bg-[#4341cc] text-justify text-sm lg:text-lg">
+                <p className="p-6">
+                  <span className="text-base font-bold text-yellow-300 lg:text-3xl">
+                    Nama saya Muhammad Kamal
+                  </span>
+                  , biasa dipanggil Kamal atau Hamad Saya lahir di Kota Bandung
+                  pada 29 Maret 2003. Sejak kecil, saya selalu ingin belajar dan
+                  berbagi. Semangat ini membawa saya menempuh pendidikan di SD
+                  Negeri 257 Pelita, SMP Negeri 7, dan SMA Negeri 11 Kota
+                  Bandung. Setelah sempat berkuliah di Universitas Padjadjaran,
+                  saya kini melanjutkan studi Sarjana Fisika di Institut
+                  Teknologi Bandung (ITB).
+                </p>
+              </div>
+              <p className="p-6">
+                Di sela kesibukan kuliah, saya terus mengembangkan diri melalui
+                berbagai pelatihan dan beasiswa, seperti IndonesiaNEXT oleh
+                Telkomsel dan Pacmann Data & Business Scholarship.
+                <span className="font-bold text-yellow-300">
+                  {" "}
+                  Bagi saya, pengetahuan bukan sekadar kumpulan teori, tetapi
+                  juga bekal untuk mengabdi.{" "}
+                </span>
+                Saya pun aktif berkiprah di berbagai organisasi, antara lain
+                HIMAFI ITB, Dagozilla ITB, serta komunitas profesional seperti
+                American Physical Society.
               </p>
             </div>
           </div>
         </div>
+        <div className=" font-poppins rounded-3xl rounded-tr-none bg-[#29287c] text-justify text-sm intersect:animate-fade-left lg:text-lg">
+          <div className="rounded-3xl rounded-t-none bg-[#302e94] text-justify text-sm md:rounded-tl-3xl lg:text-lg">
+            <p className="p-6">
+              Walau telah terlibat dalam beragam kepanitiaan dan meraih berbagai
+              pengalaman, mulai dari kepala divisi hingga asisten penelitian,{" "}
+              <span className="font-bold text-yellow-300">
+                saya tetap melihat diri saya sebagai bagian dari banyak orang
+                yang sama-sama ingin berbuat lebih bagi lingkungan.
+              </span>{" "}
+              Melalui peran saya di HIMAFI ITB dan lingkungan sekitar saya, saya
+              berharap dapat berkontribusi agar himpunan ini dan rekan-rekan di
+              lingkungan sekitar saya semakin mengakar, bertumbuh, dan bergerak
+              maju.
+            </p>
+          </div>
+          <p className="p-6">
+            Bagi saya, tujuan akhirnya sederhana: menjadi
+            <span className="font-bold text-yellow-300">
+              {" "}
+              insan yang bermanfaat{" "}
+            </span>
+            dan
+            <span className="font-bold text-yellow-300"> tetap membumi</span>.
+            Saya yakin bahwa dengan kesungguhan hati, kerja keras, serta
+            dukungan semua pihak, HIMAFI ITB dapat terus berkembang dan
+            menghadirkan dampak positif bagi masyarakat luas.{" "}
+          </p>
+        </div>
       </div>
 
-      <div className="mx-auto px-4 pt-1 max-w-7xl">
-        <div className="text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] rounded-3xl p-6 mb-4">
-          <h2 className="font-montserrat intersect:animate-jump-in text-2xl lg:text-4xl font-bold text-center">
-            Judul Rekam Jejak
+      <div className="mx-auto max-w-7xl px-4 pt-1">
+        <div className="mb-4 rounded-3xl bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] p-6 text-justify text-sm text-gray-100 lg:text-lg">
+          <h2 className="text-center text-2xl font-bold font-montserrat intersect:animate-jump-in lg:text-4xl">
+            Rekam Jejak
           </h2>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 mb-4">
-        <div className="flex flex-col md:flex-row gap-4">
+      <div className="mx-auto mb-4 max-w-7xl px-4">
+        <div className="flex flex-col gap-4 md:flex-row">
           {/* Left side box */}
-          <div className=" intersect:animate-fade-left flex-1 text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] rounded-3xl ">
-            {/* Description Box */}
-            <div className="m-6">
-              <p className=" font-montserrat mb-4 text-lg lg:text-2xl font-bold">
-                Yang ini rekam jejak himafi
+          <div className="flex flex-auto flex-col gap-4">
+            <div className="rounded-3xl bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] text-justify text-sm text-gray-100 intersect:animate-fade-left lg:text-lg">
+              {/* Description Box */}
+              <p className="font-montserrat rounded-3xl rounded-b-none bg-[#28267a] p-6 text-center text-xl font-bold lg:text-4xl">
+                HIMAFI ITB dan ITB
               </p>
-              <p className="font-poppins">
-                Rascwietali jabłoni i gruszy, Popłyli tumany nad riekoj;
-                Wychodiła na bierieg Katiusza, Na wysokij bierieg na krutoj.
-                Wychodiła na bierieg Katiusza, Na wysokij bierieg na krutoj.
-                Wychodiła, piesniu zawodiła Pro stiepnogo, sizogo orła, Pro
-                togo, kotorogo lubiła, Pro togo, czji piśma bieriegła. Pro togo,
-                kotorogo lubiła, Pro togo, czji piśma bieriegła. Oj, ty piesnia,
-                piesienka diewiczja, Ty leti za jasnym sołncem wsled, I bojcu na
-                dalniem pograniczje Ot Katiuszy pieriedaj priwiet. I bojcu na
-                dalniem pograniczje Ot Katiuszy pieriedaj priwiet. Pust'i on
-                wspomnit diewuszku prostuju, Pust' usłyszyt, kak ona pajot,
-                Pust'i on ziemlu bierieżot rodnuju A lubow' Katiusza sbierieżot.
-                Pust'i on ziemlu bierieżot rodnuju A lubow' Katiusza sbierieżot.
-                Rascwietali jabłoni i gruszy, Popłyli tumany nad riekoj;
-                Wychodiła na bierieg Katiusza, Na wysokij bierieg na krutoj.
-                Wychodiła na bierieg Katiusza, Na wysokij bierieg na krutoj.
+              <p className="font-montserrat my-4 px-4 text-lg font-bold lg:text-xl">
+                Organisasi
               </p>
+              <ul className=" font-poppins list-none space-y-4">
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center">
+                    <Image
+                      src="/himafi.jpeg"
+                      alt="Himpunan Mahasiswa Fisika ITB Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://www.instagram.com/himafi.itb/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold transition-colors duration-300 hover:text-blue-400"
+                    >
+                      Himpunan Mahasiswa Fisika ITB (2024–Sekarang)
+                    </a>
+                    <p className="text-[#b5bff8]">
+                      Anggota, Kepala Divisi Ekstrakampus
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center">
+                    <Image
+                      src="/dagoz.jpg"
+                      alt="Dagozilla ITB Logo"
+                      width={64}
+                      height={64}
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://dagozilla.itb.ac.id/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                    >
+                      Dagozilla ITB (2023–Sekarang)
+                    </a>
+                    <p className="text-[#b5bff8]">
+                      Anggota Divisi Programming, Kepala Divisi Programming
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <p className="font-montserrat my-4 px-4 text-lg font-bold lg:text-xl">
+                Kepanitiaan
+              </p>
+              <ul className=" font-poppins list-none space-y-4">
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center">
+                    <Image
+                      src="/wisoutlaw.png"
+                      alt="Wisoutlaw Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">
+                      Perayaan Wisuda Oktober HIMAFI ITB 2024 “Wisoutlaw”
+                      (2024–2025)
+                    </p>
+                    <p className="text-[#b5bff8]">Kepala Bidang Pensuasanaan</p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center">
+                    <Image
+                      src="/ishimafi.jpg"
+                      alt="Intellektuelle Schule Logo"
+                      width={64}
+                      height={64}
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://www.instagram.com/ppahimafiitb/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                    >
+                      Proses Penerimaan Anggota HIMAFI ITB “Intellektuelle
+                      Schule” 2024 (2024)
+                    </a>
+                    <p className="text-[#b5bff8]">
+                      Kepala Divisi Keilmuan dan Karir Bidang Materi dan Metode
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center">
+                    <Image
+                      src="/eureka.jpg"
+                      alt="EUREKA ITB Logo"
+                      width={64}
+                      height={64}
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://eurekaitb.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                    >
+                      EUREKA ITB! 2024 (2024)
+                    </a>
+                    <p className="text-[#b5bff8]">Staf Dokumentasi</p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center">
+                    <Image
+                      src="/itbfair24.jpg"
+                      alt="ITB Fair 2024 Logo"
+                      width={64}
+                      height={64}
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://www.instagram.com/itbfair/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                    >
+                      ITB Fair 2024 (2024)
+                    </a>
+                    <p className="text-[#b5bff8]">Staf Dokumentasi</p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center">
+                    <Image
+                      src="/wismurf.webp"
+                      alt="Wismurf Logo"
+                      width={64}
+                      height={64}
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">
+                      Parade Wisuda Oktober HIMAFI ITB 2023 “Wismurf” (2023)
+                    </p>
+                    <p className="text-[#b5bff8]">
+                      Tim Dokumentasi Volunteer, Staff Desain
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-1">
+                    <Image
+                      src="/itb.png"
+                      alt="ITB Logo"
+                      width={64}
+                      height={64}
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">
+                      Syukuran Wisuda Pertama Program Studi Sarjana Fisika ITB
+                      2023 (2023)
+                    </p>
+                    <p className="text-[#b5bff8]">Operator</p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center">
+                    <Image
+                      src="/oskm23.jpg"
+                      alt="OSKM ITB 2023 Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">
+                      Orientasi Studi Keluarga Mahasiswa ITB 2023 (2023)
+                    </p>
+                    <p className="text-[#b5bff8]">
+                      Staf Subidang Dokumentasi Divisi Kreatif
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center">
+                    <Image
+                      src="/fmipa22.png"
+                      alt="Scientia FMIPA ITB Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">
+                      Scientia FMIPA ITB 2023 (2023)
+                    </p>
+                    <p className="text-[#b5bff8]">Staf Mentor</p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="square-full flex h-16 w-16 flex-none items-center justify-center bg-black">
+                    <Image
+                      src="/tedxitb.webp"
+                      alt="TEDxITB Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://tedxitb.id"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                    >
+                      TEDxITB 6.0 (2022–2023)
+                    </a>
+                    <p className="text-[#b5bff8]">Staf Sinematografi</p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center">
+                    <Image
+                      src="/wisokto22.png"
+                      alt="Wisuda Oktober 2022 Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">
+                      Parade Wisuda Oktober ITB 2022 (2022)
+                    </p>
+                    <p className="text-[#b5bff8]">Staf Grafis Bidang Kreatif</p>
+                  </div>
+                </li>
+              </ul>
             </div>
-            {/* Right side box*/}
-          </div>
-          <div className="intersect:animate-fade-right flex-1 text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] rounded-3xl ">
-            {/* Description Box */}
-            <div className="m-6">
-              <p className="font-montserrat mb-4 text-lg lg:text-2xl font-bold">
-                Yang ini rekam jejak NON!!himafi
+            <div className="rounded-3xl bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] text-justify text-sm text-gray-100 intersect:animate-fade-left lg:text-lg">
+              <p className="font-montserrat rounded-3xl rounded-b-none bg-[#28267a] p-6 text-center text-xl font-bold lg:text-4xl">
+                Riwayat Pekerjaan/Magang
               </p>
-              <p className="font-poppins">
-                Auf der Heide blüht ein kleines Blümelein Und das heißt Erika
-                Heiß von hunderttausend kleinen Bienelein Wird umschwärmt Erika
-                Denn ihr Herz ist voller Süßigkeit Zarter Duft entströmt dem
-                Blütenkleid Auf der Heide blüht ein kleines Blümelein Und das
-                heißt Erika In der Heimat wohnt ein blondes Mägdelein Und das
-                heißt Erika Dieses Mädel ist mein treues Schätzelein Und mein
-                Glück Erika Wenn das Heidekraut rot-lila blüht Singe ich zum
-                Gruß ihr dieses Lied Auf der Heide blüht ein kleines Blümelein
-                Und das heißt Erika In mein'm Kämmerlein blüht auch ein
-                Blümelein Und das heißt Erika Schon beim Morgengrau'n sowie beim
-                Dämmerschein Schaut's mich an Erika Und dann ist es mir, als
-                spräch' es laut "Denkst du auch an deine kleine Braut?" In der
-                Heimat weint um dich ein Mägdelein Und das heißt Erika
-              </p>
+              <ul className="font-poppins mt-4 list-none space-y-4">
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-2">
+                    <Image
+                      src="/mejabelajar.webp"
+                      alt="Meja Belajar Logo"
+                      width={64}
+                      height={64}
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://www.instagram.com/mejabelajaredu/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                    >
+                      Meja Belajar (2023)
+                    </a>
+                    <p className="text-[#b5bff8]">
+                      Curriculum Team (Physics Specialization)
+                    </p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-2">
+                    <Image
+                      src="/xeratic.png"
+                      alt="Xeratic Logo"
+                      width={64}
+                      height={64}
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://www.xeratic.com/id/home"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                    >
+                      Xeratic (2022)
+                    </a>
+                    <p className="text-[#b5bff8]">Data Engineer</p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center">
+                    <Image
+                      src="/pemimpinid.png"
+                      alt="Pemimpin.id Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://www.instagram.com/pemimpin.indonesia/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                    >
+                      Pemimpin.id (2022)
+                    </a>
+                    <p className="text-[#b5bff8]">Graphic Designer</p>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
+          <div className="flex flex-auto flex-col gap-4">
+            <div className="rounded-3xl bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] text-justify text-sm text-gray-100 intersect:animate-fade-right lg:text-lg">
+              {/* Description Box */}
+              <p className="font-montserrat rounded-3xl rounded-b-none bg-[#28267a] p-6 text-center text-xl font-bold lg:text-4xl">
+                Rekam Jejak Lainnya
+              </p>
+              <p className="font-montserrat my-4 px-4 text-lg font-bold lg:text-xl">
+                Riwayat Organisasi Kemahasiswaan
+              </p>
+              <ul className="font-poppins list-none space-y-4">
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center">
+                    <Image
+                      src="/pps_society_logo.jpeg"
+                      alt="Pajajaran Physical Society Logo"
+                      width={64}
+                      height={64}
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://www.instagram.com/pps_society/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                    >
+                      Pajajaran Physical Society (2022–2024)
+                    </a>
+                    <p className="text-[#b5bff8]">
+                      Content Writer (One Page Fact), Video Editor, dan Motion
+                      Designer
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center">
+                    <Image
+                      src="/hifi.png"
+                      alt="Himpunan Mahasiswa Fisika Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://hifi.fmipa.unpad.ac.id/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                    >
+                      Himpunan Mahasiswa Fisika FMIPA Unpad (2021–2022)
+                    </a>
+                    <p className="text-[#b5bff8]">
+                      Staf Departemen Media & Informasi, Anggota Luar Biasa
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center">
+                    <Image
+                      src="/gamabaunpad.png"
+                      alt="Keluarga Mahasiswa Bandung Logo"
+                      width={64}
+                      height={64}
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://www.instagram.com/gamabanunpad/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                    >
+                      Keluarga Mahasiswa Bandung Unpad (2021–2022)
+                    </a>
+                    <p className="text-[#b5bff8]">Anggota</p>
+                  </div>
+                </li>
+              </ul>
+              <p className="font-montserrat my-4 px-4 text-lg font-bold lg:text-xl">
+                Riwayat Organisasi Umum
+              </p>
+              <ul className="font-poppins mb-4 list-none space-y-4">
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-2">
+                    <Image
+                      src="/astm.png"
+                      alt="ASTM Logo"
+                      width={64}
+                      height={64}
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <div>
+                      <a
+                        href="https://www.astm.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                      >
+                        American Standard Testing and Material International
+                        (ASTM) (2024–Sekarang)
+                      </a>
+                      <p className="text-[#b5bff8]">Student Member</p>
+                    </div>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center">
+                    <Image
+                      src="/iop.png"
+                      alt="Institute of Physics Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://www.iop.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                    >
+                      Institute of Physics (2022–Sekarang)
+                    </a>
+                    <p className="text-[#b5bff8]">Associate Member (AMInstP)</p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-2">
+                    <Image
+                      src="/APS.png"
+                      alt="American Physical Society Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://www.aps.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                    >
+                      American Physical Society (2021–Sekarang)
+                    </a>
+                    <p className="text-[#b5bff8]">
+                      Undergraduate Student Member
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center">
+                    <Image
+                      src="/pemimpinid.png"
+                      alt="Pemimpin Indonesia Logo"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://www.instagram.com/pemimpin.indonesia/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                    >
+                      Pemimpin Indonesia (2022–2023)
+                    </a>
+                    <p className="text-[#b5bff8]">Associate</p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4">
+                  <div className="flex h-16 w-16 flex-none items-center justify-center">
+                    <Image
+                      src="/gdsc.jpeg"
+                      alt="Google Developer Student Club ITB Logo"
+                      width={64}
+                      height={64}
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="https://linktr.ee/dscitb"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                    >
+                      Google Developer Student Club ITB (2022–2023)
+                    </a>
+                    <p className="text-[#b5bff8]">Member</p>
+                  </div>
+                </li>
+              </ul>
+              <p className="font-montserrat my-4 px-4 text-lg font-bold lg:text-xl">
+                Riwayat Kepanitiaan
+              </p>
+              <ul className="font-poppins list-none space-y-1 lg:space-y-2">
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4 px-8">
+                  <div>
+                    <p className="font-bold">
+                      Pekan Olahraga Fisika (PORSKA) X Putra Putri Fisika (PPF)
+                      Himpunan Mahasiswa Fisika FMIPA Unpad (2022)
+                    </p>
+                    <p className="text-[#b5bff8]">
+                      Kepala Divisi Catur Bidang Olahraga, Komentator E-Sport
+                    </p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4 px-8">
+                  <div>
+                    <p className="font-bold">
+                      Graduating Achievement (Gradient) Part 1 Himpunan
+                      Mahasiswa Fisika FMIPA Unpad 2022 Kabinet Saturasi (2022)
+                    </p>
+                    <p className="text-[#b5bff8]">
+                      Staf Divisi Acara dan Master of Ceremonies
+                    </p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4 px-8">
+                  <div>
+                    <p className="font-bold">
+                      Launching Badan Pengurus dan Dewan Himpunan Mahasiswa
+                      Fisika FMIPA Unpad 2022 Kabinet Saturasi (2022)
+                    </p>
+                    <p className="text-[#b5bff8]">
+                      Staf Divisi Acara dan Master of Ceremonies
+                    </p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4 px-8">
+                  <div>
+                    <p className="font-bold">
+                      Musyawarah Anggota (Musang) 2021 Himpunan Mahasiswa Fisika
+                      FMIPA Unpad (2021–2022)
+                    </p>
+                    <p className="text-[#b5bff8]">Kepala Divisi Acara</p>
+                  </div>
+                </li>
+
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4 px-8">
+                  <div>
+                    <p className="font-bold">
+                      Gamasport 2021 Keluarga Mahasiswa Bandung Universitas
+                      Padjadjaran (GAMABAN Unpad) (2021–2022)
+                    </p>
+                    <p className="text-[#b5bff8]">
+                      Staf Divisi Dokumentasi dan Desain
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4 px-8">
+                  <div>
+                    <p className="font-bold">
+                      Aksi Angkatan Epiphaneia Care Himpunan Mahasiswa Fisika
+                      FMIPA Unpad (2021)
+                    </p>
+                    <p className="text-[#b5bff8]">
+                      Staf Divisi Dokumentasi dan Desain
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4 rounded-3xl bg-[#302e94] p-4 px-8">
+                  <div>
+                    <p className="font-bold">
+                      Gathering Maba 2021 Keluarga Mahasiswa Bandung Universitas
+                      Padjadjaran (GAMABAN Unpad) (2021)
+                    </p>
+                    <p className="text-[#b5bff8]">
+                      Staf Divisi Dokumentasi dan Desain
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-7xl flex-1 px-4 pt-1 intersect:animate-fade-down">
+        <div className="rounded-3xl bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] text-justify text-sm text-gray-100 intersect:animate-fade-left lg:text-lg">
+          <p className="font-montserrat rounded-3xl rounded-b-none bg-[#28267a] p-6 text-center text-xl font-bold lg:text-4xl">
+            Akademik
+          </p>
+          <p className="font-montserrat my-4 px-4 text-lg font-bold lg:text-xl">
+            Riwayat Akademik dan Penelitian
+          </p>
+          <ul className="font-poppins space-y-4 list-disc md:pl-10 lg:space-y-2">
+            <li className="flex items-center space-x-4 rounded-3xl md:rounded-r-none bg-[#302e94] p-4">
+              <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-2">
+                <Image
+                  src="/ugv-uav.jpg"
+                  alt="Prawira Logo"
+                  width={64}
+                  height={64}
+                  className="rounded-full object-cover"
+                />
+              </div>
+              <div>
+                <p className="font-bold text-white">
+                  Laboratorium Elektronika dan Instrumentasi UGV & UAV
+                  (2024–Sekarang)
+                </p>
+                <p className="text-[#b5bff8]">
+                  Asisten Laboratorium dan Penelitian
+                </p>
+              </div>
+            </li>
+            <li className="flex items-center space-x-4 rounded-3xl md:rounded-r-none bg-[#302e94] p-4">
+              <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-2">
+                <Image
+                  src="/fttm.jpg"
+                  alt="FTTM Logo"
+                  width={64}
+                  height={64}
+                  className="rounded-full object-cover"
+                />
+              </div>
+              <div>
+                <a
+                  href="https://www.fttm.itb.ac.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                >
+                  Asisten Pemrograman Penelitian, Pengabdian Masyarakat, dan
+                  Inovasi ITB (Fakultas Teknik Pertambangan dan Perminyakan ITB)
+                  (2024–Sekarang)
+                </a>
+                <p className="text-[#b5bff8]">
+                  Asisten Laboratorium dan Penelitian
+                </p>
+              </div>
+            </li>
+            <li className="flex items-center space-x-4 rounded-3xl md:rounded-r-none bg-[#302e94] p-4">
+              <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-2">
+                <Image
+                  src="/elka.png"
+                  alt="elka Logo"
+                  width={64}
+                  height={64}
+                  className="rounded-full object-cover"
+                />
+              </div>
+              <div>
+                <a
+                  href="https://elka.fi.itb.ac.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                >
+                  Elektronika Analog dan Digital (2024–2025)
+                </a>
+                <p className="text-[#b5bff8]">Asisten Laboratorium Praktikum</p>
+              </div>
+            </li>
+            <li className="flex items-center space-x-4 rounded-3xl md:rounded-r-none bg-[#302e94] p-4">
+              <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-2">
+                <Image
+                  src="/pengkom.jpg"
+                  alt="pengkom Logo"
+                  width={64}
+                  height={64}
+                  className="rounded-full object-cover"
+                />
+              </div>
+              <div>
+                <a
+                  href="https://www.instagram.com/berpikir_komputasional/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                >
+                  Pengenalan Komputasi – Stream Programming (2024–2025)
+                </a>
+                <p className="text-[#b5bff8]">Staf Asisten</p>
+              </div>
+            </li>
+            <li className="flex items-center space-x-4 rounded-3xl md:rounded-tr-none bg-[#302e94] p-4">
+              <div className="flex h-16 w-16 flex-none items-center justify-center rounded-full bg-white p-2">
+                <Image
+                  src="/pengkom.jpg"
+                  alt="pengkom Logo"
+                  width={64}
+                  height={64}
+                  className="rounded-full object-cover"
+                />
+              </div>
+              <div>
+                <a
+                  href="https://www.instagram.com/berpikir_komputasional/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-white transition-colors duration-300 hover:text-blue-400"
+                >
+                  Pengenalan Komputasi -Stream Nonprogramming/Data Analysis
+                  (2023–2024)
+                </a>
+                <p className="text-[#b5bff8]">Staf Asisten</p>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

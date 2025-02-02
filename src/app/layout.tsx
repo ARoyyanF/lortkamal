@@ -13,6 +13,7 @@ import {
 import "./globals.css";
 import { TRPCProvider } from "@/trpc/client";
 import ObserverProvider from "./ObserverProvider";
+import { Toaster } from "@/components/ui/sonner";
 import { Weight } from "lucide-react";
 
 const geistSans = Geist({
@@ -77,6 +78,7 @@ export default function RootLayout({
       >
         <TRPCProvider>
           <ObserverProvider>{children}</ObserverProvider>
+          <Toaster richColors theme="light" position="bottom-center" />
         </TRPCProvider>
       </body>
     </html>

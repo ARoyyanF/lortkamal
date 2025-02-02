@@ -3,6 +3,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -11,6 +12,72 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Slider } from "@/components/ui/slider";
+import { DndContext, closestCenter, type DragEndEvent } from "@dnd-kit/core";
+import {
+  arrayMove,
+  SortableContext,
+  verticalListSortingStrategy,
+} from "@dnd-kit/sortable";
+import { Table, TableBody } from "@/components/ui/table";
+import { SortableItem } from "./sortableitem";
+
+export const DraggablePreferenceTable = ({ name, label, form, sensors }) => (
+  <FormField
+    control={form.control}
+    name={name}
+    render={({ field }) => (
+      <FormItem>
+        <FormLabel className="text-lg mb-4 text-white font-semibold">
+          {label}
+        </FormLabel>
+        <div className="pt-4 text-white font-bold">
+          Preferensi teratas / Paling penting
+        </div>
+        <FormControl>
+          <DndContext
+            sensors={sensors}
+            collisionDetection={closestCenter}
+            onDragEnd={(event: DragEndEvent) => {
+              const { active, over } = event;
+
+              if (active.id !== over?.id) {
+                const oldIndex = field.value.findIndex(
+                  (item) => item.id === active.id
+                );
+                const newIndex = field.value.findIndex(
+                  (item) => item.id === over?.id
+                );
+
+                field.onChange(arrayMove(field.value, oldIndex, newIndex));
+              }
+            }}
+          >
+            <Table className="overflow-hidden text-white ">
+              <TableBody>
+                <SortableContext
+                  items={field.value.map((p) => p.id)}
+                  strategy={verticalListSortingStrategy}
+                >
+                  {field.value.map((preference, index) => (
+                    <SortableItem
+                      key={preference.id}
+                      id={preference.id}
+                      preference={preference}
+                    />
+                  ))}
+                </SortableContext>
+              </TableBody>
+            </Table>
+          </DndContext>
+        </FormControl>
+        <FormMessage className="font-black" />
+        <div className="text-white font-bold">
+          Preferensi terbawah / Paling tidak penting
+        </div>
+      </FormItem>
+    )}
+  />
+);
 
 export const TextInput = ({ name, label, placeholder, form }) => (
   <FormField
@@ -26,6 +93,7 @@ export const TextInput = ({ name, label, placeholder, form }) => (
             className="font-bold bg-transparent border-4 border-blue-400 rounded-lg focus:border-blue-200 px-2 text-white"
           />
         </FormControl>
+        <FormMessage className="font-black" />
       </FormItem>
     )}
   />
@@ -76,6 +144,7 @@ export const CheckboxGroup = ({ name, label, options, form }) => (
             />
           ))}
         </div>
+        <FormMessage className="font-black" />
       </FormItem>
     )}
   />
@@ -106,12 +175,13 @@ export const RadioButtonGroup = ({ name, label, options, form }) => (
                   />
                 </FormControl>
                 <FormLabel className="font-semibold text-white mt-0">
-                  {option.value}
+                  {option.label}
                 </FormLabel>
               </FormItem>
             ))}
           </RadioGroup>
         </FormControl>
+        <FormMessage className="font-black" />
       </FormItem>
     )}
   />
@@ -128,7 +198,7 @@ export const RatingScale = ({ name, label, min, max, form }) => (
         </FormLabel>
         <div className="flex justify-between items-center mt-4 md:flex-row flex-col">
           <span className="text-sm text-white">Sangat tidak setuju</span>
-          <div className="flex fle<>x-grow px-12 py-6 gap-1 md:flex-row flex-col">
+          <div className="flex flex-grow px-12 py-6 gap-1 md:flex-row flex-col">
             {[...Array(max - min + 1)].map((_, i) => (
               <Button
                 key={i + min}
@@ -146,6 +216,7 @@ export const RatingScale = ({ name, label, min, max, form }) => (
           </div>
           <span className="text-sm text-white">Sangat setuju</span>
         </div>
+        <FormMessage className="font-black" />
       </FormItem>
     )}
   />
@@ -167,12 +238,21 @@ export const TextBox = ({ name, label, placeholder, form }) => (
             className="text-white bg-transparent border border-input ring-offset-background file:border-0 file:bg-transparent focus-visible:outline-none ring-0"
           />
         </FormControl>
+        <FormMessage className="font-black" />
       </FormItem>
     )}
   />
 );
 
-export const SliderScale = ({ name, label, min, max, form }) => (
+export const SliderScale = ({
+  name,
+  label,
+  min,
+  max,
+  mintext,
+  maxtext,
+  form,
+}) => (
   <FormField
     control={form.control}
     name={name}
@@ -182,13 +262,26 @@ export const SliderScale = ({ name, label, min, max, form }) => (
           {label}
         </FormLabel>
         <FormControl>
-          <Slider
-            defaultValue={[field.value]}
-            onValueChange={(value) => field.onChange(value[0])}
-            min={min}
-            max={max}
-          />
+          <div>
+            <Slider
+              defaultValue={[field.value]}
+              onValueChange={(value) => field.onChange(value[0])}
+              step={0.01}
+              min={min}
+              max={max}
+            />
+            {/* <div className="flex  items-center mt-4 flex-col">
+              <div className="flex-none"></div> */}
+            <div className="flex justify-between flex-row py-3">
+              <span className="text-sm text-secondary">{mintext}</span>
+              <span className="text-sm text-secondary text-right">
+                {maxtext}
+              </span>
+            </div>
+            {/* </div> */}
+          </div>
         </FormControl>
+        <FormMessage className="font-black" />
       </FormItem>
     )}
   />

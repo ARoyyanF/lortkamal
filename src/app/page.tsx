@@ -20,7 +20,7 @@ export default function Page() {
         <section className="scroll-mt-32" id="tentang-kamal">
           <TentangKamal />
         </section>
-        <VisiMisi />
+        {/* <VisiMisi /> */} {/*!TODO: Uncomment when Visi Misi is finished*/}
         <section className="scroll-mt-32" id="survey-form">
           <SurveyForm />
         </section>
