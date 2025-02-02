@@ -18,14 +18,10 @@ import {
   DraggablePreferenceTable,
 } from "./form-fields";
 import {
-  DndContext,
-  closestCenter,
   KeyboardSensor,
   PointerSensor,
   useSensor,
   useSensors,
-  type DragEndEvent,
-  TouchSensor,
 } from "@dnd-kit/core";
 import { sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 import { Divider } from "@/components/ui/divider";
@@ -38,14 +34,40 @@ const DraggablePreferenceTableSchema = z.object({
 const formSchema = z.object({
   nama: z.string().min(1, "Nama kosong"),
   nim: z.string().min(1, "NIM kosong"),
-  sigmaQuestion: z
-    .array(z.string())
-    .min(1, "Pilih setidaknya satu opsi atau lebih"),
-  shadowboxQuestion: z.string().min(1, "Pilih salah satu opsi"),
-  rating: z.string().min(1, "Pilih rentang"),
-  yapping: z.string().min(1, "Mohon diisi 🙏"),
-  slider: z.number().min(0).max(100),
-  preference1: z.array(DraggablePreferenceTableSchema),
+  q1a: z.number().min(0).max(100),
+  q1b: z.number().min(0).max(100),
+  q1c: z.number().min(0).max(100),
+  q1d: z.number().min(0).max(100),
+  q1e: z.number().min(0).max(100),
+  q1f: z.number().min(0).max(100),
+  q1g: z.number().min(0).max(100),
+  q1h: z.number().min(0).max(100),
+  q1i: z.number().min(0).max(100),
+  q1j: z.array(z.string()).min(1, "Pilih setidaknya satu opsi atau lebih"),
+  q1k: z.string().min(1, "Pilih salah satu opsi"),
+  q1l: z.string().min(1, "Pilih salah satu opsi"),
+  q1m: z.array(DraggablePreferenceTableSchema),
+  q1n: z.string().min(1, "Mohon diisi 🙏"),
+  q2a: z.number().min(0).max(100),
+  q2b: z.number().min(0).max(100),
+  q2c: z.number().min(0).max(100),
+  q2d: z.string().min(1, "Pilih salah satu opsi"),
+  q2e: z.string().min(1, "Pilih salah satu opsi"),
+  q2f: z.array(z.string()).min(1, "Pilih setidaknya satu opsi atau lebih"),
+  q2g: z.array(DraggablePreferenceTableSchema),
+  q2h: z.string().min(1, "Pilih salah satu opsi"),
+  q2i: z.array(DraggablePreferenceTableSchema),
+  q2j: z.array(z.string()).min(1, "Pilih setidaknya satu opsi atau lebih"),
+  q2k: z.string().min(1, "Mohon diisi 🙏"),
+
+  // sigmaQuestion: z
+  //   .array(z.string())
+  //   .min(1, "Pilih setidaknya satu opsi atau lebih"),
+  // shadowboxQuestion: z.string().min(1, "Pilih salah satu opsi"),
+  // rating: z.string().min(1, "Pilih rentang"),
+  // yapping: z.string().min(1, "Mohon diisi 🙏"),
+  // slider: z.number().min(0).max(100),
+  // preference1: z.array(DraggablePreferenceTableSchema),
 });
 
 const sigmaOptions = [
@@ -77,16 +99,19 @@ const defaultValues = {
   shadowboxQuestion: "",
   rating: "",
   yapping: "",
-  q1: 30,
-  q2: 30,
-  q3: 30,
-  q4: 30,
-  q5: 30,
-  q6: 30,
-  q7: 30,
-  q8: 30,
-  q9: 30,
-  q11: [
+  q1a: 30,
+  q1b: 30,
+  q1c: 30,
+  q1d: 30,
+  q1e: 30,
+  q1f: 30,
+  q1g: 30,
+  q1h: 30,
+  q1i: 30,
+  q1j: [],
+  q1k: "",
+  q1l: "",
+  q1m: [
     {
       id: "1",
       description:
@@ -115,23 +140,79 @@ const defaultValues = {
     { id: "7", description: "Biaya yang murah atau bahkan gratis" },
     { id: "8", description: "Cepat dalam memenuhi kebutuhan mahasiswa" },
   ],
-  q12: 30,
-  q13: 30,
-  q14: 30,
-  q18: [
-    { id: "1", description: "A hot caffeinated beverage" },
-    { id: "2", description: "A soothing herbal drink" },
-    { id: "3", description: "Essential for hydration" },
-    { id: "4", description: "Fruity and refreshing" },
-    { id: "5", description: "Blended fruits and vegetables" },
+  q1n: "",
+  q2a: 30,
+  q2b: 30,
+  q2c: 30,
+  q2d: "",
+  q2e: "",
+  q2f: [],
+  q2g: [
+    { id: "1", description: "Merevisi AD/ART dan Regulasi lainnya" },
+    { id: "2", description: "Membuat SOP di setiap bagian organisasi" },
+    {
+      id: "3",
+      description:
+        "Melibatkan anggota lebih banyak, contohnya dengan menyelenggarakan forum rutin untuk masukan anggota",
+    },
+    {
+      id: "4",
+      description: "Melaksanakan audit keuangan internal secara berkala",
+    },
+    { id: "5", description: "Mengadakan pelatihan manajemen organisasi" },
+    {
+      id: "6",
+      description:
+        "Membangun sistem digital untuk pengelolaan data dan transparansi, misalnya website",
+    },
+    {
+      id: "7",
+      description:
+        "Menetapkan indikator kinerja utama (Key Performance Indicators/KPI)",
+    },
+    {
+      id: "8",
+      description:
+        "Melaksanakan evaluasi program secara berkala (laporan 100 hari kerja, 200 hari kerja, dan semacamnya)",
+    },
+    {
+      id: "9",
+      description: "Meningkatkan Koordinasi dan Kolaborasi Antar-Divisi",
+    },
+    {
+      id: "10",
+      description:
+        "Memperkuat Jaringan Eksternal (Alumni, Departemen, dan Industri)",
+    },
   ],
-  q20: [
-    { id: "1", description: "A hot caffeinated beverage" },
-    { id: "2", description: "A soothing herbal drink" },
-    { id: "3", description: "Essential for hydration" },
-    { id: "4", description: "Fruity and refreshing" },
-    { id: "5", description: "Blended fruits and vegetables" },
+  q2h: "",
+  q2i: [
+    { id: "1", description: "Meningkatkan kemampuan komunikasi pribadi" },
+    { id: "2", description: "Meningkatkan soft skill pribadi" },
+    {
+      id: "3",
+      description: "Memperkuat rasa tanggung jawab",
+    },
+    {
+      id: "4",
+      description: "Mempersiapkan diri untuk kepemimpinan profesional",
+    },
+    { id: "5", description: "Memperluas relasi antaranggota" },
+    {
+      id: "6",
+      description: "Memperluas relasi antarorganisasi",
+    },
+    {
+      id: "7",
+      description: "Memberikan benefit untuk mempercantik CV dan resume",
+    },
+    {
+      id: "8",
+      description: "Memberikan kesempatan untuk berkontribusi untuk HIMAFI ITB",
+    },
   ],
+  q2j: [],
+  q2k: "",
 };
 
 export default function SurveyForm() {
@@ -141,12 +222,6 @@ export default function SurveyForm() {
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
-    }),
-    useSensor(TouchSensor, {
-      activationConstraint: {
-        delay: 250,
-        tolerance: 5,
-      },
     })
   );
 
@@ -228,7 +303,7 @@ export default function SurveyForm() {
           <div className="space-y-4 intersect-once intersect:animate-fade-right">
             <FormCard>
               <SliderScale
-                name="q1"
+                name="q1a"
                 label="Seberapa penting dan berdampak menurut Anda keberadaan pelatihan/kelas pembelajaran akademik terhadap diri Anda?"
                 min={0}
                 max={100}
@@ -241,7 +316,7 @@ export default function SurveyForm() {
           <div className="space-y-4 intersect-once intersect:animate-fade-right">
             <FormCard>
               <SliderScale
-                name="q2"
+                name="q1b"
                 label="Seberapa perlu menurut Anda keberadaan pelatihan/kelas pembelajaran akademik untuk diadakan oleh HIMAFI ITB?"
                 min={0}
                 max={100}
@@ -254,7 +329,7 @@ export default function SurveyForm() {
           <div className="space-y-4 intersect-once intersect:animate-fade-right">
             <FormCard>
               <SliderScale
-                name="q3"
+                name="q1c"
                 label="Seberapa rutin menurut Anda HIMAFI ITB menyelenggarakan pelatihan/kelas pembelajaran akademik seperti tutor sebaya?"
                 min={0}
                 max={100}
@@ -267,7 +342,7 @@ export default function SurveyForm() {
           <div className="space-y-4 intersect-once intersect:animate-fade-right">
             <FormCard>
               <SliderScale
-                name="q4"
+                name="q1d"
                 label="Seberapa penting dan berdampak menurut Anda keberadaan program pengembangan nonakademik minat bakat terhadap diri Anda?"
                 min={0}
                 max={100}
@@ -280,7 +355,7 @@ export default function SurveyForm() {
           <div className="space-y-4 intersect-once intersect:animate-fade-right">
             <FormCard>
               <SliderScale
-                name="q5"
+                name="q1e"
                 label="Seberapa perlu menurut Anda keberadaan program pengembangan nonakademik minat bakat untuk diadakan oleh HIMAFI ITB?"
                 min={0}
                 max={100}
@@ -293,7 +368,7 @@ export default function SurveyForm() {
           <div className="space-y-4 intersect-once intersect:animate-fade-right">
             <FormCard>
               <SliderScale
-                name="q6"
+                name="q1f"
                 label="Seberapa rutin menurut Anda HIMAFI ITB menyelenggarakan program pengembangan nonakademik minat bakat?"
                 min={0}
                 max={100}
@@ -306,7 +381,7 @@ export default function SurveyForm() {
           <div className="space-y-4 intersect-once intersect:animate-fade-right">
             <FormCard>
               <SliderScale
-                name="q7"
+                name="q1g"
                 label={
                   <>
                     Seberapa penting dan berdampak menurut Anda keberadaan
@@ -326,7 +401,7 @@ export default function SurveyForm() {
           <div className="space-y-4 intersect-once intersect:animate-fade-right">
             <FormCard>
               <SliderScale
-                name="q8"
+                name="q1h"
                 label={
                   <>
                     Seberapa perlu menurut Anda keberadaan program pengembangan
@@ -346,7 +421,7 @@ export default function SurveyForm() {
           <div className="space-y-4 intersect-once intersect:animate-fade-right">
             <FormCard>
               <SliderScale
-                name="q9"
+                name="q1i"
                 label={
                   <>
                     Seberapa sering HIMAFI ITB mengadakan program pengembangan
@@ -365,7 +440,7 @@ export default function SurveyForm() {
           <div className="intersect-once intersect:animate-fade-right">
             <FormCard>
               <CheckboxGroup
-                name="q10"
+                name="q1j"
                 label="Program kerja pelatihan dan akademik yang diadakan HIMAFI ITB mana saja yang paling sering Anda ikuti atau gunakan? (Maksimal 5) "
                 options={[
                   {
@@ -417,10 +492,50 @@ export default function SurveyForm() {
           </div>
           <div className="intersect-once intersect:animate-fade-right">
             <FormCard>
+              <RadioButtonGroup
+                name="q1k"
+                label="Seberapa besar dampak dari pelatihan rutin HIMAFI ITB terhadap pemahaman Anda di bidang keprofesionalitasan?"
+                options={[
+                  { value: "1", label: "Tidak terasa" },
+                  { value: "2", label: "Cukup terasa" },
+                  { value: "3", label: "Terasa signifikan" },
+                  { value: "5", label: "Sangat berdampak" },
+                ]}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <RadioButtonGroup
+                name="q1l"
+                label="Seberapa puas Anda terhadap program pelatihan akademik, nonakademik, dan keprofesionalitasan yang diadakan HIMAFI ITB?"
+                options={[
+                  { value: "1", label: "Sangat tidak puas" },
+                  { value: "2", label: "Tidak puas" },
+                  { value: "3", label: "Puas" },
+                  { value: "5", label: "Sangat puas" },
+                ]}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
               <DraggablePreferenceTable
-                name="q11"
+                name="q1m"
                 label="Urutkan faktor berikut yang paling memengaruhi keinginan Anda untuk mengikuti program pelatihan di HIMAFI ITB:"
                 sensors={sensors}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <TextBox
+                name="q1n"
+                label="Silakan berikan aspirasi yang berhubungan dengan bagian pelatihan dan akademik! (Aspirasi bersifat umum dan bisa berhubungan dengan kritik, saran, masukan, dan kendala yang selama ini dimiliki terhadap bagian ini)"
+                placeholder="Tulis jawaban di sini"
                 form={form}
               />
             </FormCard>
@@ -432,7 +547,7 @@ export default function SurveyForm() {
           <div className="space-y-4 intersect-once intersect:animate-fade-right">
             <FormCard>
               <SliderScale
-                name="q12"
+                name="q2a"
                 label="Seberapa rutin menurut Anda HIMAFI ITB menyelenggarakan program kerja yang membutuhkan kepanitiaan atau anggota?"
                 min={0}
                 max={100}
@@ -445,7 +560,7 @@ export default function SurveyForm() {
           <div className="space-y-4 intersect-once intersect:animate-fade-right">
             <FormCard>
               <SliderScale
-                name="q13"
+                name="q2b"
                 label="Seberapa terbuka menurut Anda HIMAFI ITB dalam memberikan kesempatan bagi Anda untuk ikut serta dalam kepanitiaan atau anggota program kerja tersebut, khususnya dalam menjadi pemimpin?"
                 min={0}
                 max={100}
@@ -458,7 +573,7 @@ export default function SurveyForm() {
           <div className="space-y-4 intersect-once intersect:animate-fade-right">
             <FormCard>
               <SliderScale
-                name="q14"
+                name="q2c"
                 label="Seberapa terbuka Anda menilai struktur keanggotaan dan partisipasi dari massa terhadap program kerja dan kegiatan HIMAFI ITB saat ini?"
                 min={0}
                 max={100}
@@ -471,7 +586,7 @@ export default function SurveyForm() {
           <div className="intersect-once intersect:animate-fade-right">
             <FormCard>
               <RadioButtonGroup
-                name="q15"
+                name="q2d"
                 label="Bagaimana efektivitas proses pengambilan keputusan di HIMAFI ITB terhadap suatu masalah, isu, atau kebijakan?"
                 options={[
                   { value: "1", label: "Lambat dan membingungkan" },
@@ -486,7 +601,7 @@ export default function SurveyForm() {
           <div className="intersect-once intersect:animate-fade-right">
             <FormCard>
               <RadioButtonGroup
-                name="q16"
+                name="q2e"
                 label="Apakah Anda mengetahui transparansi yang berhubungan dengan penggunaan dana HIMAFI ITB?"
                 options={[
                   { value: "1", label: "Ya" },
@@ -499,8 +614,8 @@ export default function SurveyForm() {
           <div className="intersect-once intersect:animate-fade-right">
             <FormCard>
               <CheckboxGroup
-                name="q17"
-                label="Program kerja pelatihan dan akademik yang diadakan HIMAFI ITB mana saja yang paling sering Anda ikuti atau gunakan? (Maksimal 5) "
+                name="q2f"
+                label="Dalam hal transparansi keuangan, informasi mana saja yang perlu secara rutin dipublikasikan kepada anggota?"
                 options={[
                   {
                     id: "1",
@@ -523,8 +638,8 @@ export default function SurveyForm() {
           <div className="intersect-once intersect:animate-fade-right">
             <FormCard>
               <DraggablePreferenceTable
-                name="q18"
-                label="6. Preference"
+                name="q2g"
+                label="Urutkan langkah yang menurut Anda paling penting untuk memperbaiki tata kelola HIMAFI ITB:"
                 sensors={sensors}
                 form={form}
               />
@@ -533,7 +648,7 @@ export default function SurveyForm() {
           <div className="intersect-once intersect:animate-fade-right">
             <FormCard>
               <RadioButtonGroup
-                name="q19"
+                name="q2h"
                 label="Bagaimana dampak program kepemimpinan dalam bentuk kepanitiaan dan program kerja di HIMAFI ITB terhadap kemampuan Anda memimpin tim?"
                 options={[
                   { value: "1", label: "Tidak ada perubakan" },
@@ -548,13 +663,84 @@ export default function SurveyForm() {
           <div className="intersect-once intersect:animate-fade-right">
             <FormCard>
               <DraggablePreferenceTable
-                name="q20"
-                label="Urutkan langkah yang menurut Anda paling penting untuk memperbaiki tata kelola HIMAFI ITB:"
+                name="q2i"
+                label="Urutkan tujuan utama Anda dalam mengikuti program kepemimpinan di HIMAFI ITB:"
                 sensors={sensors}
                 form={form}
               />
             </FormCard>
           </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <CheckboxGroup
+                name="q2j"
+                label="Aspek kepemimpinan apa saja yang paling Anda ingin kembangkan?"
+                options={[
+                  {
+                    id: "1",
+                    label: "Public Speaking",
+                  },
+                  { id: "2", label: "Time Management" },
+                  {
+                    id: "3",
+                    label: "Team Coordination",
+                  },
+                  {
+                    id: "4",
+                    label: "Conflict Resolution",
+                  },
+                  {
+                    id: "5",
+                    label: "Decision Making",
+                  },
+                  {
+                    id: "6",
+                    label: "Strategic Thinking",
+                  },
+                  {
+                    id: "7",
+                    label: "Visionary Leadership",
+                  },
+                  {
+                    id: "8",
+                    label: "Emotional Intelligence",
+                  },
+                  {
+                    id: "9",
+                    label: "Delegation",
+                  },
+                  {
+                    id: "10",
+                    label: "Mentoring & Coaching",
+                  },
+                  {
+                    id: "11",
+                    label: "Adaptability & Change Management",
+                  },
+                  {
+                    id: "12",
+                    label: "Networking & Collaboration",
+                  },
+                  {
+                    id: "13",
+                    label: "Resilience",
+                  },
+                ]}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <TextBox
+                name="q2k"
+                label="Silakan berikan aspirasi yang berhubungan dengan bagian kepemimpinan dan keorganisasian! (Aspirasi bersifat umum dan bisa berhubungan dengan kritik, saran, masukan, dan kendala yang selama ini dimiliki terhadap bagian ini)"
+                placeholder="Tulis jawaban di sini"
+                form={form}
+              />
+            </FormCard>
+          </div>
+
           {/* <div className="intersect-once intersect:animate-fade-right">
             <FormCard>
               <RadioButtonGroup
