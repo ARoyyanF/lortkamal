@@ -150,7 +150,7 @@ const defaultValues = {
     },
     {
       id: "3",
-      description: "Jadwal yang sesuai (tidak bentrok dengan kuliah/ujian",
+      description: "Jadwal yang sesuai (tidak bentrok dengan kuliah/ujian)",
     },
     { id: "4", description: "Kualitas pemateri atau pembicara" },
     {
@@ -617,7 +617,7 @@ export default function SurveyForm() {
                   {
                     id: "6",
                     label:
-                      "Tour Industri Bersama HIMAFI (TURBO) atau Kunjungan Industri dan Pelatihan Untuk ",
+                      "Tour Industri Bersama HIMAFI (TURBO) atau Kunjungan Industri dan Pelatihan Untuk Massa (KUANTUM)",
                   },
                   {
                     id: "7",
@@ -626,11 +626,11 @@ export default function SurveyForm() {
                   },
                   {
                     id: "8",
-                    label: "Masha (Main bareng Massa HIMAFI",
+                    label: "Masha (Main bareng Massa HIMAFI)",
                   },
                   {
                     id: "9",
-                    label: "TiFi (Latihan bareng HIMAFI",
+                    label: "TiFi (Latihan bareng HIMAFI)",
                   },
                   {
                     id: "10",
@@ -917,6 +917,7 @@ export default function SurveyForm() {
                   { value: "1", label: "Media Sosial HIMAFI ITB" },
                   { value: "2", label: "Broadcast di grup" },
                   { value: "3", label: "Informasi mulut ke mulut" },
+                  { value: "4", label: "Tidak mengetahui" },
                 ]}
                 form={form}
               />
