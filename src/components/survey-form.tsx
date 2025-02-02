@@ -106,10 +106,10 @@ export default function SurveyForm() {
 
   return (
     <div className="max-w-7xl mx-auto px-4">
-      <h1 className="intersect:animate-jump animate-duration-[2000ms] text-3xl lg:text-6xl font-bold text-center mb-6 text-white">
+      <h1 className="font-montserrat intersect:animate-jump animate-duration-[2000ms] text-3xl lg:text-6xl font-bold text-center mb-6 text-white">
         Semua Aspirasi Berarti
       </h1>
-      <p className="intersect:animate-fade-up text-sm lg:text-lg text-center px-4 mb-6 text-white">
+      <p className="font-poppins intersect:animate-fade-up text-sm lg:text-lg text-center px-4 mb-6 text-white">
         Setiap suara adalah langkah menuju perubahan. Saya percaya bahwa setiap
         aspirasi, sekecil apapun, memiliki peran penting dalam membangun HIMAFI
         ITB yang lebih baik. Mari sampaikan pendapatmu dan jadilah bagian dari
@@ -119,7 +119,7 @@ export default function SurveyForm() {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-6 text-white font-semibold"
+          className="space-y-6 text-white font-semibold font-poppins"
         >
           <div className="space-y-4 intersect-once intersect:animate-fade-right">
             <TextInput

@@ -5,10 +5,10 @@ export default function TentangKamal() {
   return (
     <div className="leading-tight py-8">
       <div className="max-w-7xl mx-auto px-4 ">
-        <h1 className="intersect:animate-jump-in animate-delay-300 text-3xl lg:text-6xl font-bold text-center mb-6 text-white">
+        <h1 className=" font-montserrat intersect:animate-jump-in animate-delay-300 text-3xl lg:text-6xl font-bold text-center mb-6 text-white">
           Tak Kenal Maka Tak Melekat
         </h1>
-        <p className="intersect:animate-fade-down text-sm lg:text-lg text-center px-4 mb-6 text-white">
+        <p className="font-poppins intersect:animate-fade-down text-sm lg:text-lg text-center px-4 mb-6 text-white">
           Kenali lebih dekat Muhammad Kamal, seorang anggota HIMAFI ITB yang
           ingin berkontribusi lebih untuk organisasi ini. Dengan langkah-langkah
           sederhana yang sudah saya lakukan, saya berkomitmen untuk terus
@@ -34,11 +34,11 @@ export default function TentangKamal() {
           <div className=" intersect:animate-fade-left text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#5f2eafd0] to-[#3c3abb] rounded-3xl ">
             {/* Description Box */}
             <div className="m-6">
-              <p className="mb-4 text-lg lg:text-2xl font-bold">
+              <p className=" font-montserrat mb-4 text-lg lg:text-2xl font-bold">
                 Judulnya biografi sederhana
               </p>
-              <p>
-                Saddam Hussein dilahirkan di kota Al-Awja, 13 km dari kota
+              <p className="font-poppins">
+                Saddam Hussein dilahirk an di kota Al-Awja, 13 km dari kota
                 Tikrit di Segitiga Sunni, dalam sebuah keluarga gembala. Ibunya,
                 Subha Tulfah al-Mussallat, menamai anaknya yang baru lahir itu
                 "Saddam", yang dalam bahasa Arab berarti "Dia yang menantang".
@@ -58,7 +58,7 @@ export default function TentangKamal() {
 
       <div className="mx-auto px-4 pt-1 max-w-7xl">
         <div className="text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] rounded-3xl p-6 mb-4">
-          <h2 className="intersect:animate-jump-in text-2xl lg:text-4xl font-bold text-center">
+          <h2 className="font-montserrat intersect:animate-jump-in text-2xl lg:text-4xl font-bold text-center">
             Judul Rekam Jejak
           </h2>
         </div>
@@ -70,10 +70,10 @@ export default function TentangKamal() {
           <div className=" intersect:animate-fade-left flex-1 text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] rounded-3xl ">
             {/* Description Box */}
             <div className="m-6">
-              <p className="mb-4 text-lg lg:text-2xl font-bold">
+              <p className=" font-montserrat mb-4 text-lg lg:text-2xl font-bold">
                 Yang ini rekam jejak himafi
               </p>
-              <p>
+              <p className="font-poppins">
                 Rascwietali jabłoni i gruszy, Popłyli tumany nad riekoj;
                 Wychodiła na bierieg Katiusza, Na wysokij bierieg na krutoj.
                 Wychodiła na bierieg Katiusza, Na wysokij bierieg na krutoj.
@@ -96,10 +96,10 @@ export default function TentangKamal() {
           <div className="intersect:animate-fade-right flex-1 text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#3b2eafd0] to-[#3c3abb] rounded-3xl ">
             {/* Description Box */}
             <div className="m-6">
-              <p className="mb-4 text-lg lg:text-2xl font-bold">
+              <p className="font-montserrat mb-4 text-lg lg:text-2xl font-bold">
                 Yang ini rekam jejak NON!!himafi
               </p>
-              <p>
+              <p className="font-poppins">
                 Auf der Heide blüht ein kleines Blümelein Und das heißt Erika
                 Heiß von hunderttausend kleinen Bienelein Wird umschwärmt Erika
                 Denn ihr Herz ist voller Süßigkeit Zarter Duft entströmt dem
