@@ -12,12 +12,19 @@ interface SortableItemProps {
 }
 
 export function SortableItem({ id, preference }: SortableItemProps) {
-  const { attributes, listeners, setNodeRef, transform, transition } =
-    useSortable({ id });
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    transform,
+    transition,
+    isDragging,
+  } = useSortable({ id });
 
   const style = {
     transform: CSS.Transform.toString(transform),
     transition,
+    opacity: isDragging ? 0.5 : 1,
   };
 
   return (
@@ -31,7 +38,8 @@ export function SortableItem({ id, preference }: SortableItemProps) {
         <div className="flex items-center ">
           <span
             {...listeners}
-            className="mr-2 cursor-move flex-grow flex-row flex gap-5 p-4"
+            className="mr-2 cursor-move flex-grow flex-row flex gap-5 p-4 touch-none"
+            style={{ touchAction: "none" }}
           >
             <GripVertical size={20} className="flex-shrink-0 self-center" />
             {preference.description}
