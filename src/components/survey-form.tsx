@@ -70,6 +70,15 @@ const formSchema = z.object({
   q4c: z.string().min(1, "Pilih salah satu opsi"),
   q4d: z.array(DraggablePreferenceTableSchema),
   q4e: z.string().min(1, "Mohon diisi 🙏"),
+  q5a: z.number().min(0).max(100),
+  q5b: z.number().min(0).max(100),
+  q5c: z.number().min(0).max(100),
+  q5d: z.number().min(0).max(100),
+  q5e: z.number().min(0).max(100),
+  q5f: z.number().min(0).max(100),
+  q5g: z.number().min(0).max(100),
+  q5h: z.array(DraggablePreferenceTableSchema),
+  q5i: z.string().min(1, "Mohon diisi 🙏"),
 
   // sigmaQuestion: z
   //   .array(z.string())
@@ -276,6 +285,47 @@ const defaultValues = {
     },
   ],
   q4e: "",
+  q5a: 30,
+  q5b: 30,
+  q5c: 30,
+  q5d: 30,
+  q5e: 30,
+  q5f: 30,
+  q5g: 30,
+  q5h: [
+    {
+      id: "1",
+      description: "Kegiatan dengan tema menarik",
+    },
+    {
+      id: "2",
+      description: "Kegiatan dengan acara yang terstruktur dan jelas",
+    },
+    {
+      id: "3",
+      description:
+        "Kegiatan dengan banyak orang yang ikut, khususnya teman dekat saya",
+    },
+    {
+      id: "4",
+      description: "Kegiatannya sesuai dengan minat saya",
+    },
+    {
+      id: "5",
+      description:
+        "Kegiatan menjadi sarana untuk refreshing tanpa adanya beban lain",
+    },
+    {
+      id: "6",
+      description: "Kegiatan yang tidak mengganggu jadwal kuliah saya",
+    },
+    {
+      id: "7",
+      description:
+        "Kegiatan yang menciptakan atmosfer dimana saya merasa terajak",
+    },
+  ],
+  q5i: "",
 };
 
 export default function SurveyForm() {
@@ -974,6 +1024,121 @@ export default function SurveyForm() {
               <TextBox
                 name="q4e"
                 label="Silakan berikan aspirasi yang berhubungan dengan bagian kebutuhan anggota, kolaborasi, dan advokasi massa! (Aspirasi bersifat umum dan bisa berhubungan dengan kritik, saran, masukan, dan kendala yang selama ini dimiliki terhadap bagian ini)"
+                placeholder="Tulis jawaban di sini"
+                form={form}
+              />
+            </FormCard>
+          </div>
+
+          <div className="flex justify-center">
+            <Divider>SOSIAL, REKREASI, DAN KONEKSI ANGGOTA</Divider>
+          </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <SliderScale
+                name="q5a"
+                label="Bagaimana tingkat ketertarikan Anda pada bidang Fisika saat ini?"
+                min={0}
+                max={100}
+                mintext="Sama sekali tidak tertarik"
+                maxtext="Sangat tertarik"
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <SliderScale
+                name="q5b"
+                label="Bagaimana penilaian Anda terhadap kualitas interaksi sosial dan keakraban antaranggota HIMAFI ITB?"
+                min={0}
+                max={100}
+                mintext="Sangat buruk"
+                maxtext="Sangat baik"
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <SliderScale
+                name="q5c"
+                label="Seberapa penting dan berdampak menurut Anda keberadaan kegiatan sosial dan rekreasi terhadap diri Anda?"
+                min={0}
+                max={100}
+                mintext="Tidak penting"
+                maxtext="Sangat penting dan berdampak"
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <SliderScale
+                name="q5d"
+                label="Seberapa perlu menurut Anda keberadaan kegiatan sosial dan rekreasi untuk diadakan oleh HIMAFI ITB?"
+                min={0}
+                max={100}
+                mintext="Tidak penting"
+                maxtext="Sangat penting dan berdampak"
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <SliderScale
+                name="q5e"
+                label="Seberapa rutin menurut Anda HIMAFI ITB menyelenggarakan kegiatan sosial dan rekreasi?"
+                min={0}
+                max={100}
+                mintext="Tidak mengadakan sama sekali"
+                maxtext="Sangat rutin diadakan"
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <SliderScale
+                name="q5f"
+                label="Seberapa sering Anda berpartisipasi dalam berbagai acara dan program HIMAFI ITB?"
+                min={0}
+                max={100}
+                mintext="Tidak pernah ikut"
+                maxtext="Selalu ikut"
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <SliderScale
+                name="q5g"
+                label="Menurut Anda, seberapa tinggi semangat anggota HIMAFI ITB dalam meramaikan acara HIMAFI ITB?"
+                min={0}
+                max={100}
+                mintext="Sangat rendah"
+                maxtext="Sangat tinggi"
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <DraggablePreferenceTable
+                name="q5h"
+                label="Urutkan tujuan utama Anda dalam mengikuti kegiatan sosial dan rekreasi di HIMAFI ITB:"
+                sensors={sensors}
+                form={form}
+              />
+            </FormCard>
+          </div>
+          <div className="space-y-4 intersect-once intersect:animate-fade-right">
+            <FormCard>
+              <TextBox
+                name="q5i"
+                label="Silakan berikan aspirasi yang berhubungan dengan bagian sosial, rekreasi, dan koneksi anggota! (Aspirasi bersifat umum dan bisa berhubungan dengan kritik, saran, masukan, dan kendala yang selama ini dimiliki terhadap bagian ini)"
                 placeholder="Tulis jawaban di sini"
                 form={form}
               />

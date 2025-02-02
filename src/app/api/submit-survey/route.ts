@@ -61,6 +61,15 @@ export async function POST(req: Request) {
       q4c,
       q4d,
       q4e,
+      q5a,
+      q5b,
+      q5c,
+      q5d,
+      q5e,
+      q5f,
+      q5g,
+      q5h,
+      q5i,
     } = body;
 
     function sanitisePreference(preference) {
@@ -108,6 +117,15 @@ export async function POST(req: Request) {
         q4c,
         sanitisePreference(q4d),
         q4e,
+        q5a,
+        q5b,
+        q5c,
+        q5d,
+        q5e,
+        q5f,
+        q5g,
+        sanitisePreference(q5h),
+        q5i,
       ],
     ];
     console.log("Sending form data: ", values);
