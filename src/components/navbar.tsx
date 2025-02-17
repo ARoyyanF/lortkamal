@@ -24,16 +24,15 @@ export default function NavBar() {
       href: "#tentang-kamal",
       icon: <UserRound className="w-4 h-4 md:w-5 md:h-5" />,
     },
-    //!TODO: Uncomment when Visi Misi is finished
-    // {
-    //   name: "Visi dan Misi",
-    //   href: "#visi-misi",
-    //   icon: <Rocket className="w-4 h-4 md:w-5 md:h-5" />,
-    // },
+    {
+      name: "Visi dan Misi",
+      href: "#visi-misi",
+      icon: <FileText className="w-4 h-4 md:w-5 md:h-5" />,
+    },
     // {
     //   name: "Draft",
     //   href: "#draft",
-    //   icon: <FileText className="w-4 h-4 md:w-5 md:h-5" />,
+    //   icon: <Rocket className="w-4 h-4 md:w-5 md:h-5" />,
     // },
     {
       name: "Aspirasi",
@@ -94,11 +93,10 @@ export default function NavBar() {
               key={item.name}
               href={item.href}
               onClick={(e) => handleClick(e, item.href)}
-              className={`animate-fade-right animate-duration-[3000ms] flex-grow text-[9pt] md:text-xl font-medium transition-colors hover:text-[#7fabec] ${
-                activeSection === item.href.slice(1)
-                  ? "text-white bg-[#0053CF] px-2 py-2 md:px-6 rounded-xl md:rounded-full"
-                  : "text-gray-300"
-              }`}
+              className={`animate-fade-right animate-duration-[3000ms] flex-grow text-[9pt] md:text-xl font-medium transition-colors hover:text-[#7fabec] ${activeSection === item.href.slice(1)
+                ? "text-white bg-[#0053CF] px-2 py-2 md:px-6 rounded-xl md:rounded-full"
+                : "text-gray-300"
+                }`}
             >
               {item.icon ? (
                 <div className="flex items-center justify-center py-1 gap-2">
