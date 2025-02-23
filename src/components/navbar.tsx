@@ -27,13 +27,13 @@ export default function NavBar() {
     {
       name: "Visi dan Misi",
       href: "#visi-misi",
+      icon: <Rocket className="w-4 h-4 md:w-5 md:h-5" />,
+    },
+    {
+      name: "Draft",
+      href: "#draft",
       icon: <FileText className="w-4 h-4 md:w-5 md:h-5" />,
     },
-    // {
-    //   name: "Draft",
-    //   href: "#draft",
-    //   icon: <Rocket className="w-4 h-4 md:w-5 md:h-5" />,
-    // },
     {
       name: "Aspirasi",
       href: "#survey-form",

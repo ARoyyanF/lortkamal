@@ -1,4 +1,5 @@
 "use client";
+import { ChevronsRight } from 'lucide-react';
 
 export default function VisiMisi() {
   return (
@@ -149,21 +150,21 @@ export default function VisiMisi() {
       </section>
 
       <section className="scroll-mt-32" id="draft">
-        <div className="intersect:animate-fade-up mx-auto px-4 pt-1 max-w-7xl">
-          <div className="text-gray-100 text-justify text-sm lg:text-lg bg-gradient-to-tr from-[#21217c] to-[#214a9b] rounded-3xl p-6 mb-4">
-            <div className="flex justify-between items-center">
-              <h2 className="font-montserrat intersect-once intersect:animate-jump animate-delay-500 text-4xl font-bold text-left">
-                Draft Muhammad Kamal
-              </h2>
-
-              <a href="https://drive.google.com/file/d/1O-VnDGba-nSYp4gdB8KKo67a4Ahvl1ZY/view?usp=sharingE" className="bg-white text-blue-700 font-bold py-2 px-4 rounded-lg shadow-md hover:bg-gray-200 transition">
-                Lihat Draft
-              </a>
-            </div>
-
+      <div className="intersect:animate-fade-up mx-auto px-4 pt-1 max-w-7xl mb-3">
+        <div className="flex flex-grow flex-row bg-white hover:bg-gray-200 font-poppins rounded-3xl text-justify text-sm intersect:animate-fade-left lg:text-lg">
+          <div className="flex flex-grow text-justify text-sm rounded-3xl lg:text-lg bg-gradient-to-tr from-[#21217c] to-[#214a9b]">
+            <h2 className="font-montserrat text-4xl font-bold text-left p-6">
+            Draft Muhammad Kamal
+            </h2>
           </div>
+              <a href="https://drive.google.com/file/d/1O-VnDGba-nSYp4gdB8KKo67a4Ahvl1ZY/view?usp=sharingE" className="flex flex-grow flex-col ml-auto text-blue-700 items-center justify-center text-center font-bold py-2 px-4 rounded-3xl">
+                Lihat Draft
+                <ChevronsRight className="ml-2 mt-1" />
+              </a>
         </div>
+      </div>
       </section>
+      
 
     </div>
   );
